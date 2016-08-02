@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">MaterialesUABC</string>
+
+    <string-array name="menu_list">
+        <item>Unidades</item>
+        <item>Perfil</item>
+        <item>Informacion</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="imagen_de_perfil">Imagen de perfil</string>
+    <string name="label_nombre">Nomnbre:</string>
+    <string name="apellido">Apellido:</string>
+    <string name="historial">Historial</string>
+    <string name="editar">Editar</string>
+    <string name="vacio">vacio</string>
+</resources>
