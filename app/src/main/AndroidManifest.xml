@@ -15,7 +15,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PerfilActivity"></activity>
+        <activity
+            android:name=".PerfilActivity"
+            android:label="Perfil"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".UnidadesActivity"
+            android:label="Unidades"
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>
