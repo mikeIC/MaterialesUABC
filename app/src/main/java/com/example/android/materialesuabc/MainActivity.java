@@ -1,10 +1,11 @@
 package com.example.android.materialesuabc;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
 
-public class MainActivity extends Activity implements MenuListFragment.MenuListListener{
+public class MainActivity extends AppCompatActivity implements MenuListFragment.MenuListListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +18,8 @@ public class MainActivity extends Activity implements MenuListFragment.MenuListL
 
         if(id == 0)
         {
-
+            Intent intent = new Intent(MainActivity.this, UnidadesActivity.class);
+            startActivity(intent);
         }
         if(id == 1)
         {
@@ -26,7 +28,14 @@ public class MainActivity extends Activity implements MenuListFragment.MenuListL
         }
         if(id == 2)
         {
-
+            Intent intent = new Intent(MainActivity.this,MateriasActivity.class);
+            startActivity(intent);
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_inicial,menu);
+        return super.onCreateOptionsMenu(menu);
     }
 }

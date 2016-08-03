@@ -6,6 +6,16 @@
         <item>Perfil</item>
         <item>Informacion</item>
     </string-array>
+    <string-array name="unidades_list">
+        <item>Unidad 1</item>
+        <item>Unidad 2</item>
+        <item>Unidad 3</item>
+    </string-array>
+    <string-array name="materias_list">
+        <item>Materiales Vitreos </item>
+        <item>Materiales Ceramicos</item>
+        <item>Materiales Ceramicos y Vitreos</item>
+    </string-array>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

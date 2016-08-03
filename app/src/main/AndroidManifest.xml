@@ -23,6 +23,12 @@
             android:name=".UnidadesActivity"
             android:label="Unidades"
             android:parentActivityName=".MainActivity" />
+        <activity android:name=".InformacionActivity" />
+        <activity
+            android:name=".MateriasActivity"
+            android:label="Materias"
+            android:parentActivityName=".MainActivity"
+           />
     </application>
 
 </manifest>

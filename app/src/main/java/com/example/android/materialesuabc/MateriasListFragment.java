@@ -15,13 +15,13 @@ import android.widget.TextView;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class UnidadesListFragment extends ListFragment {
-    static interface UnidadesListListener{
+public class MateriasListFragment extends ListFragment {
+
+    static interface MateriasListListener{
         void itemClicked(long id);
     };
-    private UnidadesListListener listener;
-
-    public UnidadesListFragment() {
+    private MateriasListListener listener;
+    public MateriasListFragment() {
         // Required empty public constructor
     }
 
@@ -29,15 +29,17 @@ public class UnidadesListFragment extends ListFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        String [] optionsName = getResources().getStringArray(R.array.unidades_list);
+        setHasOptionsMenu(true);
+        String [] optionsName = getResources().getStringArray(R.array.materias_list);
         ArrayAdapter<String> adapter = new ArrayAdapter<String >(inflater.getContext(),android.R.layout.simple_list_item_1,optionsName);
         setListAdapter(adapter);
+
         return super.onCreateView(inflater, container,savedInstanceState);
     }
     @Override
     public void onAttach(Activity activity){
         super.onAttach(activity);
-        this.listener = (UnidadesListListener)activity;
+        this.listener = (MateriasListListener) activity;
 
     }
 
@@ -47,5 +49,4 @@ public class UnidadesListFragment extends ListFragment {
             listener.itemClicked(id);
         }
     }
-
 }
