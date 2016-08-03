@@ -114,6 +114,7 @@ public class PerfilActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         String path = "sdcard/camera_app/foto_perfil.jpg";
         imagen_perfil.setImageDrawable(Drawable.createFromPath(path));
+        //
     }
 
     @Override
