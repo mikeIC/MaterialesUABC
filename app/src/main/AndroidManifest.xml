@@ -31,6 +31,12 @@
             android:label="@string/editar_perfil"
             android:parentActivityName=".PerfilActivity" >
         </activity>
+            android:label="Perfil"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".UnidadesActivity"
+            android:label="Unidades"
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>
