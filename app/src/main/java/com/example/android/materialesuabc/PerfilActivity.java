@@ -1,6 +1,5 @@
 package com.example.android.materialesuabc;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.SQLException;
@@ -22,7 +21,7 @@ import android.widget.Toast;
 
 import java.io.File;
 
-public class PerfilActivity extends Activity {
+public class PerfilActivity extends AppCompatActivity {
 
     public static final int CAM_REQUEST = 1;
     public static final int EDITAR_PERFIL_REQUEST_CODE = 1;
@@ -120,8 +119,8 @@ public class PerfilActivity extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_perfil, menu);
-        MenuItem menuItem = menu.findItem(R.id.action_edit);
-        shareActionProvider = (ShareActionProvider) menuItem.getActionProvider();
+//        MenuItem menuItem = menu.findItem(R.id.action_edit);
+//        shareActionProvider = (ShareActionProvider) menuItem.getActionProvider();
         return super.onCreateOptionsMenu(menu);
     }
 }
