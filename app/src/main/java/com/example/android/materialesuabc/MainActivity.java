@@ -1,10 +1,10 @@
 package com.example.android.materialesuabc;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
-public class MainActivity extends Activity implements MenuListFragment.MenuListListener{
+public class MainActivity extends AppCompatActivity implements MenuListFragment.MenuListListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

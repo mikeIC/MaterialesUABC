@@ -15,4 +15,6 @@
     <string name="historial">Historial</string>
     <string name="editar">Editar</string>
     <string name="vacio">vacio</string>
+    <string name="perfil">Perfil</string>
+    <string name="action_edit">action_editt</string>
 </resources>
