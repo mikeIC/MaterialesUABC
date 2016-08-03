@@ -81,19 +81,6 @@ public class PerfilActivity extends AppCompatActivity {
             startActivityForResult(intent,CAM_REQUEST);
         }
 
-        if(view.getId() == R.id.history_btn){
-//            Intent intent = new Intent(PerfilActivity.this, HistorialActivity.class);
-//            startActivity(intent);
-        }
-        if(view.getId() == R.id.edit_btn){
-//            Intent intent = new Intent(PerfilActivity.this, PerfilEditarActivity.class);
-//            intent.putExtra("nombre",nombre.getText().toString());
-//            intent.putExtra("apellido",apellido.getText().toString());
-//            intent.putExtra("direccion",direccion.getText().toString());
-//            intent.putExtra("telefono",telefono.getText().toString());
-//            startActivityForResult(intent,EDITAR_PERFIL_REQUEST_CODE);
-        }
-
     }
 
     private File getFile()
@@ -127,7 +114,24 @@ public class PerfilActivity extends AppCompatActivity {
         //
         //
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        Intent intent = new Intent(PerfilActivity.this,PerfilEditarActivity.class);
+        startActivity(intent);
+
+//        // handle item selection
+//        switch (item.getItemId()) {
+//            case R.id.action_edit:
+//                 do
+//                Toast.makeText(PerfilActivity.this, "Hi", Toast.LENGTH_SHORT).show();
+//                return true;
+//            default:
+                return super.onOptionsItemSelected(item);
+    }
 }
+
 
 
 

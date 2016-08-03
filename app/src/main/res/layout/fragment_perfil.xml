@@ -86,19 +86,6 @@
                 android:padding="20dp"
                 >
 
-                <Button
-                    android:id="@+id/edit_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/editar"
-                    />
-                <Button
-                    android:id="@+id/history_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/historial"
-                    />
-
             </LinearLayout>
 
         </LinearLayout>
