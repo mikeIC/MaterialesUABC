@@ -122,6 +122,7 @@ public class PerfilActivity extends AppCompatActivity {
 //        MenuItem menuItem = menu.findItem(R.id.action_edit);
 //        shareActionProvider = (ShareActionProvider) menuItem.getActionProvider();
         return super.onCreateOptionsMenu(menu);
+        //
     }
 }
 
