@@ -12,8 +12,7 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.graphics.Bitmap;
-import android.graphics.drawable.Drawable;
-import android.net.Uri;
+import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Environment;
 import android.provider.MediaStore;
@@ -26,6 +25,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ShareActionProvider;
 import android.widget.TextView;
@@ -46,6 +46,8 @@ public class PerfilActivity extends AppCompatActivity {
     private TextView nombre;
     private TextView apellido;
     private ImageView imagen_perfil;
+    private Button boton_imagen;
+
     String userChoosenTask;
 
     @Override
@@ -53,9 +55,18 @@ public class PerfilActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil);
 
+        Typeface font = Typeface.createFromAsset(getAssets(), "fonts/fontawesome_webfont.ttf");
+
         nombre = (TextView) findViewById(R.id.user_nombre);
         apellido = (TextView) findViewById(R.id.user_apellido);
         imagen_perfil = (ImageView) findViewById(R.id.imagen_perfil);
+        boton_imagen = (Button) findViewById(R.id.btnSelectPhoto);
+
+//        font.getStyle();
+        boton_imagen.setTypeface(font);
+
+
+//        boton_imagen.setTypeface(font);
 
         //CREATE cursor
         try {
