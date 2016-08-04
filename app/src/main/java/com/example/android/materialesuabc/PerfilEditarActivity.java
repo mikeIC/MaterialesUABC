@@ -52,9 +52,9 @@ public class PerfilEditarActivity extends AppCompatActivity {
 //        if(view.getId() == R.id.button_borrar_historial){
 //
 //        }
-        if(view.getId() == R.id.picture_btn){
-            dispatchTakePictureIntent();
-        }
+//        if(view.getId() == R.id.picture_btn){
+//            dispatchTakePictureIntent();
+//        }
         if(view.getId() == R.id.save_btn){
 
             SQLiteOpenHelper materialesUABCDatabaseHelper  = new MaterialesUABCDatabaseHelper(PerfilEditarActivity.this);

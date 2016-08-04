@@ -31,4 +31,5 @@
     <string name="guardar">Guardar</string>
     <string name="cancelar">cancelar</string>
     <string name="editar_perfil">Editar Perfil</string>
+    <string name="fa_camera_retro">&#xf083;</string>
 </resources>
