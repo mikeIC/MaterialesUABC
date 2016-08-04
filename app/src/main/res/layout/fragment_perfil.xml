@@ -24,14 +24,23 @@
                     android:padding="10dp"
                     android:layout_gravity="center_horizontal"
                     />
-                <Button
-                    android:id="@+id/picture_btn"
-                    android:onClick="botonPerfilClick"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:text="Foto"
-                    />
+            <ImageButton
+                android:id="@+id/btnSelectPhoto"
+                android:onClick="botonImagenClick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+
+                />
+
+                <!--<Button-->
+                    <!--android:id="@+id/picture_btn"-->
+                    <!--android:onClick="selectImage"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center_horizontal"-->
+                    <!--android:text="Foto"-->
+                    <!--/>-->
         <GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
