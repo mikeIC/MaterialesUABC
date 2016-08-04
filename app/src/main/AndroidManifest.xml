@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.android.materialesuabc">
 
+    <uses-feature android:name="android.hardware.camera2" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -17,6 +21,16 @@
         </activity>
         <activity
             android:name=".PerfilActivity"
+            android:label="@string/perfil"
+            android:parentActivityName=".MainActivity">
+
+        </activity>
+
+        <activity
+            android:name=".PerfilEditarActivity"
+            android:label="@string/editar_perfil"
+            android:parentActivityName=".PerfilActivity" >
+        </activity>
             android:label="Perfil"
             android:parentActivityName=".MainActivity" />
         <activity

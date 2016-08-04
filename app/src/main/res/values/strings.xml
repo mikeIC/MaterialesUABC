@@ -25,4 +25,10 @@
     <string name="historial">Historial</string>
     <string name="editar">Editar</string>
     <string name="vacio">vacio</string>
+    <string name="perfil">Perfil</string>
+    <string name="action_edit">action_editt</string>
+    <string name="actualizar">Actualizar</string>
+    <string name="guardar">Guardar</string>
+    <string name="cancelar">cancelar</string>
+    <string name="editar_perfil">Editar Perfil</string>
 </resources>
