@@ -1,5 +1,7 @@
 package com.example.android.materialesuabc;
 
+import android.graphics.Typeface;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
@@ -8,8 +10,17 @@ public class UnidadesActivity extends AppCompatActivity implements UnidadesListF
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+
+//        Typeface font = Typeface.createFromAsset(getAssets(), "fonts/fontawesome_webfont.ttf");
+
         setContentView(R.layout.activity_unidades);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayShowHomeEnabled(true);
+        actionBar.setIcon(R.drawable.book);
+
     }
 
     @Override

@@ -32,4 +32,10 @@
     <string name="cancelar">cancelar</string>
     <string name="editar_perfil">Editar Perfil</string>
     <string name="fa_camera_retro">&#xf083;</string>
+    <string name="fa_edit">&#xf044;</string>
+    <string name="fa_save">&#xf0c7;</string>
+    <string name="fa_remove">&#xf00d;</string>
+    <string name="fa_book"> &#xf02d;</string>
+    <string name="nombre">Nombre:</string>
+
 </resources>

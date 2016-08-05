@@ -13,11 +13,13 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.graphics.Bitmap;
 import android.graphics.Typeface;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Build;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -45,13 +47,18 @@ public class PerfilActivity extends AppCompatActivity {
     private ShareActionProvider shareActionProvider;
     private TextView nombre;
     private TextView apellido;
+    private Bitmap imagen_bit;
     private ImageView imagen_perfil;
     private Button boton_imagen;
 
     String userChoosenTask;
 
+    public PerfilActivity() {
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil);
 
@@ -60,13 +67,18 @@ public class PerfilActivity extends AppCompatActivity {
         nombre = (TextView) findViewById(R.id.user_nombre);
         apellido = (TextView) findViewById(R.id.user_apellido);
         imagen_perfil = (ImageView) findViewById(R.id.imagen_perfil);
-        boton_imagen = (Button) findViewById(R.id.btnSelectPhoto);
+//        Bitmap imagen_bit = ((BitmapDrawable)  imagen_perfil.getDrawable()).getBitmap();
 
-//        font.getStyle();
+        boton_imagen = (Button) findViewById(R.id.btnSelectPhoto);
         boton_imagen.setTypeface(font);
 
+//        if (savedInstanceState!= null)
+//            imagen_perfil = savedInstanceState.getParcelable("bitmap");
 
-//        boton_imagen.setTypeface(font);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayShowHomeEnabled(true);
+        actionBar.setIcon(R.drawable.person);
+
 
         //CREATE cursor
         try {
@@ -96,6 +108,12 @@ public class PerfilActivity extends AppCompatActivity {
         }
 
     }
+
+//    @Override
+//    public void onSaveInstanceState(Bundle toSave) {
+//        super.onSaveInstanceState(toSave);
+//        toSave.putParcelable("bitmap",imagen_bit);
+//    }
 
     public void botonImagenClick(View view) {
 
