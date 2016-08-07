@@ -20,8 +20,9 @@
 
             <ImageView
                 android:id="@+id/imagen_perfil"
-                android:layout_width="wrap_content"
-                android:layout_height="120dp"
+                android:layout_width = "100dp"
+                android:layout_height= "100dp"
+                android:scaleType="center"
                 android:contentDescription="@string/imagen_de_perfil"
                 android:src="@mipmap/ic_launcher"
                 android:padding="10dp"
@@ -84,23 +85,34 @@
 
             </LinearLayout>
 
-            <Button
-                android:id="@+id/save_btn"
-                android:onClick="botonEditarPerfilClick"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="@string/guardar"
-                />
 
-            <Button
-                android:id="@+id/cancel_btn"
-                android:onClick="botonEditarPerfilClick"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:orientation="horizontal"
+                android:background="@android:color/transparent"
+                android:paddingTop="5.0dip"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="@string/cancelar"
-                />
+                >
+
+                <Button
+                    android:id="@+id/save_btn"
+                    android:onClick="botonEditarPerfilClick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="40sp"
+                    android:theme="@style/AppTheme.Button"
+                    android:text="@string/fa_save" />
+
+                <Button
+                    android:id="@+id/cancel_btn"
+                    android:onClick="botonEditarPerfilClick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="40sp"
+                    android:theme="@style/AppTheme.Button"
+                    android:text="@string/fa_remove" />
+
+            </LinearLayout>
 
         </LinearLayout>
 

@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.graphics.Bitmap;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
@@ -13,6 +14,7 @@ import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -32,14 +34,26 @@ public class PerfilEditarActivity extends AppCompatActivity {
     private static final int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 2;
     public static final int MEDIA_TYPE_IMAGE = 1;
     private Uri fileUri;
+    private Button boton_guardar;
+    private Button boton_cancelar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        Typeface font = Typeface.createFromAsset(getAssets(), "fonts/fontawesome_webfont.ttf");
+
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_perfil_editar);
         nombre  = (EditText)findViewById(R.id.user_editar_nombre);
         apellido  = (EditText)findViewById(R.id.user_editar_apellido);
         imagen = (ImageView) findViewById(R.id.imagen_perfil);
+        boton_guardar = (Button) findViewById(R.id.save_btn);
+        boton_cancelar = (Button) findViewById(R.id.cancel_btn);
+
+        boton_guardar.setTypeface(font);
+        boton_cancelar.setTypeface(font);
 
         if(savedInstanceState != null){
             nombre.setText(savedInstanceState.getString("nombre"));
@@ -47,14 +61,20 @@ public class PerfilEditarActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        savedInstanceState.putString("nombre",nombre.getText().toString());
+        savedInstanceState.putString("apellido",apellido.getText().toString());
+    }
+
     public void botonEditarPerfilClick(View view) {
 
 //        if(view.getId() == R.id.button_borrar_historial){
 //
 //        }
-        if(view.getId() == R.id.picture_btn){
-            dispatchTakePictureIntent();
-        }
+//        if(view.getId() == R.id.picture_btn){
+//            dispatchTakePictureIntent();
+//        }
         if(view.getId() == R.id.save_btn){
 
             SQLiteOpenHelper materialesUABCDatabaseHelper  = new MaterialesUABCDatabaseHelper(PerfilEditarActivity.this);
@@ -77,10 +97,6 @@ public class PerfilEditarActivity extends AppCompatActivity {
         if(view.getId() == R.id.cancel_btn){
             finish();
         }
-    }
-    public void onSaveInstanceState(Bundle savedInstanceState){
-        savedInstanceState.putString("nombre",nombre.getText().toString());
-        savedInstanceState.putString("apellido",apellido.getText().toString());
     }
 
     @Override
@@ -127,4 +143,6 @@ public class PerfilEditarActivity extends AppCompatActivity {
             }
         }
     }
+
+
 }
