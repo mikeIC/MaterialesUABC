@@ -1,5 +1,6 @@
 package com.example.android.materialesuabc;
 
+import android.content.Intent;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -23,7 +24,6 @@ public class UnidadesActivity extends AppCompatActivity implements UnidadesListF
 
         if(savedInstanceState != null){
             materiaSeleccionada = savedInstanceState.getInt("materia");
-
         }
 
         ActionBar actionBar = getSupportActionBar();
@@ -38,7 +38,9 @@ public class UnidadesActivity extends AppCompatActivity implements UnidadesListF
 
     @Override
     public void itemClicked(long id) {
-        Toast.makeText(UnidadesActivity.this, "id: "+id, Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(UnidadesActivity.this,TriviaActivity.class);
+        intent.putExtra("materia",materiaSeleccionada);
+        startActivity(intent);
     }
 
     @Override
@@ -49,20 +51,22 @@ public class UnidadesActivity extends AppCompatActivity implements UnidadesListF
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.materias_list,
                R.layout.custom_spinner_item);
-//        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.materias_list,
+//      ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.materias_list,
 //                android.R.layout.simple_spinner_item);
 
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//      adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapter.setDropDownViewResource(R.layout.custom_spinner_dropdwon_item);
+
 
         spinner.setAdapter(adapter);
 //        spinner.setBackgroundColor(getResources().getColor(R.color.colorWhite));
-        spinner.setDrawingCacheBackgroundColor(getResources().getColor(R.color.colorWhite));
+//        spinner.setDrawingCacheBackgroundColor(getResources().getColor(R.color.colorWhite));
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
             @Override
             public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                 materiaSeleccionada = arg2;
-                Toast.makeText(UnidadesActivity.this, "arg2: "+arg2, Toast.LENGTH_SHORT).show();
+
             }
             @Override
             public void onNothingSelected(AdapterView<?> arg0) {

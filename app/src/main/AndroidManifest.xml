@@ -5,7 +5,7 @@
     <uses-feature android:name="android.hardware.camera" />
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -22,17 +22,13 @@
         <activity
             android:name=".PerfilActivity"
             android:label="@string/perfil"
-            android:parentActivityName=".MainActivity">
-
-        </activity>
-
+            android:parentActivityName=".MainActivity"></activity>
         <activity
             android:name=".PerfilEditarActivity"
             android:label="@string/editar"
-            android:parentActivityName=".PerfilActivity" >
-        </activity>
-            <!--android:label="Perfil"-->
-            <!--android:parentActivityName=".MainActivity" />-->
+            android:parentActivityName=".PerfilActivity"></activity>
+        <!-- android:label="Perfil" -->
+        <!-- android:parentActivityName=".MainActivity" /> -->
         <activity
             android:name=".UnidadesActivity"
             android:label="Unidades"
@@ -41,8 +37,8 @@
         <activity
             android:name=".MateriasActivity"
             android:label="Materias"
-            android:parentActivityName=".MainActivity"
-           />
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".TriviaActivity"></activity>
     </application>
 
 </manifest>
