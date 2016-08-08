@@ -17,10 +17,6 @@ import android.widget.TextView;
  */
 public class MateriasListFragment extends ListFragment {
 
-    static interface MateriasListListener{
-        void itemClicked(long id);
-    };
-    private MateriasListListener listener;
     public MateriasListFragment() {
         // Required empty public constructor
     }
@@ -36,17 +32,6 @@ public class MateriasListFragment extends ListFragment {
 
         return super.onCreateView(inflater, container,savedInstanceState);
     }
-    @Override
-    public void onAttach(Activity activity){
-        super.onAttach(activity);
-        this.listener = (MateriasListListener) activity;
 
-    }
 
-    @Override
-    public void onListItemClick(ListView l , View v , int position, long id){
-        if(listener!=null){
-            listener.itemClicked(id);
-        }
-    }
 }

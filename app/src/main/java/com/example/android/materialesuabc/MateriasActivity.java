@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
 
-public class MateriasActivity extends AppCompatActivity  implements MateriasListFragment.MateriasListListener  {
+public class MateriasActivity extends AppCompatActivity  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,10 +15,5 @@ public class MateriasActivity extends AppCompatActivity  implements MateriasList
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayShowHomeEnabled(true);
         actionBar.setIcon(R.drawable.school);
-    }
-
-    @Override
-    public void itemClicked(long id) {
-        Toast.makeText(MateriasActivity.this, "id: "+id, Toast.LENGTH_SHORT).show();
     }
 }

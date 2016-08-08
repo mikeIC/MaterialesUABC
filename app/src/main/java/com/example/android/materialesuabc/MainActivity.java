@@ -1,6 +1,7 @@
 package com.example.android.materialesuabc;
 
 import android.app.Fragment;
+import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -22,12 +23,12 @@ public class MainActivity extends AppCompatActivity{
     private ListView drawerList;
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle drawerToggle;
+    private int currentPosition = 0;
 
     private class DrawerItemClickListener implements ListView.OnItemClickListener {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id){
             selectItem(position);
-
         }
     };
 
@@ -41,14 +42,14 @@ public class MainActivity extends AppCompatActivity{
         drawerList = (ListView) findViewById(R.id.drawer);
         ActionBar actionBar = getSupportActionBar();
 
-//        actionBar.setDisplayShowHomeEnabled(true);
-//        actionBar.setIcon(R.mipmap.ic_launcher);
-
-
         drawerList.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_activated_1, titles));
         drawerList.setOnItemClickListener(new DrawerItemClickListener());
 
-        if (savedInstanceState == null) {
+        //Display the correct fragment.
+        if (savedInstanceState != null) {
+            currentPosition = savedInstanceState.getInt("position");
+            setActionBarTitle(currentPosition);
+        } else {
             selectItem(0);
         }
         //Create the ActionBarDrawerToggle
@@ -72,6 +73,25 @@ public class MainActivity extends AppCompatActivity{
 //        getActionBar().setDisplayHomeAsUpEnabled(true);
 //        getActionBar().setHomeButtonEnabled(true);
 
+        getFragmentManager().addOnBackStackChangedListener(
+                new FragmentManager.OnBackStackChangedListener() {
+                    public void onBackStackChanged() {
+                        FragmentManager fragMan = getFragmentManager();
+                        Fragment fragment = fragMan.findFragmentByTag("visible_fragment");
+                        if (fragment instanceof UnidadesListFragment) {
+                            currentPosition = 0;
+                        }
+                        if (fragment instanceof PerfilFragment) {
+                            currentPosition = 1;
+                        }
+                        if (fragment instanceof MateriasListFragment) {
+                            currentPosition = 2;
+                        }
+                        setActionBarTitle(currentPosition);
+                        drawerList.setItemChecked(currentPosition, true);
+                    }
+                }
+        );
     }
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
@@ -83,15 +103,16 @@ public class MainActivity extends AppCompatActivity{
         super.onConfigurationChanged(newConfig);
         drawerToggle.onConfigurationChanged(newConfig);
     }
+
     //Called whenever we call invalidateOptionsMenu()
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
 // If the drawer is open, hide action items related to the content view
         boolean drawerOpen = drawerLayout.isDrawerOpen(drawerList);
-//        menu.findItem(R.id.action_share).setVisible(!drawerOpen);
+        menu.findItem(R.id.spinner_materias).setVisible(!drawerOpen);
+        menu.findItem(R.id.action_edit).setVisible(!drawerOpen);
         return super.onPrepareOptionsMenu(menu);
     }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_inicial,menu);
@@ -100,6 +121,7 @@ public class MainActivity extends AppCompatActivity{
 
     private void selectItem(int position){
         Fragment fragment=null;
+        currentPosition = position;
         setActionBarTitle(position);
         switch(position) {
             case 0:
@@ -115,7 +137,7 @@ public class MainActivity extends AppCompatActivity{
 //                fragment = new TopFragment();
         }
         FragmentTransaction ft = getFragmentManager().beginTransaction();
-        ft.replace(R.id.main_frame_content, fragment);
+        ft.replace(R.id.main_frame_content, fragment,"visible_fragment");
         ft.addToBackStack(null);
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
         ft.commit();
@@ -131,8 +153,34 @@ public class MainActivity extends AppCompatActivity{
         } else {
             title = titles[position];
         }
+       changeActionBarIcons(position);
 //        ActionBar actionBar = getSupportActionBar();
         getSupportActionBar().setTitle(title);
+    }
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt("position", currentPosition);
+    }
+
+    private void changeActionBarIcons(int position){
+
+        switch(position) {
+            case 0:
+                //UNIDADES
+                getSupportActionBar().setIcon(R.drawable.book);
+                break;
+            case 1:
+                //PERFIL
+                getSupportActionBar().setIcon(R.drawable.person);
+                break;
+            case 2:
+                //Informacion
+                getSupportActionBar().setIcon(R.drawable.school);
+                break;
+            default:
+//                fragment = new TopFragment();
+        }
     }
 
     @Override
