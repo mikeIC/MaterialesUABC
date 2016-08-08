@@ -16,10 +16,8 @@ import android.widget.TextView;
  * A simple {@link Fragment} subclass.
  */
 public class UnidadesListFragment extends ListFragment {
-    static interface UnidadesListListener{
-        void itemClicked(long id);
-    };
-    private UnidadesListListener listener;
+
+
 
     public UnidadesListFragment() {
         // Required empty public constructor
@@ -34,18 +32,6 @@ public class UnidadesListFragment extends ListFragment {
         setListAdapter(adapter);
         return super.onCreateView(inflater, container,savedInstanceState);
     }
-    @Override
-    public void onAttach(Activity activity){
-        super.onAttach(activity);
-        this.listener = (UnidadesListListener)activity;
 
-    }
-
-    @Override
-    public void onListItemClick(ListView l , View v , int position, long id){
-        if(listener!=null){
-            listener.itemClicked(id);
-        }
-    }
 
 }
