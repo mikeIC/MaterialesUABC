@@ -49,9 +49,6 @@ public class PerfilActivity extends AppCompatActivity {
     private TextView apellido;
     private Bitmap imagen_bit;
     private ImageView imagen_perfil;
-    private Button boton_imagen;
-
-    String userChoosenTask;
 
     public PerfilActivity() {
     }
@@ -68,9 +65,6 @@ public class PerfilActivity extends AppCompatActivity {
         apellido = (TextView) findViewById(R.id.user_apellido);
         imagen_perfil = (ImageView) findViewById(R.id.imagen_perfil);
 //        Bitmap imagen_bit = ((BitmapDrawable)  imagen_perfil.getDrawable()).getBitmap();
-
-        boton_imagen = (Button) findViewById(R.id.btnSelectPhoto);
-        boton_imagen.setTypeface(font);
 
 //        if (savedInstanceState!= null)
 //            imagen_perfil = savedInstanceState.getParcelable("bitmap");
@@ -115,14 +109,6 @@ public class PerfilActivity extends AppCompatActivity {
 //        toSave.putParcelable("bitmap",imagen_bit);
 //    }
 
-    public void botonImagenClick(View view) {
-
-        if(view.getId() == R.id.btnSelectPhoto)
-        {
-            selectImage();
-        }
-    }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_perfil, menu);
@@ -147,149 +133,6 @@ public class PerfilActivity extends AppCompatActivity {
 //                return true;
 //            default:
                 return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if (resultCode == Activity.RESULT_OK) {
-            if (requestCode == SELECT_FILE)
-                onSelectFromGalleryResult(data);
-            else if (requestCode == REQUEST_CAMERA)
-                onCaptureImageResult(data);
-        }
-    }
-
-    @SuppressWarnings("deprecation")
-    private void onSelectFromGalleryResult(Intent data) {
-        Bitmap bm=null;
-        if (data != null) {
-            try {
-                bm = MediaStore.Images.Media.getBitmap(getApplicationContext().getContentResolver(), data.getData());
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-        imagen_perfil.setImageBitmap(bm);
-    }
-
-    private void onCaptureImageResult(Intent data) {
-        Bitmap thumbnail = (Bitmap) data.getExtras().get("data");
-        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
-        thumbnail.compress(Bitmap.CompressFormat.JPEG, 90, bytes);
-
-        File destination = new File(Environment.getExternalStorageDirectory(),
-                System.currentTimeMillis() + ".jpg");
-
-        FileOutputStream fo;
-        try {
-            destination.createNewFile();
-            fo = new FileOutputStream(destination);
-            fo.write(bytes.toByteArray());
-            fo.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        imagen_perfil.setImageBitmap(thumbnail);
-    }
-
-    private void cameraIntent()
-    {
-        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        startActivityForResult(intent,REQUEST_CAMERA);
-    }
-
-    private void galleryIntent()
-    {
-        Intent intent = new Intent();
-        intent.setType("image/*");
-        intent.setAction(Intent.ACTION_GET_CONTENT);//
-        startActivityForResult(Intent.createChooser(intent, "Select File"),SELECT_FILE);
-    }
-
-
-
-    private void selectImage() {
-        final CharSequence[] items = { "Tomar foto", "Seleccionar desde galeria",
-                "Cancelar" };
-
-        AlertDialog.Builder builder = new AlertDialog.Builder(PerfilActivity.this);
-        builder.setTitle("Agregar foto!");
-
-        builder.setItems(items, new DialogInterface.OnClickListener() {
-
-            @Override
-            public void onClick(DialogInterface dialog, int item) {
-
-                boolean result = Utility.checkPermission(PerfilActivity.this);
-                if (items[item].equals("Tomar foto")) {
-                    userChoosenTask = "Tomar foto";
-                    if(result)
-                        cameraIntent();
-                } else if (items[item].equals("Seleccionar desde galeria")) {
-                    userChoosenTask = "Selecionar desde galeria";
-                    if(result)
-                        galleryIntent();
-                } else if (items[item].equals("Cancelar")) {
-                    dialog.dismiss();
-                }
-            }
-        });
-        builder.show();
-    }
-    public static class Utility {
-        public static final int MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE = 123;
-        @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
-        public static boolean checkPermission(final Context context)
-        {
-            int currentAPIVersion = Build.VERSION.SDK_INT;
-            if(currentAPIVersion>=android.os.Build.VERSION_CODES.M)
-            {
-                if (ContextCompat.checkSelfPermission(context, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-                    if (ActivityCompat.shouldShowRequestPermissionRationale((Activity) context, Manifest.permission.READ_EXTERNAL_STORAGE)) {
-                        AlertDialog.Builder alertBuilder = new AlertDialog.Builder(context);
-                        alertBuilder.setCancelable(true);
-                        alertBuilder.setTitle("Permission necessary");
-                        alertBuilder.setMessage("External storage permission is necessary");
-                        alertBuilder.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                            @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
-                            public void onClick(DialogInterface dialog, int which) {
-                                ActivityCompat.requestPermissions((Activity) context, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE);
-                            }
-                        });
-                        AlertDialog alert = alertBuilder.create();
-                        alert.show();
-                    } else {
-                        ActivityCompat.requestPermissions((Activity) context, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE);
-                    }
-                    return false;
-                } else {
-                    return true;
-                }
-            } else {
-                return true;
-            }
-        }
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-        switch (requestCode) {
-            case Utility.MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE:
-                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    if(userChoosenTask.equals("Tomar foto"))
-                        cameraIntent();
-                    else if(userChoosenTask.equals("Selecionar desde galeria"))
-                        galleryIntent();
-                } else {
-                    //code for deny
-                }
-                break;
-        }
     }
 }
 
