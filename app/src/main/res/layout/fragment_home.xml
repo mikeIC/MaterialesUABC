@@ -4,72 +4,66 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.android.materialesuabc.HomeFragment">
-
-    <GridLayout
-
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:columnCount="2"
-        android:padding="20dp"
-        >
-        <TextView
-
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_column="0"
-            android:layout_row="0"
-            android:padding="15dp"
-
-            android:text="Materia: "
-
-            />
-
-        <Spinner
-            android:id="@+id/spinner_materias"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_row="0"
-            android:layout_column="1"
-            android:gravity="center_vertical"
-            android:padding="15dp"
-            android:spinnerMode="dialog" />
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:gravity="start"
+                android:text="@string/materia"
+                />
+            <Spinner
+                android:id="@+id/spinner_materias"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="5dp"
+                android:spinnerMode="dialog" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_column="0"
-            android:layout_row="1"
-            android:padding="15dp"
-            android:text="Unidad: "
-            />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:gravity="start"
+                android:text="@string/unidad"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                />
 
-        <Spinner
-            android:id="@+id/spinner_unidad"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_row="1"
-            android:layout_column="1"
-            android:gravity="center_vertical"
-            android:spinnerMode="dialog"
-            android:padding="15dp"
-            />
-
-    </GridLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center_horizontal"
-        android:paddingTop="50dp"
-        >
-        <Button
-            android:layout_width="160dp"
-            android:layout_height="80dp"
-            android:layout_gravity="center_horizontal"
-            android:text="¡Trivia!"
-            android:textSize="35dp"
-            android:textStyle="bold|italic"
-            />
-    </LinearLayout>
+            <Spinner
+                android:id="@+id/spinner_unidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:spinnerMode="dialog"
+                android:padding="5dp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:paddingTop="50dp"
+                >
+                <Button
+                    android:id="@+id/button_start_trivia"
+                    android:layout_width="160dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="¡Trivia!"
+                    android:textSize="35dp"
+                    android:textStyle="bold|italic"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
 
 </LinearLayout>

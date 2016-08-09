@@ -2,7 +2,10 @@
 
 <TextView android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:textColor="@color/colorWhite"
+    android:textColor="@color/Gold"
     android:layout_gravity="right"
+    android:textSize="25dp"
+    android:textStyle="italic"
+    android:background="@color/Green"
     xmlns:android="http://schemas.android.com/apk/res/android" />
 

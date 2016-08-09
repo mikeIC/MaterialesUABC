@@ -19,6 +19,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity{
 
@@ -30,6 +31,9 @@ public class MainActivity extends AppCompatActivity{
     private Menu menuAux;
     private int materiaSeleccionada;
     private int unidadSeleccionada;
+    private Spinner spinnerMaterias;
+    private Spinner spinnerUnidades;
+    private MenuItem item1;
 
 
     private class DrawerItemClickListener implements ListView.OnItemClickListener {
@@ -54,10 +58,13 @@ public class MainActivity extends AppCompatActivity{
         drawerList.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_activated_1, titles));
         drawerList.setOnItemClickListener(new DrawerItemClickListener());
 
-        //Display the correct fragment.
         if (savedInstanceState != null) {
             currentPosition = savedInstanceState.getInt("position");
             setActionBarTitle(currentPosition);
+//            if(currentPosition == 0){
+//                inicializarSpinners();
+//            }
+
         } else {
             selectItem(0);
         }
@@ -79,8 +86,6 @@ public class MainActivity extends AppCompatActivity{
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
-//        getActionBar().setDisplayHomeAsUpEnabled(true);
-//        getActionBar().setHomeButtonEnabled(true);
 
         getFragmentManager().addOnBackStackChangedListener(
                 new FragmentManager.OnBackStackChangedListener() {
@@ -88,7 +93,6 @@ public class MainActivity extends AppCompatActivity{
                         FragmentManager fragMan = getFragmentManager();
                         Fragment fragment = fragMan.findFragmentByTag("visible_fragment");
                         if (fragment instanceof HomeFragment) {
-                            inicializarSpinners();
                             currentPosition = 0;
                         }
                         if (fragment instanceof PerfilFragment) {
@@ -102,47 +106,8 @@ public class MainActivity extends AppCompatActivity{
                     }
                 }
         );
-    }
 
-    private void inicializarSpinners() {
-        Spinner spinnerMaterias = (Spinner) findViewById(R.id.spinner_materias);
-        Spinner spinnerUnidades = (Spinner) findViewById(R.id.spinner_unidad);
 
-        ArrayAdapter <CharSequence> adapterMaterias;
-        adapterMaterias = ArrayAdapter.createFromResource(this, R.array.materias_list,
-                R.layout.custom_spinner_item);
-        ArrayAdapter<CharSequence> adapterUnidades = ArrayAdapter.createFromResource(this, R.array.unidades_list,
-                R.layout.custom_spinner_item);
-
-        adapterMaterias.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        adapterUnidades.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-        spinnerMaterias.setAdapter(adapterMaterias);
-        spinnerUnidades.setAdapter(adapterUnidades);
-
-        spinnerMaterias.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
-                materiaSeleccionada = arg2;
-            }
-            @Override
-            public void onNothingSelected(AdapterView<?> arg0) {
-
-            }
-
-        });
-
-        spinnerUnidades.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
-                unidadSeleccionada = arg2;
-            }
-            @Override
-            public void onNothingSelected(AdapterView<?> arg0) {
-
-            }
-
-        });
     }
 
     @Override
@@ -161,37 +126,23 @@ public class MainActivity extends AppCompatActivity{
     public boolean onPrepareOptionsMenu(Menu menu) {
 // If the drawer is open, hide action items related to the content view
         boolean drawerOpen = drawerLayout.isDrawerOpen(drawerList);
-//        menu.findItem(R.id.spinner_materias).setVisible(!drawerOpen);
-//        menu.findItem(R.id.action_edit).setVisible(!drawerOpen);
+        if(currentPosition == 1){
+            menu.findItem(R.id.action_edit).setVisible(true);
+            if(drawerOpen){
+                menu.findItem(R.id.action_edit).setVisible(false);
+            }
+        }else{
+            menu.findItem(R.id.action_edit).setVisible(false);
+        }
         return super.onPrepareOptionsMenu(menu);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-
         getMenuInflater().inflate(R.menu.menu_inicial,menu);
-//        menuAux = menu;
-//
-//        MenuItem item2 = menuAux.findItem(R.id.spinner_materias);
-//        Spinner spinner = (Spinner) MenuItemCompat.getActionView(item2);
-//
-//        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.materias_list,
-//                R.layout.custom_spinner_item);
-//
-//        adapter.setDropDownViewResource(R.layout.custom_spinner_dropdwon_item);
-//        spinner.setAdapter(adapter);
-//        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-//            @Override
-//            public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
-//                materiaSeleccionada = arg2;
-//            }
-//            @Override
-//            public void onNothingSelected(AdapterView<?> arg0) {
-//
-//            }
-//
-//        });
-
+        menuAux = menu;
+        item1 = menuAux.findItem(R.id.action_edit);
+//        item1.setVisible(false);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -209,6 +160,8 @@ public class MainActivity extends AppCompatActivity{
             case 2:
                 fragment = new MateriasListFragment();
                 break;
+            case 3:
+                fragment = new PerfilEditarFragment();
             default:
 //                fragment = new TopFragment();
         }
@@ -218,64 +171,64 @@ public class MainActivity extends AppCompatActivity{
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
         ft.commit();
         //Set the action bar title
+
         setActionBarTitle(position);
         //Close drawer
         drawerLayout.closeDrawer(drawerList);
+
     }
     private void setActionBarTitle(int position) {
         String title;
         if (position == 0){
             title = getResources().getString(R.string.app_name);
-        } else {
-            title = titles[position];
-        }
-       changeActionBarIcons(position);
-//        ActionBar actionBar = getSupportActionBar();
-        getSupportActionBar().setTitle(title);
+            getSupportActionBar().setIcon(R.drawable.book);
 
+        } else if(position<3){
+            title = titles[position];
+        }else if(position ==3){
+            title = getString(R.string.perfil_editar);
+        }else{
+            title = getString(R.string.trivia);
+        }
+        changeActionBarIcons(position);
+        getSupportActionBar().setTitle(title);
     }
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
-//       MenuItem item1 = menuAux.findItem(R.id.action_edit);
 
-//        MenuItem item2 = menuAux.findItem(R.id.spinner_materias);
         super.onSaveInstanceState(outState);
         outState.putInt("position", currentPosition);
     }
 
     private void changeActionBarIcons(int position){
-//
         switch(position) {
-            case 0:
-                //UNIDADES
-
-//                item1.setVisible(false);
-//                item2.setVisible(true);
-
-                getSupportActionBar().setIcon(R.drawable.book);
-
-                break;
             case 1:
                 //PERFIL
                 getSupportActionBar().setIcon(R.drawable.person);
-//                item1.setVisible(true);
-//                item2.setVisible(false);
+
                 break;
             case 2:
                 //Informacion
-//                item1.setVisible(false);
-//                item2.setVisible(false);
                 getSupportActionBar().setIcon(R.drawable.school);
 
                 break;
             default:
-//                fragment = new TopFragment();
         }
     }
 
+//    @Override
+//    protected void onResume() {
+//        super.onResume();
+//
+//    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
+
+        if(item.getItemId() == R.id.action_edit){
+            selectItem(3);
+        }
         if (drawerToggle.onOptionsItemSelected(item)) {
             return true;
         }
