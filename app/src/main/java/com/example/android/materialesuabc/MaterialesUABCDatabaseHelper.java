@@ -10,8 +10,8 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 public class MaterialesUABCDatabaseHelper extends SQLiteOpenHelper {
 
-    private static final String DB_NAME = "MaterialesUABC"; //El nombre de la base de datos
-    private static final int DB_VERSION = 4; // La version de la base de datos
+    private static final String DB_NAME = "MaterialesUABC.db"; //El nombre de la base de datos
+    private static final int DB_VERSION = 6; // La version de la base de datos
 
 
     public MaterialesUABCDatabaseHelper(Context context){
@@ -22,7 +22,6 @@ public class MaterialesUABCDatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         updateMyDataBase(db,0,DB_VERSION);
-
 
     }
     private void updateMyDataBase(SQLiteDatabase db, int oldVersion, int newVersion){
@@ -40,30 +39,18 @@ public class MaterialesUABCDatabaseHelper extends SQLiteOpenHelper {
                     "PREGUNTA TEXT," +
                     "RESPUESTA TEXT);");
 
+        }
 
-//            insertPregunta(db,"Unidad1","pregunta1","hola");
-//            insertUsuario(db,"mike","montiel",R.mipmap.ic_launcher);
-//            insert
-//            insertTienda(db,"Oxxo","Ave.Revolucion",R.drawable.oxxo_logo);
-//            insertTienda(db,"7Eleven","Ave.Constitucion",R.drawable.eleven_logo);
-//
-//            insertProducto(db,"Arroz","Oxxo",8,0,R.drawable.arrozpic);
-//            insertProducto(db,"Leche","Oxxo",15,0,R.drawable.leche);
-//            insertProducto(db,"Frijoles","Oxxo",6,0,R.drawable.frijoles);
-//            insertProducto(db,"Jamon","Oxxo",66,0,R.drawable.jamon);
-//            insertProducto(db,"Salchicha","Oxxo",26,0,R.drawable.salchicha);
-//
-//            insertProducto(db,"Arroz","Calimax",16,0,R.drawable.arrozpic);
-//            insertProducto(db,"Leche","Calimax",16,0,R.drawable.leche);
-//            insertProducto(db,"Frijoles","Calimax",16,0,R.drawable.frijoles);
-//            insertProducto(db,"Jamon","Calimax",16,0,R.drawable.jamon);
-//            insertProducto(db,"Salchicha","Calimax",16,0,R.drawable.salchicha);
-//
-//            insertProducto(db,"Arroz","7Eleven",18,0,R.drawable.arrozpic);
-//            insertProducto(db,"Leche","Eleven",10,0,R.drawable.leche);
-//            insertProducto(db,"Frijoles","7Eleven",14,0,R.drawable.frijoles);
-//            insertProducto(db,"Jamon","7Eleven",16,0,R.drawable.jamon);
-//            insertProducto(db,"Salchicha","7Eleven",17,0,R.drawable.salchicha);
+        if(oldVersion>=4 ){
+
+            insertUsuario(db,"Erik","Macias",1);
+            insertUsuario(db,"Mike","Montiel",1);
+            insertUsuario(db,"Rigo","Nava",1);
+        }
+
+        if(oldVersion>=5 ){
+
+            insertUsuario(db,"Daniel","nop",1);
         }
     }
     @Override

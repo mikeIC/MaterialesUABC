@@ -48,6 +48,7 @@ public class PerfilEditarActivity extends AppCompatActivity {
     String userChoosenTask;
     Bitmap thumbnail;
     File photoFile = null;
+    Toast toast;
 
     public static final int REQUEST_CAMERA = 0;
     public static final int SELECT_FILE = 1;
@@ -106,17 +107,31 @@ public class PerfilEditarActivity extends AppCompatActivity {
         if(view.getId() == R.id.save_btn){
 
             SQLiteOpenHelper materialesUABCDatabaseHelper  = new MaterialesUABCDatabaseHelper(PerfilEditarActivity.this);
+            SQLiteDatabase db = materialesUABCDatabaseHelper.getWritableDatabase();
+
             ContentValues usuarioValues = new ContentValues();
-            usuarioValues.put("NAME",nombre.getText().toString());
-            usuarioValues.put("LASTNAME",apellido.getText().toString());
+
+            String name = nombre.getText().toString();
+            String lastName = apellido.getText().toString();
+
+            usuarioValues.put("NAME",name);
+            usuarioValues.put("LASTNAME",lastName);
+
+//            db.insert("USUARIO",null,usuarioValues);
+//            toast = Toast.makeText(this, "The user was created: ", Toast.LENGTH_SHORT);
+//            toast.show();
+//            db.close();
 
             try{
-                SQLiteDatabase db = materialesUABCDatabaseHelper.getWritableDatabase();
+
                 db.update("USUARIO",usuarioValues, "_id =?",new String[]{Integer.toString(1)});
+//                db.update("USUARIO",usuarioValues, "_id =?",new String[]{Integer.toString(1)});
+                toast = Toast.makeText(this, "The user was created: ", Toast.LENGTH_SHORT);
+                toast.show();
                 db.close();
 
             }catch (SQLiteException e){
-                Toast toast = Toast.makeText(this, "Database unavailable: "+e, Toast.LENGTH_SHORT);
+                toast = Toast.makeText(this, "Database unavailable: "+e, Toast.LENGTH_SHORT);
                 toast.show();
             }
 
