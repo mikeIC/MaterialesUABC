@@ -41,4 +41,6 @@
     <string name="materia">Materia:</string>
     <string name="pregunta">...Pregunta...</string>
     <string name="escoje_una_opcion">Escoje Una Opcion:</string>
+    <string name="open_drawer">Open Drawer</string>
+    <string name="close_drawer">Close Drawer</string>
 </resources>

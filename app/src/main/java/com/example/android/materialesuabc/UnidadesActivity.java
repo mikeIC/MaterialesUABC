@@ -13,7 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-public class UnidadesActivity extends AppCompatActivity implements UnidadesListFragment.UnidadesListListener {
+public class UnidadesActivity extends AppCompatActivity  {
     int materiaSeleccionada;
 
     @Override
@@ -34,13 +34,6 @@ public class UnidadesActivity extends AppCompatActivity implements UnidadesListF
     public void onSaveInstanceState(Bundle savedInstanceState) {
         savedInstanceState.putInt("materia", materiaSeleccionada);
 
-    }
-
-    @Override
-    public void itemClicked(long id) {
-        Intent intent = new Intent(UnidadesActivity.this,TriviaActivity.class);
-        intent.putExtra("materia",materiaSeleccionada);
-        startActivity(intent);
     }
 
     @Override
