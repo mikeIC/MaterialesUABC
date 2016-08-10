@@ -2,7 +2,7 @@
     <string name="app_name">MaterialesUABC</string>
 
     <string-array name="menu_list">
-        <item>Unidades</item>
+        <item>Inicio</item>
         <item>Perfil</item>
         <item>Informacion</item>
     </string-array>
@@ -43,4 +43,7 @@
     <string name="escoje_una_opcion">Escoje Una Opcion:</string>
     <string name="open_drawer">Open Drawer</string>
     <string name="close_drawer">Close Drawer</string>
+    <string name="unidad">Unidad:</string>
+    <string name="perfil_editar">Editar Perfil</string>
+    <string name="trivia">Trivia</string>
 </resources>
