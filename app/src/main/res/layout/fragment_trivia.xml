@@ -6,7 +6,12 @@
     android:padding="8dp"
     tools:context="com.example.android.materialesuabc.TriviaFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/tvNumeroPregunta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="num_pregunta"
+        />
     <TextView
         android:id="@+id/trivia_pregunta_text"
         android:paddingTop="30dp"
@@ -27,52 +32,67 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
-        <RadioGroup
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <RadioButton
-                android:id="@+id/opcion1"
+            android:layout_height="match_parent">
+
+
+            <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:background="@drawable/custom_button_background"
-                android:button="@android:color/transparent"
-                android:paddingTop="20dp"
-                android:textColor="@color/White"
-                android:text="@string/vacio"
-                />
-            <RadioButton
-                android:id="@+id/opcion2"
-                android:padding="10dp"
-                android:background="@drawable/custom_button_background"
-                android:button="@android:color/transparent"
-                android:layout_width="match_parent"
+                android:orientation="vertical">
+                <RadioButton
+                    android:id="@+id/opcion1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:background="@drawable/custom_button_background"
+                    android:button="@android:color/transparent"
+                    android:paddingTop="20dp"
+                    android:textColor="@color/White"
+                    android:text="@string/vacio"
+                    />
+                <RadioButton
+                    android:id="@+id/opcion2"
+                    android:padding="10dp"
+                    android:background="@drawable/custom_button_background"
+                    android:button="@android:color/transparent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/White"
+                    android:text="@string/vacio"
+                    />
+                <RadioButton
+                    android:id="@+id/opcion3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_button_background"
+                    android:button="@android:color/transparent"
+                    android:padding="10dp"
+                    android:textColor="@color/White"
+                    android:text="@string/vacio"
+                    />
+                <RadioButton
+                    android:id="@+id/opcion4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_button_background"
+                    android:button="@android:color/transparent"
+                    android:padding="10dp"
+                    android:textColor="@color/White"
+                    android:text="@string/vacio"
+                    />
+            </RadioGroup>
+            <Button
+                android:id="@+id/checkAnswer"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/White"
-                android:text="@string/vacio"
+                android:onClick="btnClickTrivia"
+                android:layout_gravity="end"
+                android:text="@string/ver_respuesta"
                 />
-            <RadioButton
-                android:id="@+id/opcion3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/custom_button_background"
-                android:button="@android:color/transparent"
-                android:padding="10dp"
-                android:textColor="@color/White"
-                android:text="@string/vacio"
-                />
-            <RadioButton
-                android:id="@+id/opcion4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/custom_button_background"
-                android:button="@android:color/transparent"
-                android:padding="10dp"
-                android:textColor="@color/White"
-                android:text="@string/vacio"
-                />
-        </RadioGroup>
+        </LinearLayout>
+
     </ScrollView>
 </LinearLayout>

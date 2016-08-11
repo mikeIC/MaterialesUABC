@@ -18,11 +18,10 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Spinner;
+
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity{
-
     private String[] titles;
     private ListView drawerList;
     private DrawerLayout drawerLayout;
@@ -31,10 +30,7 @@ public class MainActivity extends AppCompatActivity{
     private Menu menuAux;
     private int materiaSeleccionada;
     private int unidadSeleccionada;
-    private Spinner spinnerMaterias;
-    private Spinner spinnerUnidades;
     private MenuItem item1;
-
 
     private class DrawerItemClickListener implements ListView.OnItemClickListener {
         @Override
@@ -42,8 +38,6 @@ public class MainActivity extends AppCompatActivity{
             selectItem(position);
         }
     };
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,10 +55,6 @@ public class MainActivity extends AppCompatActivity{
         if (savedInstanceState != null) {
             currentPosition = savedInstanceState.getInt("position");
             setActionBarTitle(currentPosition);
-//            if(currentPosition == 0){
-//                inicializarSpinners();
-//            }
-
         } else {
             selectItem(0);
         }
@@ -106,8 +96,6 @@ public class MainActivity extends AppCompatActivity{
                     }
                 }
         );
-
-
     }
 
     @Override
@@ -130,6 +118,8 @@ public class MainActivity extends AppCompatActivity{
             menu.findItem(R.id.action_edit).setVisible(true);
             if(drawerOpen){
                 menu.findItem(R.id.action_edit).setVisible(false);
+            }else{
+                menu.findItem(R.id.action_edit).setVisible(true);
             }
         }else{
             menu.findItem(R.id.action_edit).setVisible(false);
@@ -137,19 +127,12 @@ public class MainActivity extends AppCompatActivity{
         return super.onPrepareOptionsMenu(menu);
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_inicial,menu);
-        menuAux = menu;
-        item1 = menuAux.findItem(R.id.action_edit);
-//        item1.setVisible(false);
-        return super.onCreateOptionsMenu(menu);
-    }
-
+    //Cambiar de fragmento con la posicion de la opcion seleccionada
     private void selectItem(int position){
         Fragment fragment=null;
         currentPosition = position;
         setActionBarTitle(position);
+
         switch(position) {
             case 0:
                 fragment = new HomeFragment();
@@ -160,8 +143,6 @@ public class MainActivity extends AppCompatActivity{
             case 2:
                 fragment = new MateriasListFragment();
                 break;
-            case 3:
-                fragment = new PerfilEditarFragment();
             default:
 //                fragment = new TopFragment();
         }
@@ -171,67 +152,66 @@ public class MainActivity extends AppCompatActivity{
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
         ft.commit();
         //Set the action bar title
-
         setActionBarTitle(position);
         //Close drawer
         drawerLayout.closeDrawer(drawerList);
 
     }
+
+    //Cambair el titulo del menu
     private void setActionBarTitle(int position) {
         String title;
         if (position == 0){
             title = getResources().getString(R.string.app_name);
             getSupportActionBar().setIcon(R.drawable.book);
 
-        } else if(position<3){
+        } else {
             title = titles[position];
-        }else if(position ==3){
-            title = getString(R.string.perfil_editar);
-        }else{
-            title = getString(R.string.trivia);
         }
         changeActionBarIcons(position);
         getSupportActionBar().setTitle(title);
     }
 
+
     @Override
     public void onSaveInstanceState(Bundle outState) {
-
         super.onSaveInstanceState(outState);
         outState.putInt("position", currentPosition);
     }
 
+    //Cambiar Icono de menu
     private void changeActionBarIcons(int position){
         switch(position) {
-            case 1:
-                //PERFIL
+            case 1://PERFIL
                 getSupportActionBar().setIcon(R.drawable.person);
-
                 break;
-            case 2:
-                //Informacion
+            case 2://Informacion
                 getSupportActionBar().setIcon(R.drawable.school);
-
                 break;
             default:
         }
     }
 
-//    @Override
-//    protected void onResume() {
-//        super.onResume();
-//
-//    }
 
+    //Al crear el menu:
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_inicial,menu);
+        menuAux = menu;
+        item1 = menuAux.findItem(R.id.action_edit);
+//        item1.setVisible(false);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    //Al seleccionar una opcion del Menu
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
-
         if(item.getItemId() == R.id.action_edit){
-            selectItem(3);
+            //Iniciar Actividad Editar Perfil
+            Intent intent = new Intent(MainActivity.this,PerfilEditarActivity.class);
+            startActivity(intent);
         }
-        if (drawerToggle.onOptionsItemSelected(item)) {
-            return true;
-        }
+        if (drawerToggle.onOptionsItemSelected(item)) {return true;}
         return false;
     }
 }

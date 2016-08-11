@@ -11,7 +11,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class MaterialesUABCDatabaseHelper extends SQLiteOpenHelper {
 
     private static final String DB_NAME = "MaterialesUABC"; //El nombre de la base de datos
-    private static final int DB_VERSION = 4; // La version de la base de datos
+    private static final int DB_VERSION = 5; // La version de la base de datos
 
 
     public MaterialesUABCDatabaseHelper(Context context){
@@ -26,21 +26,46 @@ public class MaterialesUABCDatabaseHelper extends SQLiteOpenHelper {
 
     }
     private void updateMyDataBase(SQLiteDatabase db, int oldVersion, int newVersion){
+        if(oldVersion<0){
+
+        }
 
         if(oldVersion< 4){
-//            db.execSQL("DROP TABLE USUARIO");
-//            db.execSQL("DROP TABLE PREGUNTA");
+
+
+        }
+        if(oldVersion<=4){
+                        db.execSQL("DROP TABLE USUARIO");
+            db.execSQL("DROP TABLE PREGUNTA");
 
             db.execSQL("CREATE TABLE USUARIO(_id INTEGER PRIMARY KEY AUTOINCREMENT," +
                     "NAME TEXT," +
                     "LASTNAME TEXT," +
                     "IMAGE_RESOURCE_ID INTEGER);");
             db.execSQL("CREATE TABLE PREGUNTA(_id INTEGER PRIMARY KEY AUTOINCREMENT," +
-                    "NAME TEXT," +
+                    "MATERIA TEXT" +
+                    "UNIDAD TEXT," +
                     "PREGUNTA TEXT," +
                     "RESPUESTA TEXT);");
 
+            insertPregunta(db,"Materia1","Unidad1","pregunta1","respuesta1");
+            insertPregunta(db,"Materia1","Unidad1","pregunta2","respuesta2");
+            insertPregunta(db,"Materia1","Unidad1","pregunta3","respuesta3");
+            insertPregunta(db,"Materia1","Unidad1","pregunta4","respuesta4");
+            insertPregunta(db,"Materia1","Unidad1","pregunta5","respuesta5");
 
+            insertPregunta(db,"Materia1","Unidad2","pregunta1","respuesta1");
+            insertPregunta(db,"Materia1","Unidad2","pregunta2","respuesta2");
+            insertPregunta(db,"Materia1","Unidad2","pregunta3","respuesta3");
+            insertPregunta(db,"Materia1","Unidad2","pregunta4","respuesta4");
+            insertPregunta(db,"Materia1","Unidad2","pregunta5","respuesta5");
+
+            insertPregunta(db,"Materia1","Unidad3","pregunta1","respuesta1");
+            insertPregunta(db,"Materia1","Unidad3","pregunta2","respuesta2");
+            insertPregunta(db,"Materia1","Unidad3","pregunta3","respuesta3");
+            insertPregunta(db,"Materia1","Unidad3","pregunta4","respuesta4");
+            insertPregunta(db,"Materia1","Unidad3","pregunta5","respuesta5");
+        }
 //            insertPregunta(db,"Unidad1","pregunta1","hola");
 //            insertUsuario(db,"mike","montiel",R.mipmap.ic_launcher);
 //            insert
@@ -64,7 +89,7 @@ public class MaterialesUABCDatabaseHelper extends SQLiteOpenHelper {
 //            insertProducto(db,"Frijoles","7Eleven",14,0,R.drawable.frijoles);
 //            insertProducto(db,"Jamon","7Eleven",16,0,R.drawable.jamon);
 //            insertProducto(db,"Salchicha","7Eleven",17,0,R.drawable.salchicha);
-        }
+
     }
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
@@ -78,9 +103,10 @@ public class MaterialesUABCDatabaseHelper extends SQLiteOpenHelper {
         usuarioValues.put("IMAGE_RESOURCE_ID",resourceId);
         db.insert("USUARIO",null,usuarioValues);
     }
-    public void insertPregunta(SQLiteDatabase db, String name, String pregunta, String respuesta) {
+    public void insertPregunta(SQLiteDatabase db,String materia, String unidad, String pregunta, String respuesta) {
         ContentValues preguntaValues = new ContentValues();
-        preguntaValues.put("NAME", name);
+        preguntaValues.put("MATERIA",materia);
+        preguntaValues.put("UNIDAD", unidad);
         preguntaValues.put("PREGUNTA", pregunta);
         preguntaValues.put("RESPUESTA", respuesta);
         db.insert("PREGUNTA", null, preguntaValues);

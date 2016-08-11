@@ -1,6 +1,8 @@
 package com.example.android.materialesuabc;
 
 
+import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.LayoutInflater;
@@ -8,17 +10,21 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements View.OnClickListener{
     private int materiaSeleccionada;
     private int unidadSeleccionada;
     public Spinner spinnerMaterias;
     public Spinner spinnerUnidades;
+    public Button botonStartTrivia;
+
 
     public HomeFragment() {
         // Required empty public constructor
@@ -48,17 +54,14 @@ public class HomeFragment extends Fragment {
     }
 
     @Override
-    public void onResume() {
-        super.onResume();
-
-    }
-
-    @Override
     public void onStart() {
         super.onStart();
         View view = getView();
         spinnerMaterias = (Spinner) view.findViewById(R.id.spinner_materias);
         spinnerUnidades = (Spinner) view.findViewById(R.id.spinner_unidad);
+        botonStartTrivia = (Button) view.findViewById(R.id.button_start_trivia);
+
+        botonStartTrivia.setOnClickListener(this);
 
         ArrayAdapter<CharSequence> adapterMaterias;
         adapterMaterias = ArrayAdapter.createFromResource(view.getContext(), R.array.materias_list,
@@ -100,6 +103,17 @@ public class HomeFragment extends Fragment {
             }
 
         });
+    }
+
+    @Override
+    public void onClick(View view) {
+        Toast.makeText(getActivity(), "clicked", Toast.LENGTH_SHORT).show();
+        if(view.getId() == R.id.button_start_trivia){
+            Intent intent = new Intent(getActivity(),TriviaActivity.class);
+            intent.putExtra("materia",materiaSeleccionada);
+            intent.putExtra("unidad",unidadSeleccionada);
+            startActivity(intent);
+        }
 
     }
 }

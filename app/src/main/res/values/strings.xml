@@ -46,4 +46,6 @@
     <string name="unidad">Unidad:</string>
     <string name="perfil_editar">Editar Perfil</string>
     <string name="trivia">Trivia</string>
+    <string name="ver_respuesta">Ver Respuesta</string>
+    <string name="siguiente">Siguiente</string>
 </resources>
