@@ -17,7 +17,6 @@ public class TriviaFragment extends Fragment{
     private int numeroFragment;
     private TextView numeroPregunta;
 
-
     public TriviaFragment() {
         // Required empty public constructor
     }

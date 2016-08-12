@@ -57,6 +57,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
     public void onStart() {
         super.onStart();
         View view = getView();
+        assert view != null;
         spinnerMaterias = (Spinner) view.findViewById(R.id.spinner_materias);
         spinnerUnidades = (Spinner) view.findViewById(R.id.spinner_unidad);
         botonStartTrivia = (Button) view.findViewById(R.id.button_start_trivia);

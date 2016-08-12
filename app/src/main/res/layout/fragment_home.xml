@@ -1,12 +1,9 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.android.materialesuabc.HomeFragment">
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -16,7 +13,7 @@
                 android:layout_height="wrap_content"
                 android:padding="10dp"
                 android:textStyle="bold"
-                android:textSize="15dp"
+                android:textSize="15sp"
                 android:gravity="start"
                 android:text="@string/materia"
                 />
@@ -26,7 +23,10 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:padding="5dp"
-                android:spinnerMode="dialog" />
+
+                android:spinnerMode="dropdown"
+                android:clickable="false"
+                android:focusable="true" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -35,7 +35,7 @@
                 android:gravity="start"
                 android:text="@string/unidad"
                 android:textStyle="bold"
-                android:textSize="15dp"
+                android:textSize="15sp"
                 />
 
             <Spinner
@@ -43,6 +43,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
+                android:background="@drawable/border"
                 android:spinnerMode="dialog"
                 android:padding="5dp"
                 />
@@ -57,13 +58,10 @@
                     android:layout_width="160dp"
                     android:layout_height="80dp"
                     android:layout_gravity="center_horizontal"
-                    android:text="¡Trivia!"
-                    android:textSize="35dp"
+                    android:text="@string/trivia"
+                    android:textSize="35sp"
                     android:textStyle="bold|italic"
                     />
             </LinearLayout>
         </LinearLayout>
-    </ScrollView>
-
-
-</LinearLayout>
+</ScrollView>

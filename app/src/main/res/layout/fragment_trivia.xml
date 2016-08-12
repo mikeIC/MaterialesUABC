@@ -1,9 +1,11 @@
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="8dp"
+
     tools:context="com.example.android.materialesuabc.TriviaFragment">
 
     <TextView
@@ -12,6 +14,8 @@
         android:layout_height="wrap_content"
         android:text="@string/numero_pregunta"
         android:layout_gravity="end"
+        android:textStyle="bold|italic"
+        android:textColor="@color/Green3"
         />
     <TextView
         android:id="@+id/trivia_pregunta_text"
@@ -32,65 +36,64 @@
         />
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <RadioGroup
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
                 android:orientation="vertical">
                 <RadioButton
                     android:id="@+id/opcion1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:background="@drawable/custom_button_background"
-                    android:button="@android:color/transparent"
-                    android:paddingTop="20dp"
-                    android:textColor="@color/White"
+                    style="@style/RadioButtonStyle"
                     android:text="@string/vacio"
                     />
                 <RadioButton
                     android:id="@+id/opcion2"
-                    android:padding="10dp"
-                    android:background="@drawable/custom_button_background"
-                    android:button="@android:color/transparent"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/White"
                     android:text="@string/vacio"
+                    style="@style/RadioButtonStyle"
                     />
                 <RadioButton
                     android:id="@+id/opcion3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/custom_button_background"
-                    android:button="@android:color/transparent"
-                    android:padding="10dp"
-                    android:textColor="@color/White"
                     android:text="@string/vacio"
+                    style="@style/RadioButtonStyle"
                     />
                 <RadioButton
                     android:id="@+id/opcion4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/custom_button_background"
-                    android:button="@android:color/transparent"
-                    android:padding="10dp"
-                    android:textColor="@color/White"
                     android:text="@string/vacio"
+                    style="@style/RadioButtonStyle"
                     />
             </RadioGroup>
-            <Button
-                android:id="@+id/checkAnswer"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="btnClickTrivia"
-                android:layout_gravity="end"
-                android:text="@string/ver_respuesta"
-                />
+                android:paddingTop="30dp"
+                android:gravity="bottom|end"
+                >
+                <Button
+                    android:id="@+id/checkAnswer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:onClick="btnClickTrivia"
+                    android:layout_gravity="end|bottom"
+                    android:text="@string/ver_respuesta"
+                    />
+
+            </LinearLayout>
         </LinearLayout>
 
     </ScrollView>
