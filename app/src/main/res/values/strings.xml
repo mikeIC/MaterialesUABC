@@ -48,4 +48,6 @@
     <string name="trivia">Trivia</string>
     <string name="ver_respuesta">Ver Respuesta</string>
     <string name="siguiente">Siguiente</string>
+    <string name="numero_pregunta">Numero Pregunta</string>
+    <string name="anterior">Anterior</string>
 </resources>

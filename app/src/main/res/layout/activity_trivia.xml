@@ -10,46 +10,43 @@
     android:orientation="vertical"
     tools:context="com.example.android.materialesuabc.TriviaActivity">
 
-    <FrameLayout
-        android:id="@+id/pregunta_frame_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    </FrameLayout>
-    <!--<android.support.v4.view.ViewPager-->
-        <!--android:id="@+id/viewpagerPregunta"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"></android.support.v4.view.ViewPager>-->
-
-
-    <LinearLayout
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpagerPregunta"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
-        <Button
-            android:id="@+id/lastFragment"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:onClick="btnClickTrivia"
-            android:padding="15dp"
-            android:text="Anterior"
-            />
-        <Button
-            android:id="@+id/nextFragment"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:padding="15dp"
-            android:onClick="btnClickTrivia"
 
-            android:text="@string/siguiente"
-            />
+        />
 
 
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--&gt;-->
+        <!--<Button-->
+            <!--android:id="@+id/lastFragment"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:onClick="btnClickTrivia"-->
+            <!--android:padding="15dp"-->
+            <!--android:text="@string/anterior"-->
+            <!--/>-->
+        <!--<Button-->
+            <!--android:id="@+id/nextFragment"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:padding="15dp"-->
+            <!--android:onClick="btnClickTrivia"-->
 
-    </LinearLayout>
+            <!--android:text="@string/siguiente"-->
+            <!--/>-->
+
+
+
+    <!--</LinearLayout>-->
 
 
 

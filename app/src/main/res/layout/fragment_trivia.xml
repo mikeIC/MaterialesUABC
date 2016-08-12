@@ -1,7 +1,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="8dp"
     tools:context="com.example.android.materialesuabc.TriviaFragment">
@@ -10,14 +10,15 @@
         android:id="@+id/tvNumeroPregunta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="num_pregunta"
+        android:text="@string/numero_pregunta"
+        android:layout_gravity="end"
         />
     <TextView
         android:id="@+id/trivia_pregunta_text"
-        android:paddingTop="30dp"
-        android:paddingBottom="30dp"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/pregunta" />
@@ -26,8 +27,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/escoje_una_opcion"
-        android:padding="5dp"
-        android:paddingBottom="30dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="5dp"
         />
     <ScrollView
         android:layout_width="match_parent"
@@ -35,9 +36,7 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-
+            android:layout_height="wrap_content">
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
