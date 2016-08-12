@@ -39,7 +39,7 @@
     <string name="nombre">Nombre:</string>
 
     <string name="materia">Materia:</string>
-    <string name="pregunta">...Pregunta...</string>
+    <string name="pregunta">Pregunta Aqui</string>
     <string name="escoje_una_opcion">Escoje Una Opcion:</string>
     <string name="open_drawer">Open Drawer</string>
     <string name="close_drawer">Close Drawer</string>
@@ -48,4 +48,13 @@
     <string name="trivia">Trivia</string>
     <string name="ver_respuesta">Ver Respuesta</string>
     <string name="siguiente">Siguiente</string>
+    <string name="numero_pregunta">Numero Pregunta</string>
+    <string name="anterior">Anterior</string>
+    <string name="reloj">Reloj</string>
+    <string name="finalizar">Finalizar</string>
+    <string name="cancel">cancelar</string>
+    <string name="ok">OK</string>
+    <string name="salir">Salir</string>
+    <string name="seguro">¿Estas seguro?</string>
+    <string name="alerta">!Alerta!</string>
 </resources>

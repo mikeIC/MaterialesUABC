@@ -57,6 +57,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
     public void onStart() {
         super.onStart();
         View view = getView();
+        assert view != null;
         spinnerMaterias = (Spinner) view.findViewById(R.id.spinner_materias);
         spinnerUnidades = (Spinner) view.findViewById(R.id.spinner_unidad);
         botonStartTrivia = (Button) view.findViewById(R.id.button_start_trivia);
@@ -109,6 +110,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
     public void onClick(View view) {
         Toast.makeText(getActivity(), "clicked", Toast.LENGTH_SHORT).show();
         if(view.getId() == R.id.button_start_trivia){
+//            Intent intent = new Intent(getActivity(),ScreenSlidePagerActivity.class);
             Intent intent = new Intent(getActivity(),TriviaActivity.class);
             intent.putExtra("materia",materiaSeleccionada);
             intent.putExtra("unidad",unidadSeleccionada);

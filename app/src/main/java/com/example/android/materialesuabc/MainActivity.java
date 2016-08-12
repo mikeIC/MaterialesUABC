@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity{
         public void onItemClick(AdapterView<?> parent, View view, int position, long id){
             selectItem(position);
         }
-    };
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity{
         materiaSeleccionada = 0;
         unidadSeleccionada = 0;
 
-        drawerList.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_activated_1, titles));
+        drawerList.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_activated_1, titles));
         drawerList.setOnItemClickListener(new DrawerItemClickListener());
 
         if (savedInstanceState != null) {
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity{
                 invalidateOptionsMenu();
             }
         };
-        drawerLayout.setDrawerListener(drawerToggle);
+        drawerLayout.addDrawerListener(drawerToggle);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
@@ -192,7 +192,6 @@ public class MainActivity extends AppCompatActivity{
         }
     }
 
-
     //Al crear el menu:
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -211,7 +210,6 @@ public class MainActivity extends AppCompatActivity{
             Intent intent = new Intent(MainActivity.this,PerfilEditarActivity.class);
             startActivity(intent);
         }
-        if (drawerToggle.onOptionsItemSelected(item)) {return true;}
-        return false;
+        return drawerToggle.onOptionsItemSelected(item);
     }
 }

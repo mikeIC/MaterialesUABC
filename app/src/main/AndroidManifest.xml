@@ -22,11 +22,11 @@
         <activity
             android:name=".PerfilActivity"
             android:label="@string/perfil"
-            android:parentActivityName=".MainActivity"></activity>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".PerfilEditarActivity"
             android:label="@string/editar"
-            android:parentActivityName=".PerfilActivity"></activity>
+            android:parentActivityName=".PerfilActivity" />
         <!-- android:label="Perfil" -->
         <!-- android:parentActivityName=".MainActivity" /> -->
         <activity
@@ -38,7 +38,10 @@
             android:name=".MateriasActivity"
             android:label="Materias"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".TriviaActivity"></activity>
+        <activity android:name=".TriviaActivity"
+            android:label="Trivia"
+            />
+        <activity android:name=".ScreenSlidePagerActivity"></activity>
     </application>
 
 </manifest>
