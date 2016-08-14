@@ -21,7 +21,6 @@ public class MaterialesUABCDatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         updateMyDataBase(db,0,DB_VERSION);
 
-
     }
     private void updateMyDataBase(SQLiteDatabase db, int oldVersion, int newVersion){
 
