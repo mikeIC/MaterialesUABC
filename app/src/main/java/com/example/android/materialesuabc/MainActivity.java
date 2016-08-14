@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity{
                         if (fragment instanceof PerfilFragment) {
                             currentPosition = 1;
                         }
-                        if (fragment instanceof MateriasListFragment) {
+                        if (fragment instanceof InformacionFragment) {
                             currentPosition = 2;
                         }
                         setActionBarTitle(currentPosition);
@@ -141,7 +141,7 @@ public class MainActivity extends AppCompatActivity{
                 fragment = new PerfilFragment();
                 break;
             case 2:
-                fragment = new MateriasListFragment();
+                fragment = new InformacionFragment();
                 break;
             default:
 //                fragment = new TopFragment();

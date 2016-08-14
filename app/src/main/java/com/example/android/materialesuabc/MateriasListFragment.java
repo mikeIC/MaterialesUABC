@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -27,10 +28,14 @@ public class MateriasListFragment extends ListFragment {
                              Bundle savedInstanceState) {
         setHasOptionsMenu(true);
         String [] optionsName = getResources().getStringArray(R.array.materias_list);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String >(inflater.getContext(),android.R.layout.simple_list_item_1,optionsName);
+        ArrayAdapter<String> adapter = new ArrayAdapter< >(inflater.getContext(),android.R.layout.simple_list_item_1,optionsName);
         setListAdapter(adapter);
 
         return super.onCreateView(inflater, container,savedInstanceState);
+    }
+    @Override
+    public void onListItemClick(ListView l , View v , int position, long id){
+        Toast.makeText(getActivity(), "Clicked List", Toast.LENGTH_SHORT).show();
     }
 
 

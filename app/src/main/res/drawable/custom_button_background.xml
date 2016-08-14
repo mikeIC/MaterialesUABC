@@ -3,24 +3,30 @@
     <item android:state_pressed="true" >
         <shape android:shape="rectangle" >
             <corners android:radius="3dip" />
-            <stroke android:width="1dip" android:color="@color/lightBlue" />
-            <solid android:color="@color/lightBlue" />
+            <stroke android:width="1dip" android:color="@color/Green2" />
+            <solid android:color="@color/Green" />
+            <padding android:left="10dp"
+                android:right="10dp"/>
         </shape>
     </item>
 
     <item android:state_checked="true">
         <shape android:shape="rectangle" >
             <corners android:radius="3dip" />
-            <stroke android:width="1dip" android:color="@color/lightBlue" />
-            <solid android:color="@color/lightBlue" />
+            <stroke android:width="1dip" android:color="@color/Green3" />
+            <solid android:color="@color/Green2" />
+            <padding android:left="10dp"
+                android:right="10dp"/>
         </shape>
     </item>
 
     <item>
         <shape android:shape="rectangle"  >
             <corners android:radius="3dip" />
-            <stroke android:width="2dip" android:color="@color/White" />
-            <solid android:color="@color/Grey" />
+            <stroke android:width="2dip" android:color="@color/Green2" />
+            <solid android:color="@color/White" />
+            <padding android:left="10dp"
+                android:right="10dp"/>
         </shape>
 
     </item>

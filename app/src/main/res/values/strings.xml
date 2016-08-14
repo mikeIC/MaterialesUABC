@@ -57,4 +57,5 @@
     <string name="salir">Salir</string>
     <string name="seguro">¿Estas seguro?</string>
     <string name="alerta">!Alerta!</string>
+    <string name="link_pagina">Link a Pagina</string>
 </resources>

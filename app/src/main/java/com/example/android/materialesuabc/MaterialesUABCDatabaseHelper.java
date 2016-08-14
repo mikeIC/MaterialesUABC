@@ -5,13 +5,11 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-/**
- * Created by mike on 2/08/16.
- */
+
 public class MaterialesUABCDatabaseHelper extends SQLiteOpenHelper {
 
     private static final String DB_NAME = "MaterialesUABC"; //El nombre de la base de datos
-    private static final int DB_VERSION = 5; // La version de la base de datos
+    private static final int DB_VERSION = 9; // La version de la base de datos
 
 
     public MaterialesUABCDatabaseHelper(Context context){
@@ -26,16 +24,9 @@ public class MaterialesUABCDatabaseHelper extends SQLiteOpenHelper {
 
     }
     private void updateMyDataBase(SQLiteDatabase db, int oldVersion, int newVersion){
-        if(oldVersion<0){
 
-        }
-
-        if(oldVersion< 4){
-
-
-        }
-        if(oldVersion<=4){
-                        db.execSQL("DROP TABLE USUARIO");
+        if(oldVersion<=7){
+            db.execSQL("DROP TABLE USUARIO");
             db.execSQL("DROP TABLE PREGUNTA");
 
             db.execSQL("CREATE TABLE USUARIO(_id INTEGER PRIMARY KEY AUTOINCREMENT," +
@@ -43,7 +34,7 @@ public class MaterialesUABCDatabaseHelper extends SQLiteOpenHelper {
                     "LASTNAME TEXT," +
                     "IMAGE_RESOURCE_ID INTEGER);");
             db.execSQL("CREATE TABLE PREGUNTA(_id INTEGER PRIMARY KEY AUTOINCREMENT," +
-                    "MATERIA TEXT" +
+                    "MATERIA TEXT," +
                     "UNIDAD TEXT," +
                     "PREGUNTA TEXT," +
                     "RESPUESTA TEXT);");
@@ -65,30 +56,50 @@ public class MaterialesUABCDatabaseHelper extends SQLiteOpenHelper {
             insertPregunta(db,"Materia1","Unidad3","pregunta3","respuesta3");
             insertPregunta(db,"Materia1","Unidad3","pregunta4","respuesta4");
             insertPregunta(db,"Materia1","Unidad3","pregunta5","respuesta5");
+
         }
-//            insertPregunta(db,"Unidad1","pregunta1","hola");
-//            insertUsuario(db,"mike","montiel",R.mipmap.ic_launcher);
-//            insert
-//            insertTienda(db,"Oxxo","Ave.Revolucion",R.drawable.oxxo_logo);
-//            insertTienda(db,"7Eleven","Ave.Constitucion",R.drawable.eleven_logo);
-//
-//            insertProducto(db,"Arroz","Oxxo",8,0,R.drawable.arrozpic);
-//            insertProducto(db,"Leche","Oxxo",15,0,R.drawable.leche);
-//            insertProducto(db,"Frijoles","Oxxo",6,0,R.drawable.frijoles);
-//            insertProducto(db,"Jamon","Oxxo",66,0,R.drawable.jamon);
-//            insertProducto(db,"Salchicha","Oxxo",26,0,R.drawable.salchicha);
-//
-//            insertProducto(db,"Arroz","Calimax",16,0,R.drawable.arrozpic);
-//            insertProducto(db,"Leche","Calimax",16,0,R.drawable.leche);
-//            insertProducto(db,"Frijoles","Calimax",16,0,R.drawable.frijoles);
-//            insertProducto(db,"Jamon","Calimax",16,0,R.drawable.jamon);
-//            insertProducto(db,"Salchicha","Calimax",16,0,R.drawable.salchicha);
-//
-//            insertProducto(db,"Arroz","7Eleven",18,0,R.drawable.arrozpic);
-//            insertProducto(db,"Leche","Eleven",10,0,R.drawable.leche);
-//            insertProducto(db,"Frijoles","7Eleven",14,0,R.drawable.frijoles);
-//            insertProducto(db,"Jamon","7Eleven",16,0,R.drawable.jamon);
-//            insertProducto(db,"Salchicha","7Eleven",17,0,R.drawable.salchicha);
+        if(oldVersion <=8){
+            //***************************************INICIO PREGUNTAS UNIDAD 2
+            insertPregunta(db,"Materia2","Unidad1","pregunta1","respuesta1");
+            insertPregunta(db,"Materia2","Unidad1","pregunta2","respuesta2");
+            insertPregunta(db,"Materia2","Unidad1","pregunta3","respuesta3");
+            insertPregunta(db,"Materia2","Unidad1","pregunta4","respuesta4");
+            insertPregunta(db,"Materia2","Unidad1","pregunta5","respuesta5");
+
+            insertPregunta(db,"Materia2","Unidad2","pregunta1","respuesta1");
+            insertPregunta(db,"Materia2","Unidad2","pregunta2","respuesta2");
+            insertPregunta(db,"Materia2","Unidad2","pregunta3","respuesta3");
+            insertPregunta(db,"Materia2","Unidad2","pregunta4","respuesta4");
+            insertPregunta(db,"Materia2","Unidad2","pregunta5","respuesta5");
+
+            insertPregunta(db,"Materia2","Unidad3","pregunta1","respuesta1");
+            insertPregunta(db,"Materia2","Unidad3","pregunta2","respuesta2");
+            insertPregunta(db,"Materia2","Unidad3","pregunta3","respuesta3");
+            insertPregunta(db,"Materia2","Unidad3","pregunta4","respuesta4");
+            insertPregunta(db,"Materia2","Unidad3","pregunta5","respuesta5");
+            //******************************************FIN PREGUNTAS UNIDAD 2
+
+            //***************************************INICIO PREGUNTAS UNIDAD 3
+            insertPregunta(db,"Materia3","Unidad1","pregunta1","respuesta1");
+            insertPregunta(db,"Materia3","Unidad1","pregunta2","respuesta2");
+            insertPregunta(db,"Materia3","Unidad1","pregunta3","respuesta3");
+            insertPregunta(db,"Materia3","Unidad1","pregunta4","respuesta4");
+            insertPregunta(db,"Materia3","Unidad1","pregunta5","respuesta5");
+
+            insertPregunta(db,"Materia3","Unidad2","pregunta1","respuesta1");
+            insertPregunta(db,"Materia3","Unidad2","pregunta2","respuesta2");
+            insertPregunta(db,"Materia3","Unidad2","pregunta3","respuesta3");
+            insertPregunta(db,"Materia3","Unidad2","pregunta4","respuesta4");
+            insertPregunta(db,"Materia3","Unidad2","pregunta5","respuesta5");
+
+            insertPregunta(db,"Materia3","Unidad3","pregunta1","respuesta1");
+            insertPregunta(db,"Materia3","Unidad3","pregunta2","respuesta2");
+            insertPregunta(db,"Materia3","Unidad3","pregunta3","respuesta3");
+            insertPregunta(db,"Materia3","Unidad3","pregunta4","respuesta4");
+            insertPregunta(db,"Materia3","Unidad3","pregunta5","respuesta5");
+            //******************************************FIN PREGUNTAS UNIDAD 3
+        }
+
 
     }
     @Override

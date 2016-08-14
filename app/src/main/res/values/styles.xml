@@ -31,7 +31,7 @@
         <item name="android:paddingTop">@dimen/padding_top_radio_button</item>
         <item name="android:paddingBottom">@dimen/padding_bottom_radio_button</item>
         <item name="android:background">@drawable/custom_button_background</item>
-        <item name="android:textColor">@color/White</item>
+        <item name="android:textColor">@color/Green3</item>
         <item name="android:button">@android:color/transparent</item>
     </style>
 

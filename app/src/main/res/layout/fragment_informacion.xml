@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.materialesuabc.InformacionFragment">
+    <FrameLayout android:id="@+id/frame_lista_materias"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="30dp"
+    />
+    <TextView
+        android:id="@+id/tv_link_pagina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold|italic"
+        android:background="@drawable/custom_button_background"
+        android:text="@string/link_pagina"
+        android:layout_gravity="center_horizontal"
+
+        />
+
+</LinearLayout>

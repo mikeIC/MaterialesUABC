@@ -2,6 +2,10 @@ package com.example.android.materialesuabc;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteException;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.support.v4.app.Fragment;
 import android.app.FragmentTransaction;
 import android.support.v4.app.FragmentActivity;
@@ -28,7 +32,7 @@ import android.os.Handler;
 
 public class TriviaActivity extends AppCompatActivity {
 
-    private static final int NUM_PAGES = 10;
+    private static final int NUM_PAGES = 5;
     private RadioButton opcion1;
     private RadioButton opcion2;
     private RadioButton opcion3;
@@ -47,6 +51,10 @@ public class TriviaActivity extends AppCompatActivity {
     private String time;
     private Button buttonView;
     private Boolean triviaEnded;
+    private int materiaEscojida;
+    private int unidadEscojida;
+    private String nombreMateria;
+    private String nombreUnidad;
 
 
     @Override
@@ -58,17 +66,37 @@ public class TriviaActivity extends AppCompatActivity {
         pagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(pagerAdapter);
         triviaEnded = false;
+        Intent intent = getIntent();
+        materiaEscojida =intent.getIntExtra("materia",-1);
+        unidadEscojida =intent.getIntExtra("unidad",-1);
 
-
+        switch (materiaEscojida){
+            case 0:nombreMateria = "Materia1";
+                break;
+            case 1:nombreMateria = "Materia2";
+                break;
+            case 2:nombreMateria = "Materia3";
+                break;
+            default:nombreMateria = getResources().getString(R.string.vacio);
+        }
+        switch (unidadEscojida){
+            case 0:nombreUnidad = "Unidad1";
+                break;
+            case 1:nombreUnidad = "Unidad2";
+                break;
+            case 2:nombreUnidad = "Unidad3";
+                break;
+            default:nombreUnidad = getResources().getString(R.string.vacio);
+        }
+        Toast.makeText(TriviaActivity.this, "materiaEscojida: "+materiaEscojida+" UnidadEscojida: "+unidadEscojida+" NombreMateria: "+nombreMateria+" Nombreunidad: "+nombreUnidad, Toast.LENGTH_LONG).show();
         if (savedInstanceState != null) {
             triviaEnded = savedInstanceState.getBoolean("trivia_ended");
             seconds = savedInstanceState.getInt("seconds");
             running = savedInstanceState.getBoolean("running");
             wasRunning = savedInstanceState.getBoolean("wasRunning");
-
+            unidadEscojida = savedInstanceState.getInt("materia");
+            materiaEscojida = savedInstanceState.getInt("unidad");
         }
-
-
     }
 
     @Override
@@ -77,8 +105,9 @@ public class TriviaActivity extends AppCompatActivity {
         savedInstanceState.putInt("seconds", seconds);
         savedInstanceState.putBoolean("running", running);
         savedInstanceState.putBoolean("wasRunning", wasRunning);
+        savedInstanceState.putInt("materia",materiaEscojida);
+        savedInstanceState.putInt("unidad",unidadEscojida);
     }
-
 
     @Override
     protected void onStop() {
@@ -170,13 +199,50 @@ public class TriviaActivity extends AppCompatActivity {
         public ScreenSlidePagerAdapter(FragmentManager fm) {
             super(fm);
         }
-
         @Override
         public Fragment getItem(int position) {
             TriviaFragment fragment = new TriviaFragment();
             Bundle bundle = new Bundle();
-            bundle.putInt("posicion",position);
+
+            try{
+                SQLiteOpenHelper materialesUABCDataBaseHelper = new MaterialesUABCDatabaseHelper(TriviaActivity.this);
+                SQLiteDatabase dataBaseMateriales = materialesUABCDataBaseHelper.getReadableDatabase();
+
+                Cursor cursorPregunta1 = dataBaseMateriales.query(
+                        "PREGUNTA",
+                        new String[]{"PREGUNTA","RESPUESTA"},
+                        "MATERIA = ? AND UNIDAD = ?",
+//                    "UNIDAD = ?",
+                        new String[]{nombreMateria,nombreUnidad},
+//                    new String[]{"Materia1","Unidad2"},
+                        null,
+                        null,
+                        null
+                );
+                if(cursorPregunta1.moveToFirst()){
+                    if(position >0 ){
+                        for (int i =0; i< position; i++){
+                            cursorPregunta1.moveToNext();
+                        }
+
+                    }
+
+                    bundle.putInt("posicion",position);
+                    bundle.putString("materia",nombreMateria);
+                    bundle.putString("unidad",nombreUnidad);
+                    bundle.putString("pregunta",cursorPregunta1.getString(0));
+                    bundle.putString("respuesta",cursorPregunta1.getString(1));
+
+                }
+                cursorPregunta1.close();
+                dataBaseMateriales.close();
+            }catch(SQLiteException e){
+                Toast.makeText(TriviaActivity.this, "SQL Error: "+e, Toast.LENGTH_LONG).show();
+            }
+
+
             fragment.setArguments(bundle);
+
             return fragment;
 //            return new TriviaFragment();
         }

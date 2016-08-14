@@ -7,7 +7,22 @@
     android:padding="8dp"
 
     tools:context="com.example.android.materialesuabc.TriviaFragment">
-
+    <TextView
+        android:id="@+id/tv_nombre_materia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:layout_gravity="start"
+        android:textColor="@color/Green3"
+        />
+    <TextView
+        android:id="@+id/tv_nombre_unidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:layout_gravity="start"
+        android:textColor="@color/Green3"
+        />
     <TextView
         android:id="@+id/tvNumeroPregunta"
         android:layout_width="wrap_content"
