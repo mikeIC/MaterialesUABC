@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class MaterialesUABCDatabaseHelper extends SQLiteOpenHelper {
 
     private static final String DB_NAME = "MaterialesUABC"; //El nombre de la base de datos
-    private static final int DB_VERSION = 9; // La version de la base de datos
+    private static final int DB_VERSION = 10; // La version de la base de datos
 
 
     public MaterialesUABCDatabaseHelper(Context context){
@@ -25,7 +25,7 @@ public class MaterialesUABCDatabaseHelper extends SQLiteOpenHelper {
     }
     private void updateMyDataBase(SQLiteDatabase db, int oldVersion, int newVersion){
 
-        if(oldVersion<=7){
+        if(oldVersion<=9){
             db.execSQL("DROP TABLE USUARIO");
             db.execSQL("DROP TABLE PREGUNTA");
 
@@ -39,64 +39,62 @@ public class MaterialesUABCDatabaseHelper extends SQLiteOpenHelper {
                     "PREGUNTA TEXT," +
                     "RESPUESTA TEXT);");
 
-            insertPregunta(db,"Materia1","Unidad1","pregunta1","respuesta1");
-            insertPregunta(db,"Materia1","Unidad1","pregunta2","respuesta2");
-            insertPregunta(db,"Materia1","Unidad1","pregunta3","respuesta3");
-            insertPregunta(db,"Materia1","Unidad1","pregunta4","respuesta4");
-            insertPregunta(db,"Materia1","Unidad1","pregunta5","respuesta5");
+            insertPregunta(db,"Materia1","Unidad1","pregunta1_m1_u1","respuesta1_m1_u1");
+            insertPregunta(db,"Materia1","Unidad1","pregunta2_m1_u1","respuesta2_m1_u1");
+            insertPregunta(db,"Materia1","Unidad1","pregunta3_m1_u1","respuesta3_m1_u1");
+            insertPregunta(db,"Materia1","Unidad1","pregunta4_m1_u1","respuesta4_m1_u1");
+            insertPregunta(db,"Materia1","Unidad1","pregunta5_m1_u1","respuesta5_m1_u1");
 
-            insertPregunta(db,"Materia1","Unidad2","pregunta1","respuesta1");
-            insertPregunta(db,"Materia1","Unidad2","pregunta2","respuesta2");
-            insertPregunta(db,"Materia1","Unidad2","pregunta3","respuesta3");
-            insertPregunta(db,"Materia1","Unidad2","pregunta4","respuesta4");
-            insertPregunta(db,"Materia1","Unidad2","pregunta5","respuesta5");
+            insertPregunta(db,"Materia1","Unidad2","pregunta1_m1_u2","respuesta1_m1_u2");
+            insertPregunta(db,"Materia1","Unidad2","pregunta2_m1_u2","respuesta2_m1_u2");
+            insertPregunta(db,"Materia1","Unidad2","pregunta3_m1_u2","respuesta3_m1_u2");
+            insertPregunta(db,"Materia1","Unidad2","pregunta4_m1_u2","respuesta4_m1_u2");
+            insertPregunta(db,"Materia1","Unidad2","pregunta5_m1_u2","respuesta5_m1_u2");
 
-            insertPregunta(db,"Materia1","Unidad3","pregunta1","respuesta1");
-            insertPregunta(db,"Materia1","Unidad3","pregunta2","respuesta2");
-            insertPregunta(db,"Materia1","Unidad3","pregunta3","respuesta3");
-            insertPregunta(db,"Materia1","Unidad3","pregunta4","respuesta4");
-            insertPregunta(db,"Materia1","Unidad3","pregunta5","respuesta5");
+            insertPregunta(db,"Materia1","Unidad3","pregunta1_m1_u3","respuesta1_m1_u3");
+            insertPregunta(db,"Materia1","Unidad3","pregunta2_m1_u3","respuesta2_m1_u3");
+            insertPregunta(db,"Materia1","Unidad3","pregunta3_m1_u3","respuesta3_m1_u3");
+            insertPregunta(db,"Materia1","Unidad3","pregunta4_m1_u3","respuesta4_m1_u3");
+            insertPregunta(db,"Materia1","Unidad3","pregunta5_m1_u3","respuesta5_m1_u3");
 
-        }
-        if(oldVersion <=8){
             //***************************************INICIO PREGUNTAS UNIDAD 2
-            insertPregunta(db,"Materia2","Unidad1","pregunta1","respuesta1");
-            insertPregunta(db,"Materia2","Unidad1","pregunta2","respuesta2");
-            insertPregunta(db,"Materia2","Unidad1","pregunta3","respuesta3");
-            insertPregunta(db,"Materia2","Unidad1","pregunta4","respuesta4");
-            insertPregunta(db,"Materia2","Unidad1","pregunta5","respuesta5");
+            insertPregunta(db,"Materia2","Unidad1","pregunta1_m2_u1","respuesta1_m2_u1");
+            insertPregunta(db,"Materia2","Unidad1","pregunta2_m2_u1","respuesta2_m2_u1");
+            insertPregunta(db,"Materia2","Unidad1","pregunta3_m2_u1","respuesta3_m2_u1");
+            insertPregunta(db,"Materia2","Unidad1","pregunta4_m2_u1","respuesta4_m2_u1");
+            insertPregunta(db,"Materia2","Unidad1","pregunta5_m2_u1","respuesta5_m2_u1");
 
-            insertPregunta(db,"Materia2","Unidad2","pregunta1","respuesta1");
-            insertPregunta(db,"Materia2","Unidad2","pregunta2","respuesta2");
-            insertPregunta(db,"Materia2","Unidad2","pregunta3","respuesta3");
-            insertPregunta(db,"Materia2","Unidad2","pregunta4","respuesta4");
-            insertPregunta(db,"Materia2","Unidad2","pregunta5","respuesta5");
+            insertPregunta(db,"Materia2","Unidad2","pregunta1_m2_u2","respuesta1_m2_u2");
+            insertPregunta(db,"Materia2","Unidad2","pregunta2_m2_u2","respuesta2_m2_u2");
+            insertPregunta(db,"Materia2","Unidad2","pregunta3_m2_u2","respuesta3_m2_u2");
+            insertPregunta(db,"Materia2","Unidad2","pregunta4_m2_u2","respuesta4_m2_u2");
+            insertPregunta(db,"Materia2","Unidad2","pregunta5_m2_u2","respuesta5_m2_u2");
 
-            insertPregunta(db,"Materia2","Unidad3","pregunta1","respuesta1");
-            insertPregunta(db,"Materia2","Unidad3","pregunta2","respuesta2");
-            insertPregunta(db,"Materia2","Unidad3","pregunta3","respuesta3");
-            insertPregunta(db,"Materia2","Unidad3","pregunta4","respuesta4");
-            insertPregunta(db,"Materia2","Unidad3","pregunta5","respuesta5");
+            insertPregunta(db,"Materia2","Unidad3","pregunta1_m2_u3","respuesta1_m2_u3");
+            insertPregunta(db,"Materia2","Unidad3","pregunta2_m2_u3","respuesta2_m2_u3");
+            insertPregunta(db,"Materia2","Unidad3","pregunta3_m2_u3","respuesta3_m2_u3");
+            insertPregunta(db,"Materia2","Unidad3","pregunta4_m2_u3","respuesta4_m2_u3");
+            insertPregunta(db,"Materia2","Unidad3","pregunta5_m2_u3","respuesta5_m2_u3");
             //******************************************FIN PREGUNTAS UNIDAD 2
 
             //***************************************INICIO PREGUNTAS UNIDAD 3
-            insertPregunta(db,"Materia3","Unidad1","pregunta1","respuesta1");
-            insertPregunta(db,"Materia3","Unidad1","pregunta2","respuesta2");
-            insertPregunta(db,"Materia3","Unidad1","pregunta3","respuesta3");
-            insertPregunta(db,"Materia3","Unidad1","pregunta4","respuesta4");
-            insertPregunta(db,"Materia3","Unidad1","pregunta5","respuesta5");
+            insertPregunta(db,"Materia3","Unidad1","pregunta1_m3_u1","respuesta1_m3_u1");
+            insertPregunta(db,"Materia3","Unidad1","pregunta2_m3_u1","respuesta2_m3_u1");
+            insertPregunta(db,"Materia3","Unidad1","pregunta3_m3_u1","respuesta3_m3_u1");
+            insertPregunta(db,"Materia3","Unidad1","pregunta4_m3_u1","respuesta4_m3_u1");
+            insertPregunta(db,"Materia3","Unidad1","pregunta5_m3_u1","respuesta5_m3_u1");
 
-            insertPregunta(db,"Materia3","Unidad2","pregunta1","respuesta1");
-            insertPregunta(db,"Materia3","Unidad2","pregunta2","respuesta2");
-            insertPregunta(db,"Materia3","Unidad2","pregunta3","respuesta3");
-            insertPregunta(db,"Materia3","Unidad2","pregunta4","respuesta4");
-            insertPregunta(db,"Materia3","Unidad2","pregunta5","respuesta5");
+            insertPregunta(db,"Materia3","Unidad2","pregunta1_m3_u2","respuesta1_m3_u2");
+            insertPregunta(db,"Materia3","Unidad2","pregunta2_m3_u2","respuesta2_m3_u2");
+            insertPregunta(db,"Materia3","Unidad2","pregunta3_m3_u2","respuesta3_m3_u2");
+            insertPregunta(db,"Materia3","Unidad2","pregunta4_m3_u2","respuesta4_m3_u2");
+            insertPregunta(db,"Materia3","Unidad2","pregunta5_m3_u2","respuesta5_m3_u2");
 
-            insertPregunta(db,"Materia3","Unidad3","pregunta1","respuesta1");
-            insertPregunta(db,"Materia3","Unidad3","pregunta2","respuesta2");
-            insertPregunta(db,"Materia3","Unidad3","pregunta3","respuesta3");
-            insertPregunta(db,"Materia3","Unidad3","pregunta4","respuesta4");
-            insertPregunta(db,"Materia3","Unidad3","pregunta5","respuesta5");
+            insertPregunta(db,"Materia3","Unidad3","pregunta1_m3_u3","respuesta1_m3_u3");
+            insertPregunta(db,"Materia3","Unidad3","pregunta2_m3_u3","respuesta2_m3_u3");
+            insertPregunta(db,"Materia3","Unidad3","pregunta3_m3_u3","respuesta3_m3_u3");
+            insertPregunta(db,"Materia3","Unidad3","pregunta4_m3_u3","respuesta4_m3_u3");
+            insertPregunta(db,"Materia3","Unidad3","pregunta5_m3_u3","respuesta5_m3_u3");
             //******************************************FIN PREGUNTAS UNIDAD 3
         }
 
