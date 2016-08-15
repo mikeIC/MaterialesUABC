@@ -33,7 +33,7 @@ import android.os.Handler;
 import com.viewpagerindicator.CirclePageIndicator;
 import com.viewpagerindicator.TitlePageIndicator;
 
-public class TriviaActivity extends AppCompatActivity {
+public class TriviaActivity extends AppCompatActivity implements TriviaFragment.TriviaClickListener{
 
     private static final int NUM_PAGES = 5;
     private TriviaFragment fragmentPreguntas[];
@@ -232,6 +232,11 @@ public class TriviaActivity extends AppCompatActivity {
     public void resetTrivia(){
         running = false;
         seconds = 0;
+    }
+
+    @Override
+    public void changePage() {
+        viewPager.setCurrentItem(viewPager.getCurrentItem()+1);
     }
 
     private class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter {

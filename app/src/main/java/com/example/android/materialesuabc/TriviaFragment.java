@@ -1,6 +1,7 @@
 package com.example.android.materialesuabc;
 
 
+import android.app.Activity;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
@@ -23,6 +24,8 @@ import java.util.Random;
  * A simple {@link Fragment} subclass.
  */
 public class TriviaFragment extends Fragment{
+
+
     private int numeroFragment;
     private TextView numeroPregunta;
 
@@ -37,6 +40,10 @@ public class TriviaFragment extends Fragment{
     private String respuestaString;
     private int randomAnswerPosition;
 
+    static interface TriviaClickListener{
+        void changePage();
+    };
+    private TriviaClickListener listener;
 
 
     public TriviaFragment() {
@@ -47,6 +54,12 @@ public class TriviaFragment extends Fragment{
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_trivia, container, false);
+    }
+    @Override
+    public void onAttach(Activity activity){
+        super.onAttach(activity);
+        this.listener = (TriviaClickListener) activity;
+
     }
 
     @Override
@@ -77,7 +90,7 @@ public class TriviaFragment extends Fragment{
 
                 if(i == radioButtonIds[randomAnswerPosition]){
 
-
+                    listener.changePage();
                     Toast.makeText(getActivity(), "Respuesta Correcta", Toast.LENGTH_SHORT).show();
                 }else{
                     RadioButton radioButton = (RadioButton) view.findViewById(i);
