@@ -4,18 +4,17 @@ package com.example.android.materialesuabc;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.res.ResourcesCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 import java.util.Random;
 
@@ -36,6 +35,7 @@ public class TriviaFragment extends Fragment{
     private String nombreUnidad;
     private String preguntaString;
     private String respuestaString;
+    private int randomAnswerPosition;
 
 
 
@@ -52,11 +52,10 @@ public class TriviaFragment extends Fragment{
     @Override
     public void onStart() {
         super.onStart();
-        View view = getView();
+        final View view = getView();
         int rbId = 0;
-        int radioButtonIds[]={R.id.opcion1,R.id.opcion2,R.id.opcion3,R.id.opcion4};
+        final int radioButtonIds[]={R.id.opcion1,R.id.opcion2,R.id.opcion3,R.id.opcion4};
         RadioButton radioButtonAux;
-
         Bundle bundle = this.getArguments();
         if(bundle!= null){
             numeroFragment= bundle.getInt("posicion",0);
@@ -67,20 +66,36 @@ public class TriviaFragment extends Fragment{
 
         }
         Random r = new Random();
-        int i1 = r.nextInt(3);
-        numeroPregunta = (TextView) view.findViewById(R.id.tvNumeroPregunta);
+        randomAnswerPosition = r.nextInt(3);
+//        numeroPregunta = (TextView) view.findViewById(R.id.tvNumeroPregunta);
         tvPregunta = (TextView)view.findViewById(R.id.trivia_pregunta_text);
-        rbRespuesta = (RadioButton)view.findViewById(radioButtonIds[i1]) ;
-        tvMateria = (TextView) view.findViewById(R.id.tv_nombre_materia);
-        tvUnidad = (TextView) view.findViewById(R.id.tv_nombre_unidad);
+        rbRespuesta = (RadioButton)view.findViewById(radioButtonIds[randomAnswerPosition]) ;
+        RadioGroup radioGroup = (RadioGroup) view.findViewById(R.id.radio_group_opciones);
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
+                if(i == radioButtonIds[randomAnswerPosition]){
+
+
+                    Toast.makeText(getActivity(), "Respuesta Correcta", Toast.LENGTH_SHORT).show();
+                }else{
+                    RadioButton radioButton = (RadioButton) view.findViewById(i);
+                    radioButton.setBackground(ResourcesCompat.getDrawable(getResources(),R.drawable.custom_radio_button_red,null));
+                }
+            }
+        });
+//        tvMateria = (TextView) view.findViewById(R.id.tv_nombre_materia);
+//        tvUnidad = (TextView) view.findViewById(R.id.tv_nombre_unidad);
 
         tvPregunta.setText(preguntaString);
-        tvUnidad.setText(nombreUnidad);
-        tvMateria.setText(nombreMateria);
+//        tvUnidad.setText(nombreUnidad);
+//        tvMateria.setText(nombreMateria);
         rbRespuesta.setText(respuestaString);
 
+
         Integer integer = numeroFragment+1;
-        numeroPregunta.setText(integer.toString());
+//        numeroPregunta.setText(integer.toString());
 
         try{
             SQLiteOpenHelper openHelper = new MaterialesUABCDatabaseHelper(getActivity());
@@ -98,7 +113,7 @@ public class TriviaFragment extends Fragment{
                 boolean boolaux;
                 int auxNum = 0;
                 for(int i = 0; i< 4;i++){
-                    if(i != i1) {
+                    if(i != randomAnswerPosition) {
                         radioButtonAux = (RadioButton) view.findViewById(radioButtonIds[i]);
                         Random random = new Random();
                         int randomRespuesta = random.nextInt(cursor.getCount());

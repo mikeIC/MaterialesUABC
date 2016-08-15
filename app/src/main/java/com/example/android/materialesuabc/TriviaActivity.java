@@ -30,13 +30,12 @@ import java.util.ArrayList;
 import java.util.List;
 import android.os.Handler;
 
+import com.viewpagerindicator.CirclePageIndicator;
+import com.viewpagerindicator.TitlePageIndicator;
+
 public class TriviaActivity extends AppCompatActivity {
 
     private static final int NUM_PAGES = 5;
-    private RadioButton opcion1;
-    private RadioButton opcion2;
-    private RadioButton opcion3;
-    private RadioButton opcion4;
     private TriviaFragment fragmentPreguntas[];
     private ViewPager viewPager;
     private PagerAdapter pagerAdapter;
@@ -64,7 +63,27 @@ public class TriviaActivity extends AppCompatActivity {
 
         viewPager = (ViewPager) findViewById(R.id.viewpagerPregunta);
         pagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
+
+//        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+//            @Override
+//            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+//
+//            }
+//
+//            @Override
+//            public void onPageSelected(int position) {
+//
+//            }
+//
+//            @Override
+//            public void onPageScrollStateChanged(int state) {
+//
+//            }
+//        });
         viewPager.setAdapter(pagerAdapter);
+
+        CirclePageIndicator circlePageIndicator = (CirclePageIndicator) findViewById(R.id.indicador_pregunta);
+        circlePageIndicator.setViewPager(viewPager);
         triviaEnded = false;
         Intent intent = getIntent();
         materiaEscojida =intent.getIntExtra("materia",-1);
@@ -88,7 +107,7 @@ public class TriviaActivity extends AppCompatActivity {
                 break;
             default:nombreUnidad = getResources().getString(R.string.vacio);
         }
-        Toast.makeText(TriviaActivity.this, "materiaEscojida: "+materiaEscojida+" UnidadEscojida: "+unidadEscojida+" NombreMateria: "+nombreMateria+" Nombreunidad: "+nombreUnidad, Toast.LENGTH_LONG).show();
+//        Toast.makeText(TriviaActivity.this, "materiaEscojida: "+materiaEscojida+" UnidadEscojida: "+unidadEscojida+" NombreMateria: "+nombreMateria+" Nombreunidad: "+nombreUnidad, Toast.LENGTH_LONG).show();
         if (savedInstanceState != null) {
             triviaEnded = savedInstanceState.getBoolean("trivia_ended");
             seconds = savedInstanceState.getInt("seconds");
@@ -148,6 +167,26 @@ public class TriviaActivity extends AppCompatActivity {
         if (viewPager.getCurrentItem() == 0) {
             // If the user is currently looking at the first step, allow the system to handle the
             // Back button. This calls finish() on this activity and pops the back stack.
+
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setMessage(R.string.seguro)
+                    .setTitle(R.string.alerta);
+            // Add the buttons
+            builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    // User clicked OK button
+                    endTrivia();
+                }
+            });
+            builder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    // User cancelled the dialog
+                }
+            });
+
+            // Create the AlertDialog
+            AlertDialog dialog = builder.create();
+            dialog.show();
             super.onBackPressed();
         } else {
             // Otherwise, select the previous step.
@@ -162,9 +201,8 @@ public class TriviaActivity extends AppCompatActivity {
             // Add the buttons
             builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int id) {
-                    endTrivia();
-
                     // User clicked OK button
+                    endTrivia();
                 }
             });
             builder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
@@ -176,6 +214,7 @@ public class TriviaActivity extends AppCompatActivity {
             // Create the AlertDialog
             AlertDialog dialog = builder.create();
             dialog.show();
+
         }
 
         if (triviaEnded) {
