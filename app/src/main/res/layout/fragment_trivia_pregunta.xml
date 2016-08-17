@@ -1,0 +1,85 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    tools:context=".TriviaPreguntaFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imagen_correcto"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_gravity="end"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/trivia_pregunta_text"
+        android:paddingTop="10dp"
+        android:paddingBottom="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pregunta" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/escoje_una_opcion"
+        android:paddingTop="10dp"
+        android:paddingBottom="5dp"
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioGroup
+                android:id="@+id/radio_group_opciones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:orientation="vertical">
+                <RadioButton
+                    android:id="@+id/opcion1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/RadioButtonStyle"
+                    android:text="@string/vacio"
+                    android:paddingBottom="20dp"
+                    />
+                <RadioButton
+                    android:id="@+id/opcion2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vacio"
+                    style="@style/RadioButtonStyle"
+                    />
+                <RadioButton
+                    android:id="@+id/opcion3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vacio"
+                    style="@style/RadioButtonStyle"
+                    />
+                <RadioButton
+                    android:id="@+id/opcion4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vacio"
+                    style="@style/RadioButtonStyle"
+                    />
+            </RadioGroup>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
