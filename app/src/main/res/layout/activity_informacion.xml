@@ -3,23 +3,149 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:orientation="vertical"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.android.materialesuabc.InformacionActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpagerInformacion"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:scrollIndicators="bottom"
+        android:layout_weight="8" />
+
+    <com.viewpagerindicator.CirclePageIndicator
+        android:id="@+id/indicador_informacion"
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        app:strokeColor="@color/Grey"
+        android:layout_gravity="center_horizontal"
+        android:scrollbarStyle="outsideOverlay"
+        app:radius="8dp"
+        app:snap="true"
+        app:strokeWidth="4dp"
+        app:fillColor="@color/Gray"
+        app:pageColor="@color/White"
+        android:layout_weight="1" />
     <!--<fragment-->
         <!--android:layout_width="match_parent"-->
         <!--android:layout_height="wrap_content"-->
         <!--class="com.example.android.materialesuabc.MateriasListFragment"-->
         <!--/>-->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/link_pagina"
-        android:layout_gravity="center_horizontal"
-        android:onClick="showPagina"
-        />
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="vertical">-->
 
+            <!--<TextView-->
+                <!--android:id="@+id/txtInformacion1"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/texto_informacion1"-->
+                <!--/>-->
+            <!--<TextView-->
+                <!--android:id="@+id/txtInformacion2"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/texto_informacion2"-->
+                <!--/>-->
+            <!--<TextView-->
+                <!--android:id="@+id/txtInformacion3"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/texto_informacion3"-->
+                <!--/>-->
+            <!--<TextView-->
+                <!--android:id="@+id/txtInformacion4"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/texto_informacion4"-->
+                <!--/>-->
+            <!--<TextView-->
+                <!--android:id="@+id/txtInformacion5"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/texto_informacion5"-->
+                <!--/>-->
+            <!--<TextView-->
+                <!--android:id="@+id/txtInformacion6"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/texto_informacion6"-->
+                <!--/>-->
+            <!--<TextView-->
+                <!--android:id="@+id/txtInformacion7"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/texto_informacion7"-->
+                <!--/>-->
+            <!--<TextView-->
+                <!--android:id="@+id/txtInformacion8"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/texto_informacion8"-->
+                <!--/>-->
+            <!--<TextView-->
+                <!--android:id="@+id/txtInformacion9"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/texto_informacion9"-->
+                <!--/>-->
+            <!--<TextView-->
+                <!--android:id="@+id/txtInformacion10"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/texto_informacion10"-->
+                <!--/>-->
+            <!--<TextView-->
+                <!--android:id="@+id/txtInformacion11"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/texto_informacion11"-->
+                <!--/>-->
+            <!--<TextView-->
+                <!--android:id="@+id/txtInformacion12"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/texto_informacion12"-->
+                <!--/>-->
+            <!--<TextView-->
+                <!--android:id="@+id/txtInformacion13"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/texto_informacion13"-->
+                <!--/>-->
+            <!--<TextView-->
+                <!--android:id="@+id/txtInformacion14"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/texto_informacion14"-->
+                <!--/>-->
+            <!--<TextView-->
+                <!--android:id="@+id/txtInformacion15"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/texto_informacion15"-->
+                <!--/>-->
+            <!--<TextView-->
+                <!--android:id="@+id/txtInformacion16"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/texto_informacion16"-->
+                <!--/>-->
+            <!--<TextView-->
+                <!--android:id="@+id/txtInformacion17"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/texto_informacion17"-->
+                <!--/>-->
+        <!--</LinearLayout>-->
+    <!--</ScrollView>-->
 </LinearLayout>

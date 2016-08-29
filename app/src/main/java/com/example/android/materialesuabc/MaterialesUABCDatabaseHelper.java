@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class MaterialesUABCDatabaseHelper extends SQLiteOpenHelper {
 
     private static final String DB_NAME = "MaterialesUABC"; //El nombre de la base de datos
-    private static final int DB_VERSION = 10; // La version de la base de datos
+    private static final int DB_VERSION = 11; // La version de la base de datos
 
 
     public MaterialesUABCDatabaseHelper(Context context){
@@ -95,9 +95,16 @@ public class MaterialesUABCDatabaseHelper extends SQLiteOpenHelper {
             insertPregunta(db,"Materia3","Unidad3","pregunta4_m3_u3","respuesta4_m3_u3");
             insertPregunta(db,"Materia3","Unidad3","pregunta5_m3_u3","respuesta5_m3_u3");
             //******************************************FIN PREGUNTAS UNIDAD 3
+        }if(oldVersion<=10){
+            db.execSQL("CREATE TABLE RESULTADOS(_id INTEGER PRIMARY KEY AUTOINCREMENT," +
+                    "MATERIA TEXT," +
+                    "UNIDAD TEXT," +
+                    "ERRORES INTEGER," +
+                    "ACIERTOS INTEGER," +
+                    "TIME NUMERIC," +
+                    "FECHA TEXT" +
+                    ");");
         }
-
-
     }
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {

@@ -21,7 +21,8 @@
         android:layout_gravity="center_horizontal"
         android:scrollbarStyle="outsideOverlay"
         app:radius="8dp"
-        app:strokeWidth="2dp"
+        app:snap="true"
+        app:strokeWidth="4dp"
         app:fillColor="@color/Gray"
         app:pageColor="@color/White"
         android:layout_weight="1" />

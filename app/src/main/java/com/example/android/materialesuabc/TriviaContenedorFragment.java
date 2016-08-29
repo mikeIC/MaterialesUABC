@@ -64,11 +64,8 @@ public class TriviaContenedorFragment extends Fragment {
         viewPager = (ViewPager) view.findViewById(R.id.viewpagerPregunta);
 //        pagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
         pagerAdapter = new ScreenSlidePagerAdapter(getActivity().getSupportFragmentManager());
-
         viewPager.setAdapter(pagerAdapter);
-        Log.d(TAG, "Setted Adapter");
         circlePageIndicator.setViewPager(viewPager);
-        Log.d(TAG, "Set pager to indicator");
     }
     private class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter {
         public ScreenSlidePagerAdapter(FragmentManager fm) {
@@ -94,7 +91,7 @@ public class TriviaContenedorFragment extends Fragment {
                         null,
                         null
                 );
-                Log.d(TAG, "Created Cursor");
+
                 if(cursorPregunta1.moveToFirst()){
                     if(position >0 ){
                         for (int i =0; i< position; i++){
@@ -113,7 +110,7 @@ public class TriviaContenedorFragment extends Fragment {
                 Toast.makeText(getActivity(), "SQL Error: "+e, Toast.LENGTH_LONG).show();
             }
             fragment.setArguments(bundle);
-            Log.d(TAG, "Set Fragment Arguments, Position: "+position);
+
             return fragment;
 //            return new TriviaPreguntaFragment();
         }

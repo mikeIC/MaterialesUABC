@@ -51,4 +51,6 @@ public class InformacionFragment extends Fragment {
             }
         });
     }
+
+
 }

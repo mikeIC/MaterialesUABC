@@ -1,0 +1,58 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.materialesuabc.DiapositivaFragment">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/ivDiapositiva1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tvDiapositiva1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:id="@+id/tvDiapositiva2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+        <ImageView
+            android:id="@+id/ivDiapositiva2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tvDiapositiva3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:id="@+id/tvDiapositiva4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+        <ImageView
+            android:id="@+id/ivDiapositiva3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tvDiapositiva5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:id="@+id/tvDiapositiva6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+        <ImageView
+            android:id="@+id/ivDiapositiva4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</ScrollView>

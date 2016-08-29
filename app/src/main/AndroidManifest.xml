@@ -6,6 +6,7 @@
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -33,15 +34,28 @@
             android:name=".UnidadesActivity"
             android:label="Unidades"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".InformacionActivity" />
+        <activity
+            android:name=".InformacionActivity"
+            android:label="Informacion"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MateriasActivity"
             android:label="Materias"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".TriviaActivity"
-            android:label="Trivia"
-            />
-        <activity android:name=".ScreenSlidePagerActivity"></activity>
+        <activity
+            android:name=".TriviaActivity"
+            android:label="Trivia" />
+        <activity android:name=".ScreenSlidePagerActivity" />
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity android:name=".LibrosActivity" />
+        <activity android:name=".PresentacionActivity"></activity>
     </application>
 
 </manifest>

@@ -3,7 +3,8 @@
 
     <string-array name="menu_list">
         <item>Inicio</item>
-        <item>Perfil</item>
+        <item>Presentaciones</item>
+        <item>Libros</item>
         <item>Informacion</item>
     </string-array>
     <string-array name="unidades_list">
@@ -11,11 +12,108 @@
         <item>Unidad 2</item>
         <item>Unidad 3</item>
     </string-array>
-    <string-array name="materias_list">
-        <item>Materiales Vitreos </item>
-        <item>Materiales Ceramicos</item>
-        <item>Materiales Ceramicos y Vitreos</item>
+    <string-array name="libros_list">
+        <item>Advances in Sintering Science and Technology</item>
+        <item>Introduction to Materials Engineering</item>
+        <item>Callister Fundamentas of Materials Science</item>
+        <item>Ceramic Materiacs Science and Engineering</item>
+        <item>Ciencia e Ingenieria de los Materiales</item>
+        <item>Classic and Advanced Ceramics</item>
+        <item>Libro Materiales</item>
     </string-array>
+    <string-array name="presentaciones_list">
+        <item>Introduccion a Materiales 1</item>
+        <item>Introduccion a Materiales 2</item>
+        <item>Introduccion a Materiales 3</item>
+    </string-array>
+    <string-array name="materias_list">
+        <item>Desarrollo de Materiales </item>
+        <!--<item>Materiales Ceramicos</item>-->
+        <!--<item>Materiales Ceramicos y Vitreos</item>-->
+    </string-array>
+
+    <string name="texto_bienvenida1">En primer lugar, se les da
+        la más cordial bienvenida al curso de Desarrollo de Materiales [Taller - Laboratorio]
+        para el período de 2016-2 del cual se tiene la confianza de que será de gran aceptación
+        por su parte dada mi intención de llevar a cabo un curso ágil, dinámico y de mucha comunicación.</string>
+    <string name="texto_bienvenida2">
+        En curso con Laboratorio y Taller, cada uno elegirá un sistema de material para
+    desarrollarlo en laboratorio por diferentes procesos, así que nos veremos tiempo parcial
+    en salón de clase, todo se enviará con apoyo de Blackboard; Carta Descriptiva de cada
+    curso, Plan de trabajo, recepción de tareas [Norma Editorial se enviara y el archivo
+    enviado favor de etiquetarlo de la siguiente manera: Apellido Paterno y Materno –
+    Tarea 1 DM o. Ejemplo: Díaz Trujillo-Tarea 1- DM] e información que se considere
+    pertinente. Se da correo electrónico alterno para dudas; diazg@uabc.edu.mx. Esta
+    semana se suben archivos a Blackboard. Se agradece el que se utilice la plataforma de
+    Blackboard.
+    </string>
+    <string name="texto_bienvenida3">
+        Asesoría en cubículo 10 de Ed. 6D, de manera permanente, mi horario es de las 8:00 a
+    22:00 Hs.
+    </string>
+    <string name="texto_bienvenida4">
+        Por lo antes mencionado, me dirijo a Uds. con el fin de que se me tenga la confianza
+    para poder llevar a cabo en todo momento comentarios positivos que permitan obtener
+    el mejor rendimiento por ambos lados; por su parte, el adquirir el conocimiento que
+    permitan llevar a cabo un buen desarrollo profesional y de mi parte, el que sea un
+    estimulo el poder contribuir a su formación para un buen desempeño de sus
+    actividades.
+    </string>
+    <string name="texto_bienvenida5">
+        De aquí que, para lograrlo debamos de estar siempre en comunicación y el que me
+    tengan la suficiente confianza para acudir en todo momento de duda.
+    </string>
+    <string name="texto_bienvenida6">
+        Gracias por su atención y apoyo y sobre todo inquietud de fortalecer su formación
+    académica
+    </string>
+    <string name="texto_bienvenida7">
+        Gerardo C Díaz Trujillo
+    </string>
+
+    <string name="texto_informacion1">PROPÓSITO GENERAL DEL CURSO</string>
+    <string name="texto_informacion2">
+        Los contenidos teóricos y prácticos que se manejan en este curso darán al participante las habilidades de
+formular y elaborar un nuevo producto, en base a una hipótesis elaborada por el mismo en un proyecto de
+investigación y desarrollo, tomando como criterio de calidad la normatividad y estándares establecidos y los
+conocimientos teóricos y prácticos de materias previas que fortalecen la toma de decisiones, con espíritu de
+iniciativa responsable y creativa fomentando el compromiso con la comunidad.
+    </string>
+    <string name="texto_informacion3">COMPETENCIA DEL CURSO</string>
+    <string name="texto_informacion4">
+        Formular un nuevo material o modificar uno ya existente, utilizando materias primas de la región, que cumpla
+con las características deseadas de calidad y normatividad vigente, siguiendo el método científico y
+seleccionando las técnicas analíticas adecuadas, así como las estrategias de prevención y control de la
+contaminación, con espíritu de iniciativa responsable y creativa ante la problemática social.
+    </string>
+    <string name="texto_informacion5">Contenido</string>
+    <string name="texto_informacion6">Capítulo I: Elaboración del anteproyecto</string>
+    <string name="texto_informacion7">
+        Definición del problema, Revisión bibliográfica, Justificación, Objetivos (generales y específicos), Metas,
+Hipótesis, Fundamentos, Metodología, Cronograma de actividades y Bitácora de laboratorio</string>
+    <string name="texto_informacion8">
+        Capítulo II: Caracterización de materias primas
+    </string>
+    <string name="texto_informacion9">
+        Determinar; composición química, propiedades fisicoquímicas de la materia prima y análisis
+Espectroscópico, mineralógico y microestructural
+    </string>
+    <string name="texto_informacion10">Capítulo III: Diseño de experimentos</string>
+    <string name="texto_informacion11">
+        Definiciones básicas en el diseño de experimentos; Etapas, Consideraciones prácticas sobre el uso de
+métodos estadísticos, Elementos de inferencia estadística, Experimentos con un solo factor (análisis de
+varianza), Diseño completamente al azar y ANOVA, Comparaciones o pruebas de rango múltiples,
+Verificación de los supuestos del modelo, Elección del tamaño de la muestra, Diseño factoriales.
+    </string>
+    <string name="texto_informacion12">Capítulo IV: Caracterización de producto terminal</string>
+    <string name="texto_informacion13">
+        Determinar; composición química, propiedades fisicoquímicas de producto obtenido y análisis
+Espectroscópico, mineralógico y microestructural
+    </string>
+    <string name="texto_informacion14">Capítulo V: Elaboración de la tesina</string>
+    <string name="texto_informacion15">Contenido de un trabajo terminal como Tesis</string>
+    <string name="texto_informacion16">Capítulo VI: Patentes</string>
+    <string name="texto_informacion17">Redacción, Conservación de derechos de patente y su uso como fuente de información</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -58,4 +156,11 @@
     <string name="seguro">¿Estas seguro?</string>
     <string name="alerta">!Alerta!</string>
     <string name="link_pagina">Link a Pagina</string>
+    <string name="regresar_pregunta">Regresar a Preguntas</string>
+    <string name="ok_salir">OK, Salir</string>
+    <string name="errores">Errores</string>
+    <string name="aciertos">Aciertos</string>
+    <string name="tiempo">Tiempo</string>
+    <string name="appp_key">xl0y0ywg4q20x8b</string>
+    <string name="app_secrete">t275ub8b3fd0v32</string>
 </resources>
