@@ -120,11 +120,11 @@ public class MainActivity extends AppCompatActivity implements MateriasListFragm
         boolean drawerOpen = drawerLayout.isDrawerOpen(drawerList);
         if(currentPosition == 1){
             menu.findItem(R.id.action_edit).setVisible(false);
-            if(drawerOpen){
+//            if(drawerOpen){
 //                menu.findItem(R.id.action_edit).setVisible(false);
-            }else{
+//            }else{
 //                menu.findItem(R.id.action_edit).setVisible(true);
-            }
+//            }
         }else{
             menu.findItem(R.id.action_edit).setVisible(false);
         }

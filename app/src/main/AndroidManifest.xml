@@ -61,7 +61,7 @@
         <activity android:name=".PresentacionActivity"
             android:parentActivityName=".MainActivity"
             android:label="Presentacion"
-            ></activity>
+            />
     </application>
 
 </manifest>
