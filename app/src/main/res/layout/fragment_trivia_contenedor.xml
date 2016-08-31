@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.android.materialesuabc.TriviaContenedorFragment">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpagerPregunta"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="8" />
+
+    <com.viewpagerindicator.CirclePageIndicator
+        android:id="@+id/indicador_pregunta"
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        app:strokeColor="@color/Grey"
+        android:layout_gravity="center_horizontal"
+        android:scrollbarStyle="outsideOverlay"
+        app:radius="8dp"
+        app:snap="true"
+        app:strokeWidth="4dp"
+        app:fillColor="@color/Gray"
+        app:pageColor="@color/White"
+        android:layout_weight="1" />
+
+</LinearLayout>

@@ -3,63 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context="com.example.android.materialesuabc.TriviaActivity"
-    >
+    tools:context="com.example.android.materialesuabc.TriviaActivity">
+    <FrameLayout
+        android:id="@+id/framelayout_trivia"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/viewpagerPregunta"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="0.24" />
-    <!--<LinearLayout-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_gravity="end"-->
-        <!--android:background="@drawable/border"-->
-
-        <!--&gt;-->
-
-        <!--<Button-->
-            <!--android:id="@+id/botonFin"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="Hello"-->
-            <!--/>-->
-    <!--</LinearLayout>-->
-
-
-
-    <!--<LinearLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:orientation="horizontal"-->
-        <!--android:layout_gravity="center_horizontal"-->
-        <!--&gt;-->
-        <!--<Button-->
-            <!--android:id="@+id/lastFragment"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_gravity="center_horizontal"-->
-            <!--android:onClick="btnClickTrivia"-->
-            <!--android:padding="15dp"-->
-            <!--android:text="@string/anterior"-->
-            <!--/>-->
-        <!--<Button-->
-            <!--android:id="@+id/nextFragment"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_gravity="center_horizontal"-->
-            <!--android:padding="15dp"-->
-            <!--android:onClick="btnClickTrivia"-->
-
-            <!--android:text="@string/siguiente"-->
-            <!--/>-->
-
-
-
-    <!--</LinearLayout>-->
-
-
-
+    </FrameLayout>
 </LinearLayout>

@@ -23,45 +23,59 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:padding="5dp"
-
                 android:spinnerMode="dropdown"
                 android:clickable="false"
                 android:focusable="true" />
-
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/txtBienvenida1"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:gravity="start"
-                android:text="@string/unidad"
-                android:textStyle="bold"
-                android:textSize="15sp"
+                android:text="@string/texto_bienvenida1"
+                android:padding="7dp"
+                />
+            <TextView
+                android:id="@+id/txtBienvenida2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/texto_bienvenida2"
+                android:padding="7dp"
+                />
+            <TextView
+                android:id="@+id/txtBienvenida3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/texto_bienvenida3"
+                android:padding="7dp"
+                />
+            <TextView
+                android:id="@+id/txtBienvenida4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/texto_bienvenida4"
+                android:padding="7dp"
+                />
+            <TextView
+                android:id="@+id/txtBienvenida5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/texto_bienvenida5"
+                android:padding="7dp"
+                />
+            <TextView
+                android:id="@+id/txtBienvenida6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/texto_bienvenida6"
+                android:padding="7dp"
+                />
+            <TextView
+                android:id="@+id/txtBienvenida7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/texto_bienvenida7"
+                android:padding="7dp"
                 />
 
-            <Spinner
-                android:id="@+id/spinner_unidad"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:spinnerMode="dialog"
-                android:padding="5dp"
-                />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center_horizontal"
-                android:paddingTop="50dp"
-                >
-                <Button
-                    android:id="@+id/button_start_trivia"
-                    android:layout_width="160dp"
-                    android:layout_height="80dp"
-                    android:layout_gravity="center_horizontal"
-                    android:text="@string/trivia"
-                    android:background="@drawable/custom_button_background"
-                    android:textSize="35sp"
-                    android:textStyle="bold|italic"
-                    />
-            </LinearLayout>
+
         </LinearLayout>
 </ScrollView>

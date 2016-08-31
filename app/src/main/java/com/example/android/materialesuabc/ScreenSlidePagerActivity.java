@@ -61,7 +61,7 @@ public class ScreenSlidePagerActivity extends FragmentActivity {
 
         @Override
         public Fragment getItem(int position) {
-            return new TriviaFragment();
+            return new TriviaPreguntaFragment();
         }
 
         @Override

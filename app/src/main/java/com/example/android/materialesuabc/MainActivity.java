@@ -5,6 +5,7 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -21,7 +22,7 @@ import android.widget.ListView;
 
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity implements MateriasListFragment.MateriasListListener,LibrosListFragment.LibroListListener,PresentacionesListFragment.PresentacionesListListener{
     private String[] titles;
     private ListView drawerList;
     private DrawerLayout drawerLayout;
@@ -85,11 +86,14 @@ public class MainActivity extends AppCompatActivity{
                         if (fragment instanceof HomeFragment) {
                             currentPosition = 0;
                         }
-                        if (fragment instanceof PerfilFragment) {
+                        if (fragment instanceof PresentacionesFragment) {
                             currentPosition = 1;
                         }
-                        if (fragment instanceof InformacionFragment) {
+                        if(fragment instanceof LibrosFragment){
                             currentPosition = 2;
+                        }
+                        if (fragment instanceof InformacionFragment) {
+                            currentPosition = 3;
                         }
                         setActionBarTitle(currentPosition);
                         drawerList.setItemChecked(currentPosition, true);
@@ -115,11 +119,11 @@ public class MainActivity extends AppCompatActivity{
 // If the drawer is open, hide action items related to the content view
         boolean drawerOpen = drawerLayout.isDrawerOpen(drawerList);
         if(currentPosition == 1){
-            menu.findItem(R.id.action_edit).setVisible(true);
+            menu.findItem(R.id.action_edit).setVisible(false);
             if(drawerOpen){
-                menu.findItem(R.id.action_edit).setVisible(false);
+//                menu.findItem(R.id.action_edit).setVisible(false);
             }else{
-                menu.findItem(R.id.action_edit).setVisible(true);
+//                menu.findItem(R.id.action_edit).setVisible(true);
             }
         }else{
             menu.findItem(R.id.action_edit).setVisible(false);
@@ -138,9 +142,13 @@ public class MainActivity extends AppCompatActivity{
                 fragment = new HomeFragment();
                 break;
             case 1:
-                fragment = new PerfilFragment();
+                fragment = new PresentacionesFragment();
                 break;
             case 2:
+                //libros fragment
+                fragment = new LibrosFragment();
+                break;
+            case 3:
                 fragment = new InformacionFragment();
                 break;
             default:
@@ -157,7 +165,51 @@ public class MainActivity extends AppCompatActivity{
         drawerLayout.closeDrawer(drawerList);
 
     }
+    //itemClicked para Informacion materia
+    @Override
+    public void itemClicked(long id) {
 
+//        Toast.makeText(MainActivity.this, "BLAH id: "+id, Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(MainActivity.this,InformacionActivity.class);
+        intent.putExtra("materia_id",id);
+        startActivity(intent);
+
+    }
+    @Override
+    public void itemClickedPresentaciones(long id) {
+        Intent intent = new Intent(MainActivity.this,PresentacionActivity.class);
+        intent.putExtra("id",id);
+        startActivity(intent);
+    }
+
+    @Override
+    public void itemClickedLibros(long id) {
+        Uri uri = null;
+        if(id == 0){
+            uri = Uri.parse("https://www.dropbox.com/s/bc2g6iiee2g7twu/Advances%20in%20Sintering%20Science%20and%20Technology.pdf?dl=0");
+        }
+        if(id == 1){
+            uri = Uri.parse("https://www.dropbox.com/s/xgdiq06tq7vrq5z/AN%20INTRODUCTION%20TO%20MATERIALS%20ENGINEERING%20AND%20SCIENCE.pdf?dl=0");
+        }
+        if(id == 2){
+            uri = Uri.parse("https://www.dropbox.com/s/5e66c3db79rq1c5/Callister-fundamentals_of_materials_science_and_engineering_callister_5th.pdf?dl=0");
+        }
+        if(id == 3){
+            uri = Uri.parse("https://www.dropbox.com/s/006tlyxocwexzmg/Ceramic-Materials-Science-and-Engineering.pdf?dl=0");
+        }
+        if(id == 4) {
+            uri = Uri.parse("https://www.dropbox.com/s/p5chdled6c5hnbx/Ciencia%20e%20Ingenieria%20de%20los%20Materiales%20-%20Donald%20Askeland%20-%203edicion.pdf?dl=0");
+        }
+        if(id == 5) {
+            uri = Uri.parse("https://www.dropbox.com/s/utwlled7p2lkwmc/Classic%20and%20Advanced%20Ceramics.pdf?dl=0");
+        }
+        if(id == 6) {
+            uri = Uri.parse("https://www.dropbox.com/s/jept6bj4hliatdd/Libro%20Materiales.pdf?dl=0");
+        }
+
+        Intent intent = new Intent(Intent.ACTION_VIEW,uri);
+        startActivity(intent);
+    }
     //Cambair el titulo del menu
     private void setActionBarTitle(int position) {
         String title;

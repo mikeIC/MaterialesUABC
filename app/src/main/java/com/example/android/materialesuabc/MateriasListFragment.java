@@ -18,24 +18,38 @@ import android.widget.Toast;
  */
 public class MateriasListFragment extends ListFragment {
 
+    static interface MateriasListListener{
+        void itemClicked(long id);
+    }
+    private MateriasListListener listener;
+
     public MateriasListFragment() {
         // Required empty public constructor
     }
 
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        setHasOptionsMenu(true);
+//        setHasOptionsMenu(true);
         String [] optionsName = getResources().getStringArray(R.array.materias_list);
         ArrayAdapter<String> adapter = new ArrayAdapter< >(inflater.getContext(),android.R.layout.simple_list_item_1,optionsName);
         setListAdapter(adapter);
-
         return super.onCreateView(inflater, container,savedInstanceState);
     }
     @Override
+    public void onAttach(Activity activity){
+        super.onAttach(activity);
+        this.listener = (MateriasListListener) activity;
+
+    }
+    @Override
     public void onListItemClick(ListView l , View v , int position, long id){
-        Toast.makeText(getActivity(), "Clicked List", Toast.LENGTH_SHORT).show();
+        if(listener!=null){
+            listener.itemClicked(id);
+        }
+//        Toast.makeText(getActivity(), "Clicked List", Toast.LENGTH_SHORT).show();
     }
 
 
