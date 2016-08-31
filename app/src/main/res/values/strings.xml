@@ -4,6 +4,7 @@
     <string-array name="menu_list">
         <item>Inicio</item>
         <item>Presentaciones</item>
+        <item>Tareas</item>
         <item>Libros</item>
         <item>Informacion</item>
     </string-array>

@@ -89,11 +89,14 @@ public class MainActivity extends AppCompatActivity implements MateriasListFragm
                         if (fragment instanceof PresentacionesFragment) {
                             currentPosition = 1;
                         }
-                        if(fragment instanceof LibrosFragment){
+                        if (fragment instanceof TareasFragment) {
                             currentPosition = 2;
                         }
-                        if (fragment instanceof InformacionFragment) {
+                        if(fragment instanceof LibrosFragment){
                             currentPosition = 3;
+                        }
+                        if (fragment instanceof InformacionFragment) {
+                            currentPosition = 4;
                         }
                         setActionBarTitle(currentPosition);
                         drawerList.setItemChecked(currentPosition, true);
@@ -145,10 +148,13 @@ public class MainActivity extends AppCompatActivity implements MateriasListFragm
                 fragment = new PresentacionesFragment();
                 break;
             case 2:
+                fragment = new TareasFragment();
+                break;
+            case 3:
                 //libros fragment
                 fragment = new LibrosFragment();
                 break;
-            case 3:
+            case 4:
                 fragment = new InformacionFragment();
                 break;
             default:
