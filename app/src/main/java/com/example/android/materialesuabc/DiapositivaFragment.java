@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 
 /**
@@ -26,4 +27,14 @@ public class DiapositivaFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_diapositiva, container, false);
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        View view = getView();
+        Bundle bunble = getArguments();
+        ImageView imagen = (ImageView) view.findViewById(R.id.ivDiapositiva1);
+
+        imagen.setImageResource(bunble.getInt("idImagen"));
+
+    }
 }

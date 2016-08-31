@@ -5,30 +5,26 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingLeft="4dp"
+    android:paddingRight="4dp"
     tools:context="com.example.android.materialesuabc.PresentacionActivity">
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpagerPresentacion"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:scrollIndicators="bottom"
-        android:layout_weight="8" />
+        android:layout_weight="9" />
 
-    <com.viewpagerindicator.CirclePageIndicator
+    <com.viewpagerindicator.LinePageIndicator
         android:id="@+id/indicador_presentacion"
         android:layout_height="0dp"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         app:strokeColor="@color/Grey"
         android:layout_gravity="center_horizontal"
-        android:scrollbarStyle="outsideOverlay"
-        app:radius="8dp"
-        app:snap="true"
-        app:strokeWidth="4dp"
-        app:fillColor="@color/Gray"
-        app:pageColor="@color/White"
-        android:layout_weight="2" />
+        app:selectedColor="@color/Green"
+        app:unselectedColor="@color/Gray"
+        app:strokeWidth="5dp"
+        app:lineWidth="4dp"
+        app:centered="true"
+        android:layout_weight="1" />
 
 </LinearLayout>

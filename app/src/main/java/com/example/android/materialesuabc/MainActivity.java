@@ -33,9 +33,6 @@ public class MainActivity extends AppCompatActivity implements MateriasListFragm
     private int unidadSeleccionada;
     private MenuItem item1;
 
-
-
-
     private class DrawerItemClickListener implements ListView.OnItemClickListener {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id){
@@ -89,7 +86,7 @@ public class MainActivity extends AppCompatActivity implements MateriasListFragm
                         if (fragment instanceof HomeFragment) {
                             currentPosition = 0;
                         }
-                        if (fragment instanceof PerfilFragment) { //TODO modify this
+                        if (fragment instanceof PresentacionesFragment) {
                             currentPosition = 1;
                         }
                         if(fragment instanceof LibrosFragment){
@@ -122,11 +119,11 @@ public class MainActivity extends AppCompatActivity implements MateriasListFragm
 // If the drawer is open, hide action items related to the content view
         boolean drawerOpen = drawerLayout.isDrawerOpen(drawerList);
         if(currentPosition == 1){
-            menu.findItem(R.id.action_edit).setVisible(true);
+            menu.findItem(R.id.action_edit).setVisible(false);
             if(drawerOpen){
-                menu.findItem(R.id.action_edit).setVisible(false);
+//                menu.findItem(R.id.action_edit).setVisible(false);
             }else{
-                menu.findItem(R.id.action_edit).setVisible(true);
+//                menu.findItem(R.id.action_edit).setVisible(true);
             }
         }else{
             menu.findItem(R.id.action_edit).setVisible(false);
@@ -145,7 +142,7 @@ public class MainActivity extends AppCompatActivity implements MateriasListFragm
                 fragment = new HomeFragment();
                 break;
             case 1:
-                fragment = new PerfilFragment();
+                fragment = new PresentacionesFragment();
                 break;
             case 2:
                 //libros fragment
