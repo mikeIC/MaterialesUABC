@@ -89,11 +89,14 @@ public class MainActivity extends AppCompatActivity implements MateriasListFragm
                         if (fragment instanceof PresentacionesFragment) {
                             currentPosition = 1;
                         }
-                        if(fragment instanceof LibrosFragment){
+                        if (fragment instanceof TareasFragment) {
                             currentPosition = 2;
                         }
-                        if (fragment instanceof InformacionFragment) {
+                        if(fragment instanceof LibrosFragment){
                             currentPosition = 3;
+                        }
+                        if (fragment instanceof InformacionFragment) {
+                            currentPosition = 4;
                         }
                         setActionBarTitle(currentPosition);
                         drawerList.setItemChecked(currentPosition, true);
@@ -120,11 +123,11 @@ public class MainActivity extends AppCompatActivity implements MateriasListFragm
         boolean drawerOpen = drawerLayout.isDrawerOpen(drawerList);
         if(currentPosition == 1){
             menu.findItem(R.id.action_edit).setVisible(false);
-            if(drawerOpen){
+//            if(drawerOpen){
 //                menu.findItem(R.id.action_edit).setVisible(false);
-            }else{
+//            }else{
 //                menu.findItem(R.id.action_edit).setVisible(true);
-            }
+//            }
         }else{
             menu.findItem(R.id.action_edit).setVisible(false);
         }
@@ -145,10 +148,13 @@ public class MainActivity extends AppCompatActivity implements MateriasListFragm
                 fragment = new PresentacionesFragment();
                 break;
             case 2:
+                fragment = new TareasFragment();
+                break;
+            case 3:
                 //libros fragment
                 fragment = new LibrosFragment();
                 break;
-            case 3:
+            case 4:
                 fragment = new InformacionFragment();
                 break;
             default:

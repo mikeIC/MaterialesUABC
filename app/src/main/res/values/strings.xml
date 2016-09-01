@@ -4,6 +4,7 @@
     <string-array name="menu_list">
         <item>Inicio</item>
         <item>Presentaciones</item>
+        <item>Tareas</item>
         <item>Libros</item>
         <item>Informacion</item>
     </string-array>
@@ -25,6 +26,7 @@
         <item>Introduccion a Materiales 1</item>
         <item>Introduccion a Materiales 2</item>
         <item>Introduccion a Materiales 3</item>
+        <item>Presentacion 4</item>
     </string-array>
     <string-array name="materias_list">
         <item>Desarrollo de Materiales </item>

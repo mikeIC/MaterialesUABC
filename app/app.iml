@@ -119,8 +119,8 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 24 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="application-1.1" level="project" />
     <orderEntry type="library" exported="" name="pdf-renderer-140" level="project" />
+    <orderEntry type="library" exported="" name="application-1.1" level="project" />
     <orderEntry type="library" exported="" name="support-media-compat-24.2.0" level="project" />
     <orderEntry type="library" exported="" name="library-2.4.3" level="project" />
     <orderEntry type="library" exported="" name="support-compat-24.2.0" level="project" />
