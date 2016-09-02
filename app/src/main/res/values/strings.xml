@@ -121,7 +121,7 @@ Espectroscópico, mineralógico y microestructural
     <string name="texto_informacion17">Redacción, Conservación de derechos de patente y su uso como fuente de información</string>
     <!--*********FIN TEXTO INFORMACION***********-->
 
-    <!--Texto del slide2..-->
+    <!--Texto del slide..-->
     <string-array name="slide_1_texto">
         <item>Ceramicas Covalente</item>
         <item>Formadas basicamente por silicion y oxigeno</item>
@@ -194,6 +194,513 @@ Espectroscópico, mineralógico y microestructural
             solidifican en una o mas fases (diagramas de equilibrio)
         </item>
     </string-array>
+    <!--*********FIN TEXTO Slide2***********-->
+
+    <!--Texto del slide2.-->
+    <string-array name="slide2_1_texto">
+        <item>
+            Conservacion de Derechos
+
+        </item>
+        <item>
+            Que es una Invecion?
+
+        </item>
+        <item>
+            Toda creacion humana que permite transformar los
+            maeteriales o la energia que existe en la naturaleza
+            para:
+        </item>
+        <item>
+            Aprovechamiento por el hombre
+        </item>
+        <item>
+            Dar solucion a un problema concreto
+        </item>
+    </string-array>
+    <string-array name="slide2_2_texto">
+        <item>
+        Figuras Juridicas protegidas por la
+            Ley de la Propiedad Industrial
+        </item>
+    </string-array>
+    <string-array name="slide2_3_texto">
+        <item>
+            Patente
+
+        </item><item>
+            Es un derecho o privilegio legal que concede el estado a una persona,
+        fisica o moral, para producir o utilizar en forma exclusiva, o a traves de
+        un tercero bajo licencia, un producto o proceso desarrollado por dicha
+        persona.
+
+        </item>
+    </string-array>
+    <string-array name="slide2_4_texto">
+        <item>
+         Modelo de Utilidad
+        </item><item>
+            Son objetos, utensilios, aparatos o herramientas que,
+            como resultado de una modificacion presente una funcion
+            diferente.
+        </item>
+    </string-array>
+    <string-array name="slide2_5_texto">
+        <item>
+            Diseños Industriales
+        </item><item>
+            Los dibujos insdustriales son la combinacion
+        de figuras, lineas o colores que se incorporen a un
+        producto industrial con fines de ornamentacion y que
+        le den un aspecto peculiar y propio.
+        </item>
+    </string-array>
+    <string-array name="slide2_6_texto">
+        <item>
+            Diseños Industriales
+
+        </item><item>
+            Los Modelos Industriales estan constituidos por la forma tridimensional
+        que sirva de tipo o patron para la fabricacion de un producto industrial,
+        que le de apariencia especial en cuanto no implique efectos tecnicos.
+        </item>
+    </string-array>
+    <string-array name="slide2_7_texto">
+        <item>
+            Procedimiento Administrativo.
+
+        </item>
+    </string-array>
+    <string-array name="slide2_8_texto">
+        <item>
+            Examen de Forma
+        </item>
+    </string-array>
+    <string-array name="slide2_9_texto">
+        <item>
+            Resultado Examen de Forma
+        </item>
+    </string-array>
+    <string-array name="slide2_10_texto">
+        <item>
+            Examen de Fondo
+        </item>
+    </string-array>
+    <string-array name="slide2_11_texto">
+        <item>
+            Condiciones de Patentabilidad
+
+        </item>
+        <item>
+        Novedad
+        </item>
+        <item>
+        Actividad Inventiva
+        </item>
+        <item>
+        Aplicacion Industrial
+        </item>
+    </string-array>
+    <string-array name="slide2_12_texto">
+        <item>
+            Excepciones de Patentabilidad
+
+        </item><item>
+        (No son Patentables)
+
+
+        </item><item>
+        Metodos de produccion y cruza utilizados
+        primordialmente en el ramo de la agricultura y la
+        ganaderia
+        </item><item>
+        El material biologico y genetico tal como se
+        encuentrarn en la naturaleza
+        </item><item>
+        Las razas de animales
+        </item><item>
+        El cuerpo humano y las partes vivas que lo componen
+        </item>
+        ><item>
+        Las variedades vegetables
+        </item>
+    </string-array>
+    <string-array name="slide2_13_texto">
+        <item>
+            No son Invenciones
+
+        </item><item>
+        Principios teoricos o cientificos
+
+        </item><item>
+        Descubrimientos existentes en la naturaleza
+
+        </item><item>
+        Esquemas, planes, reglas y metodos para realizar actos mentales,
+        juegos o negocios, asi como lso metodos matematicos
+
+        </item><item>
+        Programams de computo
+
+        </item><item>
+        Formas de presentacion de informacion
+
+        </item>
+        <item>Creaciones esteticas y obras artisticas o literarias</item>
+        <item>Metodos para tratamiento quirurgico, terapeutico
+        o de diagnostico relativos al cuerpo humano o a los animales.
+        </item>
+        <item>
+            Mezclas de productos conocidos, su variacion de
+            uso, forma, dimensiones o materiales, salvo que
+            se obtenga un resultado industrial o un uso no
+            obvio para un tecnico en la materia.
+        </item>
+    </string-array>
+
+    <string-array name="slide2_14_texto">
+        <item>
+            Nulidad de una patente o registro
+
+        </item><item>
+        Otorgamiento en contravencion a las condiciones
+        requisitos de patentabilidad.
+
+        </item><item>
+        Otorgameinto de contravencion a las
+        disposiciones legales vigentes durante el
+        otorgamiento de la patente o registor.
+        </item><item>
+        Cuando se incurra en abandono
+        </item><item>
+        Por vicios o errores en el otorgamiento, o se
+        hubiere concedido a quien no tenia derecho
+        para obtenerla
+        </item>
+    </string-array>
+    <string-array name="slide2_15_texto">
+        <item>
+            Expedicion de Titulo de Patente o Registro
+        </item><item>
+        Que documentos presentar?
+        </item>
+    </string-array>
+    <string-array name="slide2_16_texto">
+        <item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item>
+    </string-array>
+    <string-array name="slide2_17_texto">
+        <item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item>
+    </string-array>
+    <string-array name="slide2_18_texto">
+        <item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item>
+    </string-array>
+    <string-array name="slide2_19_texto">
+        <item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item>
+    </string-array>
+    <string-array name="slide2_20_texto">
+        <item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item>
+    </string-array>
+    <string-array name="slide2_21_texto">
+        <item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item>
+    </string-array>
+    <string-array name="slide2_22_texto">
+        <item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item>
+    </string-array>
+    <string-array name="slide2_23_texto">
+        <item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item>
+    </string-array>
+    <string-array name="slide2_24_texto">
+        <item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item>
+    </string-array>
+    <string-array name="slide2_25_texto">
+        <item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item>
+    </string-array>
+    <string-array name="slide2_26_texto">
+        <item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item>
+</string-array>
+    <string-array name="slide2_27_texto">
+        <item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item>
+    </string-array>
+    <string-array name="slide2_28_texto">
+        <item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item>
+    </string-array><string-array name="slide2_29_texto">
+        <item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item>
+</string-array>
+    <string-array name="slide2_30_texto">
+        <item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item><item>
+
+
+        </item>
+    </string-array>
+
+
 
 
 
