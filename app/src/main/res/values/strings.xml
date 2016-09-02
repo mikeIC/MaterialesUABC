@@ -33,7 +33,7 @@
         <!--<item>Materiales Ceramicos</item>-->
         <!--<item>Materiales Ceramicos y Vitreos</item>-->
     </string-array>
-
+<!--Texto de la bienvenida localizada en HomeFragment-->
     <string name="texto_bienvenida1">En primer lugar, se les da
         la más cordial bienvenida al curso de Desarrollo de Materiales [Taller - Laboratorio]
         para el período de 2016-2 del cual se tiene la confianza de que será de gran aceptación
@@ -72,6 +72,9 @@
     <string name="texto_bienvenida7">
         Gerardo C Díaz Trujillo
     </string>
+    <!--*********FIN TEXTO BIENVENIDA***********-->
+
+    <!--Texto de la informacion de la primera Materia localizada en Informacion..-->
 
     <string name="texto_informacion1">PROPÓSITO GENERAL DEL CURSO</string>
     <string name="texto_informacion2">
@@ -116,9 +119,87 @@ Espectroscópico, mineralógico y microestructural
     <string name="texto_informacion15">Contenido de un trabajo terminal como Tesis</string>
     <string name="texto_informacion16">Capítulo VI: Patentes</string>
     <string name="texto_informacion17">Redacción, Conservación de derechos de patente y su uso como fuente de información</string>
+    <!--*********FIN TEXTO INFORMACION***********-->
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--Texto del slide2..-->
+    <string-array name="slide_1_texto">
+        <item>Ceramicas Covalente</item>
+        <item>Formadas basicamente por silicion y oxigeno</item>
+        <item>A partir de combinaciones.....</item>
+    </string-array>
+    <string-array name="slide_2_texto">
+        <item>Ceramicas Covalente</item>
+        <item>Si dos Tetraedros SiO4 ^4- se unen compartiendo un oxigeno tendremos una estructura en forma
+        de cadena(asbestos)</item>
+    </string-array>
+    <string-array name="slide_3_texto">
+        <item>Ceramicas Covalente</item>
+        <item>Si dos  tetraedros SiO4 ^4- comparten tres oxigenos se forman estructuras laminares (arcillas y micas)</item>
+    </string-array>
+    <string-array name="slide_4_texto">
+        <item>Ceramicas Covalente</item>
+        <item>Si los 4 oxigenos del tetraedro
+            SiO4^4- son compartidos, se
+            forma una red tridimensional de silice (SiO2), que puede
+            ser cristalina o amorfa</item>
+        <item>Cristobalita (polimorfo cristalino del SiO2</item>
+    </string-array>
+    <string-array name="slide_5_texto">
+        <item>Ceramicas Amorfas</item>
+        <item>La silice puede existir como solido amorfo o vidrio</item>
+        <item>Los Vidrios inorganicos mas comunes (recipientes,ventanas) llevan oxidos
+        (B203, CaO, Na20</item>
+    </string-array>
+    <string-array name="slide_6_texto">
+        <item>Defectos Estructurales</item>
+        <item> Defectos atomicos puntuales</item>
+        <item>Vacantes anionicas iones (cationes) intersticiales</item>
+        <item>Estructura de defectos → Electroneutralidad →
+            en los ceramicos los defectos no ocurren de forma aislada
+        </item>
+        <item>Defecto Frenkel: vacante cationica + cation intersticial</item>
+        <item>Defecto Schottky: Solo en ceramicos AX.
+            Consiste en una vacante aniomica + vacante cationica
+        </item>
+        <item>Iones con 2 estados de oxidacion (Fe^2+, Fe ^3+)→
+            se conserva la electoneutralidad pero no la estequiometria
+        </item>
+    </string-array>
+    <string-array name="slide_7_texto">
+        <item>Defectos Estructurales</item>
+        <item> Impurezas</item>
+        <item>Intersticiales: sus radios ionicos debe ser pequeños
+            en relacion con los del anion.
+        </item>
+        <item>Sustitucionales: sus tamaños ionicos y su carga deben
+            ser casi iguales que los iones disolventes
+        </item>
+
+        <item>Para compensar las diferencias de carga que puedan aparecer
+            y mantener la electroneutralidad se forman defectos atomicos puntuales en la red.
+        </item>
+    </string-array>
+    <string-array name="slide_8_texto">
+        <item>
+            Aleaciones Ceramicas
+        </item>
+        <item>
+            Mejorar la tenacidad a la fractura
+        </item>
+        <item>
+            Conseguir una densificacion total
+        </item>
+        <item>
+            Los oxidos fundidos tienen gran solubilidad entre si y
+            solidifican en una o mas fases (diagramas de equilibrio)
+        </item>
+    </string-array>
+
+
+
+
+
+    <!--Texto Mix..-->
     <string name="imagen_de_perfil">Imagen de perfil</string>
     <string name="label_nombre">Nombre:</string>
     <string name="apellido">Apellido:</string>
@@ -137,7 +218,6 @@ Espectroscópico, mineralógico y microestructural
     <string name="fa_remove">&#xf00d;</string>
     <string name="fa_book"> &#xf02d;</string>
     <string name="nombre">Nombre:</string>
-
     <string name="materia">Materia:</string>
     <string name="pregunta">Pregunta Aqui</string>
     <string name="escoje_una_opcion">Escoje Una Opcion:</string>
