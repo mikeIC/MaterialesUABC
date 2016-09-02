@@ -172,18 +172,17 @@ Espectroscópico, mineralógico y microestructural
         <item>Propiedades y Caracteristicas</item>
         <item>Materiales Inorganicos</item>
         <item>Materiales policristalinos o amorfos</item>
-        <item>Caracter no Metalico                   ^</item>
-        <item>Enlace ionico/covalente -> estabilidad | T(a) fusion</item>
-        <item>Materiales duros y fragiles    ( | tenacidad y ductilidad)</item>
-        <item>Aislantes Electricos y termicos  ^</item>
-
+        <item>Caracter no Metalico</item>
+        <item>Enlace ionico/covalente -> estabilidad ↑ T^a fusion</item>
+        <item>Materiales duros y fragiles ( ↓ tenacidad y ductilidad)</item>
+        <item>Aislantes Electricos y termicos  </item>
     </string-array>
 
     <string-array name="p2_2_t1">
         <item>Enlace en Ceramicos</item>
-        <item>Tiene un % de caracter y un % de caracter covalente</item>
-        <item>El % de caracter ionico aumenta con la diferencia de electronegatividad</item>
-        <!-- Imagen -->
+        <item>Tiene un %% de caracter y un %% de caracter covalente</item>
+        <item>El %% de caracter ionico aumenta con la diferencia de electronegatividad</item>
+        <!--Imagen-->
     </string-array>
 
     <string-array name="p2_3_t1">
@@ -191,18 +190,46 @@ Espectroscópico, mineralógico y microestructural
         <item>Dos grupos principales:</item>
         <item>Ceramicos tradicionales: a partir de arcilla,
         silice y feldespato (porcelanas, ladrillos, vidrios, etc.)</item>
-        <item>Ceramicos avanzandos: formados por compuestos tales como AI_2O_3, SiC, Si_3Ni_4</item>
+        <item>Ceramicos avanzandos: formados por compuestos tales como A12O3, SiC, Si3Ni4</item>
     </string-array>
 
     <string-array name="p2_4_t1">
         <item>Importancia Industrial</item>
+        <item>Aplicaciones:</item>
         <item>Sustratos de circuitos, semiconductores</item>
         <item>Dielectricos de condensadores</item>
         <item>Ceramicos piezoelectricos</item>
-        <item></item>
-
-
+        <item>Prismas y lentes en tecnologia laser</item>
+        <item>Energia nuclear: combustibles, pantallas abosrbentes</item>
+        <item>Quemadores e intercambiadores de calor</item>
+        <item>Elementos de motores termicos</item>
+        <item>Matrices de extrusion y herramientas de mecanizado</item>
     </string-array>
+
+    <string-array name="p2_5_t1">
+        <item>Importancia Industrial</item>
+        <item>Limitaciones (debidas a su fragilidad caracteristica): </item>
+        <item>Alta sensibilidad ante defectos (poros, inclusiones) que actuen
+            como concentradores de tensiones
+        </item>
+        <item>Dificultades en cuanto al diseño</item>
+        <item>Elevado precio</item>
+    </string-array>
+
+    <string-array name="p2_6_t1">
+        <item>Estructuras Tipo</item>
+        <item>Dos factores definen la estructura y el grado de compactacion
+            ceramicos iconicos:</item>
+        <item>La carga electrica de los iones: el cristal debe ser electricamente nuetro</item>
+        <item>Los tamaños relativos de aniones y cationes</item>
+        <item>Estructura estable ⇔ el cation esta en contacto con todos los aniones que le rodean</item>
+        <item>Numero de coordinacion (NC) es el numero de aniones mas proximos a un cation</item>
+        <item>NC -> r_c/r_a con el que se da el contacto</item>
+    </string-array>
+
+    <string name="p2_7_t1">Estructuras Tipo</string>
+    <string name="p2_8_t1">Estructuras Tipo</string>
+    <string name="p2_9_t1">Estructuras Tipo</string>
 
     <string-array name="p2_10_t1">
         <item>Estructuras TIPO (AX)</item>
@@ -214,9 +241,107 @@ Espectroscópico, mineralógico y microestructural
         <item>C1-(0,0,0)</item>
         <item>Na+(1/2,0,0)</item>
         <item>NaC1, MgO, MnS, LiF, FeO</item>
-
     </string-array>
 
+    <string-array name="p2_14_t1">
+        <item>Estructuras TIPO (AX)</item>
+        <item>Cloruro Sodico</item>
+        <item>NC = 8 (aniones y cationes)</item>
+        <item>Cubica simple</item>
+        <item>Base Estructural:</item>
+        <item>C1-(0,0,0)</item>
+        <item>Cs+(1/2,1/2,1/2)</item>
+        <item>CsBr, T1Br</item>
+    </string-array>
 
+    <string-array name="p2_15_t1">
+        <item>Estructuras TIPO (AX)</item>
+        <item>Blenda (ZnS)</item>
+        <item>NC = 4 </item>
+        <item>FCC pata S^2-</item>
+        <item>Zn^2+ ocupa de los ocho huecos tetraedricos</item>
+        <item>Base estructural:</item>
+        <item>S^2-(0,0,0)</item>
+        <item>Zn^2+(1/4,1/4,1/4)</item>
+        <item>ZnTe, SiC</item>
+    </string-array>
+
+    <string-array name="p2_16_t1">
+        <item>Estructuras TIPO (A_m B_p)</item>
+        <item>Fluorita (CaF2)</item>
+        <item>NC = 4 (aniones), 8 (cationes) </item>
+        <item>FCC pata Ca^2+</item>
+        <item>F- en todos los huecos tetraedicos</item>
+        <item>Base estructural:</item>
+        <item>Ca^2+(0,0,0)</item>
+        <item>F-(1/4,1/4,1/4)(1/4,-1/4,1/4)</item>
+        <item>UO_2, BaF_2, AuuA1_2, PbMg_2</item>
+    </string-array>
+
+    <string-array name="p2_19_t1">
+        <item>Estructuras TIPO (A_m B_p)</item>
+        <item>HC (A1_20_3)</item>
+        <item>A1^3+ en dos tercios de los huecos octaedricos</item>
+        <item>Li_2O, Na_2O,Mg_2Si</item>
+    </string-array>
+
+    <string-array name="p2_20_t1">
+        <item>Estructuras TIPO (A_m B_n X_p)</item>
+        <item>Perouskita (BaTiO_3)</item>
+        <item>Cubica simple para Ba^2+</item>
+        <item>Ti^4+ en el centro del cubo</item>
+        <item>O^2- en los centros de las seis caras</item>
+        <item>CaZrO_3, SrZrO_3</item>
+        <item>Importante para piezoelectricos</item>
+    </string-array>
+
+    <string-array name="p2_21_t1">
+        <item>Estructuras TIPO (A_m B_n X_p)</item>
+        <item>Espinela (MgA1_2O_4)</item>
+        <item>FCC para O^2-</item>
+        <item>A1^3+ y Mg^2+ se encuentran en huecos octaedricos y tetraedricos</item>
+        <item>Para materiales magneticos en aplicaciones electronicas</item>
+    </string-array>
+
+    <string-array name="p2_22_t1">
+        <item>Ceramicas Covalentes</item>
+        <item>Estructuras cristalinas con enlaces covalentes</item>
+        <item>Se consideran: </item>
+        <item>Diamante</item>
+        <item>Grafito</item>
+        <item>Fullerenos</item>
+        <item>SiC</item>
+        <item>Silicatos</item>
+    </string-array>
+
+    <string-array name="p2_23_t1">
+        <item>Ceramicas Covalentes</item>
+        <item>Diamante</item>
+        <item>Estructura procedente de la blenda presente tambien en el SiC</item>
+        <item>Fuerte enlace covalente</item>
+        <item>Elevadisima dureza</item>
+        <item>Muy baja conductividad electrica</item>
+        <item>Alta conductividad termica</item>
+        <item>Recubrimiento de superficies de brocas, cojinetes, herramientas de corte</item>
+    </string-array>
+
+    <string-array name="p2_24_t1">
+        <item>Ceramicas Covalentes</item>
+        <item>Graficto</item>
+        <item>Capas de atomos de carbono unidos por enlace covalente</item>
+        <item>Enlaces de van der Waals entre las capas -> buenas propiedades lubricantes</item>
+        <item>Alta conductividad electrica paralelamente a las capas</item>
+        <item>Alta conductividad termica</item>
+        <item>Alta estabilidad a alta T^a</item>
+        <item>Electrodos, en crisoles, en contactos electricos</item>
+    </string-array>
+
+    <string-array name="p2_25_t1">
+        <item>Ceramicas Covalentes</item>
+        <item>Fullerenos</item>
+        <item>Materiales formados por moleculas C_60
+        (red esfericaca de 60 atomos de carbono)</item>
+        <item>Semiconductores</item>
+    </string-array>
 
 </resources>
