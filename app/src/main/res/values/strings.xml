@@ -165,4 +165,58 @@ Espectroscópico, mineralógico y microestructural
     <string name="tiempo">Tiempo</string>
     <string name="appp_key">xl0y0ywg4q20x8b</string>
     <string name="app_secrete">t275ub8b3fd0v32</string>
+
+    <!--Presentacion#2-->
+
+    <string-array name="p2_1_t1">
+        <item>Propiedades y Caracteristicas</item>
+        <item>Materiales Inorganicos</item>
+        <item>Materiales policristalinos o amorfos</item>
+        <item>Caracter no Metalico                   ^</item>
+        <item>Enlace ionico/covalente -> estabilidad | T(a) fusion</item>
+        <item>Materiales duros y fragiles    ( | tenacidad y ductilidad)</item>
+        <item>Aislantes Electricos y termicos  ^</item>
+
+    </string-array>
+
+    <string-array name="p2_2_t1">
+        <item>Enlace en Ceramicos</item>
+        <item>Tiene un % de caracter y un % de caracter covalente</item>
+        <item>El % de caracter ionico aumenta con la diferencia de electronegatividad</item>
+        <!-- Imagen -->
+    </string-array>
+
+    <string-array name="p2_3_t1">
+        <item>Importancia Industrial</item>
+        <item>Dos grupos principales:</item>
+        <item>Ceramicos tradicionales: a partir de arcilla,
+        silice y feldespato (porcelanas, ladrillos, vidrios, etc.)</item>
+        <item>Ceramicos avanzandos: formados por compuestos tales como AI_2O_3, SiC, Si_3Ni_4</item>
+    </string-array>
+
+    <string-array name="p2_4_t1">
+        <item>Importancia Industrial</item>
+        <item>Sustratos de circuitos, semiconductores</item>
+        <item>Dielectricos de condensadores</item>
+        <item>Ceramicos piezoelectricos</item>
+        <item></item>
+
+
+    </string-array>
+
+    <string-array name="p2_10_t1">
+        <item>Estructuras TIPO (AX)</item>
+        <item>Cloruro Sodico</item>
+        <item>NC = 6 (aniones y cationes)</item>
+        <item>FCC para aniones</item>
+        <item>Cationes en todos los huecos octaedricos</item>
+        <item>Base Estructural:</item>
+        <item>C1-(0,0,0)</item>
+        <item>Na+(1/2,0,0)</item>
+        <item>NaC1, MgO, MnS, LiF, FeO</item>
+
+    </string-array>
+
+
+
 </resources>
