@@ -387,317 +387,215 @@ Espectroscópico, mineralógico y microestructural
     </string-array>
     <string-array name="slide2_16_texto">
         <item>
-
-
-        </item><item>
-
-
-        </item><item>
-
-
-        </item><item>
-
-
-        </item><item>
-
-
-        </item><item>
-
-
+            Oficio de "Cita a Pago"
         </item>
     </string-array>
     <string-array name="slide2_17_texto">
         <item>
-
-
-        </item><item>
-
-
-        </item><item>
-
-
-        </item><item>
-
-
-        </item><item>
-
-
-        </item><item>
-
+            Linea de Captura para pago de Servicios
 
         </item>
     </string-array>
     <string-array name="slide2_18_texto">
         <item>
-
-
-        </item><item>
-
+            Solicitud de Descuento
 
         </item><item>
-
-
-        </item><item>
-
+        Inventores Independientes o Personas Fisicas
 
         </item><item>
-
+        Micro o pequeña industria
 
         </item><item>
+        Instituciones de educacion superior
 
+        </item><item>
+        Instituciones de investigacion cientifica y tecnologica
+        del sector publico
 
         </item>
     </string-array>
     <string-array name="slide2_19_texto">
         <item>
-
-
-        </item><item>
-
+            Figuras Requeridas en el Oficio de Cita a Pago
 
         </item><item>
-
-
-        </item><item>
-
+        Tres copias finas en las siguientes Medidas
 
         </item><item>
-
+        Para un dibujo: 7.00 x 11.00cm
 
         </item><item>
-
+        Para dos o mas dibujos: 11.00 x14.00 cm
 
         </item>
     </string-array>
     <string-array name="slide2_20_texto">
         <item>
-
-
-        </item><item>
-
-
-        </item><item>
-
-
-        </item><item>
-
-
-        </item><item>
-
-
-        </item><item>
-
-
+            Titulo de Patente
         </item>
     </string-array>
     <string-array name="slide2_21_texto">
         <item>
-
-
-        </item><item>
-
-
-        </item><item>
-
-
-        </item><item>
-
-
-        </item><item>
-
-
-        </item><item>
-
+        Titulo de Registro de Diseño Industrial
 
         </item>
     </string-array>
     <string-array name="slide2_22_texto">
         <item>
-
-
-        </item><item>
-
-
-        </item><item>
-
-
-        </item><item>
-
-
-        </item><item>
-
-
-        </item><item>
-
-
+            Titulo de Registro de Modelo de Utilidad
         </item>
     </string-array>
     <string-array name="slide2_23_texto">
         <item>
-
-
+            Derechos Conferidos por una Patente o Registro
         </item><item>
-
-
+        Derecho de exclusividad en la explotacion de la
+        invencion, el cual esta determinado por las
+        reivindicaciones.
         </item><item>
-
-
-        </item><item>
-
-
-        </item><item>
-
-
-        </item><item>
-
-
+        Demandar daños prejuicios a terceros que antes
+        del otrogamiento hubieren explotado sin su
+        consentimiento la patente o registro.
         </item>
     </string-array>
     <string-array name="slide2_24_texto">
         <item>
-
-
+            Plazo Adicional
         </item><item>
-
-
+        Sin que medie solicitud y comprobando el pago
+        correspondiente
         </item><item>
-
-
+        Relativo al articulo 31 de la tarifa vigente por los
+        servicios que presta el instituo mexicano de la
+        propiedad industrial
         </item><item>
-
-
+        Por el cumplimiento de requisito dentro del plazo de
+        dos meses previsto en el articulo 58 y 122 bis por cada
+        uno.
         </item><item>
-
-
+        $152.77
         </item><item>
-
-
+        IVA $24.44
         </item>
+        <item>Total $177.21 (Por Cada Mes)</item>
     </string-array>
     <string-array name="slide2_25_texto">
         <item>
-
-
-        </item><item>
-
-
-        </item><item>
-
-
-        </item><item>
-
-
-        </item><item>
-
-
-        </item><item>
-
-
+            Ejemplo Plazo Adicional
         </item>
     </string-array>
     <string-array name="slide2_26_texto">
         <item>
-
-
-        </item><item>
-
-
-        </item><item>
-
-
-        </item><item>
-
-
-        </item><item>
-
-
-        </item><item>
-
-
+            Licencias de Explotacion
         </item>
 </string-array>
     <string-array name="slide2_27_texto">
         <item>
-
-
+            Licencia de Explotacion
         </item><item>
-
-
+        Quien la otorga es el titular de la patente o
+        registro y, debe ser inscrita ante el instituto para
+        producir efectos contra terceros.
         </item><item>
-
-
+        Puede ser solicitada por el licenciante o el licenciatario
         </item><item>
-
-
+        Tanto la viegencia como las condiciones generales
+        de la misma, estan determinadas por las partes, sin
+        embargo, el convecio debe hacer mencion, si la
+        misma concede facultades para ejercer acciones
+        legales contra terceros.
         </item><item>
-
-
-        </item><item>
-
-
+        Puede otorgarse de manera exclusiva
         </item>
     </string-array>
     <string-array name="slide2_28_texto">
         <item>
-
-
-        </item><item>
-
-
-        </item><item>
-
-
-        </item><item>
-
-
-        </item><item>
-
-
-        </item><item>
-
-
+            Vigilancia de Pago Anualidades
         </item>
-    </string-array><string-array name="slide2_29_texto">
+    </string-array>
+
+    <string-array name="slide2_29_texto">
         <item>
-
-
+            Patentes o Registros
         </item><item>
-
-
+        Constraprestaciones para el titular:
         </item><item>
-
-
+        Publicacion de la invecion
         </item><item>
-
-
-        </item><item>
-
-
-        </item><item>
-
-
+        Pago de anualidades
         </item>
 </string-array>
     <string-array name="slide2_30_texto">
         <item>
-
-
+            Condiciones para el Pago de Anualidades
         </item><item>
-
-
+        El pago de anualidades debe realizarse dentro
+        del mes aniversario de la solicitud, que se
+        refiere al mes de presentacion.
         </item><item>
-
-
-        </item><item>
-
-
-        </item><item>
-
-
-        </item><item>
-
-
+        Ejemplo, la solicitud se presento el 2 de enero
+        de 2000 y se concedio el 8 de noviembre de 2001.
         </item>
+    </string-array>
+    <string-array name="slide2_31_texto">
+        <item>Ejemplo del Pago de un Quinquenio o Anualidad
+        Correspondiente</item>
+        <item>Frecha de presentacion de una solicitud de patente:</item>
+        <item>15 de abril de 2002</item>
+        <item>Fecha de concesion: </item>
+        <item>16 de febreor de 2009</item>
+    </string-array>
+    <string-array name="slide2_32_texto">
+        <item>Fecha de Presentacion: 15/Abril/2002</item>
+        <item>Fecha de Concesion: 16/Febrero/2009</item>
+
+    </string-array>
+    <string-array name="slide2_33_texto">
+        <item>Plazo de Gracia</item>
+        <item>Es un derecho que otroga la ley</item>
+        <item>Seis meses para cubrir pago de anualidades, contados
+        apartir del mes siguiente en que debio pagar</item>
+        <item>Obligacion del Titular de Cubir el pago de: </item>
+        <item>A) Anualidades;</item>
+        <item>B)  Recargos</item>
+        <item>C) Actualizacion Fiscal</item>
+    </string-array>
+    <string-array name="slide2_34_texto">
+        <item>Rehabilitacion</item>
+        <item>Derecho otorgado por la ley.</item>
+        <item>La solicitud debe presentarse dentro de los seis
+        meses siguientes al plazo de gracia.</item>
+        <item>El titular debe cubrir el pago de:</item>
+        <item>A. Estudio rehabilitacion</item>
+        <item>B. Anualidades</item>
+        <item>C. Recargos</item>
+        <item>D. Actualizacion fiscal</item>
+        <item>Solicitud por parte del titular o licenciatario,
+        salvo estipulacin en contrario, Art. 49 RLPI.</item>
+    </string-array>
+    <string-array name="slide2_35_texto">
+        <item>Plazo de Gracia</item>
+        <item>Por ejemplo, si el pago de la anualidad o
+        quinquenio debia realizarse en el mes de junio de
+        2012, el conteo del plazo de gracia se hace de la
+        siguiente manera:</item>
+    </string-array>
+    <string-array name="slide2_36_texto">
+        <item>Rehabilitacion</item>
+        <item>Plazo para solicitar la rehabilitacion Fenece en
+        junio de 2013</item>
+    </string-array>
+    <string-array name="slide2_37_texto">
+        <item>Caducidad de Patente</item>
+        <item>1. Termino de su vigencia.</item>
+        <item>2. Flata de pago de las anualidades.</item>
+        <item>3. Flata de explotacion con licencia
+        obligatoria dos años, supuesto del Art. 73 LPI</item>
+    </string-array>
+
+    <string-array name="slide2_38_texto">
+        <item></item>
     </string-array>
 
 
