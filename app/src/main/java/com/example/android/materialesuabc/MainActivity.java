@@ -22,7 +22,7 @@ import android.widget.ListView;
 
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements MateriasListFragment.MateriasListListener,LibrosListFragment.LibroListListener,PresentacionesListFragment.PresentacionesListListener{
+public class MainActivity extends AppCompatActivity implements MateriasListFragment.MateriasListListener,LibrosListFragment.LibroListListener,PresentacionesListFragment.PresentacionesListListener, VideosCategoryList.VideosCategoryListListener{
     private String[] titles;
     private ListView drawerList;
     private DrawerLayout drawerLayout;
@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity implements MateriasListFragm
     private int materiaSeleccionada;
     private int unidadSeleccionada;
     private MenuItem item1;
+
+
 
     private class DrawerItemClickListener implements ListView.OnItemClickListener {
         @Override
@@ -95,8 +97,11 @@ public class MainActivity extends AppCompatActivity implements MateriasListFragm
                         if(fragment instanceof LibrosFragment){
                             currentPosition = 3;
                         }
-                        if (fragment instanceof InformacionFragment) {
+                        if(fragment instanceof VideosCategoryFragment){
                             currentPosition = 4;
+                        }
+                        if (fragment instanceof InformacionFragment) {
+                            currentPosition = 5;
                         }
                         setActionBarTitle(currentPosition);
                         drawerList.setItemChecked(currentPosition, true);
@@ -155,6 +160,9 @@ public class MainActivity extends AppCompatActivity implements MateriasListFragm
                 fragment = new LibrosFragment();
                 break;
             case 4:
+                fragment = new VideosCategoryFragment();
+                break;
+            case 5:
                 fragment = new InformacionFragment();
                 break;
             default:
@@ -214,6 +222,14 @@ public class MainActivity extends AppCompatActivity implements MateriasListFragm
         }
 
         Intent intent = new Intent(Intent.ACTION_VIEW,uri);
+        startActivity(intent);
+    }
+
+    // called when video category is choosen
+    @Override
+    public void itemClickedVideosCategory(long id) {
+        Intent intent = new Intent(MainActivity.this,VideosActivity.class);
+        intent.putExtra("id",id);
         startActivity(intent);
     }
     //Cambair el titulo del menu

@@ -6,6 +6,7 @@
         <item>Presentaciones</item>
         <item>Tareas</item>
         <item>Libros</item>
+        <item>Videos</item>
         <item>Informacion</item>
     </string-array>
     <string-array name="unidades_list">
@@ -26,14 +27,50 @@
         <item>Introduccion a Materiales 1</item>
         <item>Introduccion a Materiales 2</item>
         <item>Introduccion a Materiales 3</item>
-        <item>Presentacion 4</item>
+        <item>Conservacion de derechos de Patentes</item>
+        <item>Redaccion de Patentes</item>
+        <item>Los patentes como fuente de información</item>
     </string-array>
     <string-array name="materias_list">
         <item>Desarrollo de Materiales </item>
         <!--<item>Materiales Ceramicos</item>-->
         <!--<item>Materiales Ceramicos y Vitreos</item>-->
     </string-array>
-<!--Texto de la bienvenida localizada en HomeFragment-->
+
+    <string-array name="videos_temas_list">
+        <item>Ceramica</item>
+        <item>Metal</item>
+        <item>Plastico</item>
+        <item>Vidrio</item>
+    </string-array>
+    <string-array name="videos_ceramica_list">
+        <item>Coomo se Fabrican: Azulejos de Ceramica</item>
+        <item>Ladrillos Ceramicos</item>
+        <item>Proceso Artesanal Cerámica</item>
+    </string-array>
+    <string-array name="videos_metal_list">
+        <item>Asi se hace el Acero</item>
+        <item>Proceso de Produccion Parte 1</item>
+        <item>Proceso de Produccion Parte 2</item>
+        <item>Los metales 2: El bronce</item>
+        <item>Los metales 3: El hierro</item>
+        <item>Los metales 4: El acero</item>
+        <item>Los metales 5: El oro</item>
+        <item>Los metales 6: El aluminio</item>
+        <item>Proceso de extraccion del hierro</item>
+
+    </string-array>
+    <string-array name="videos_plastico_list">
+        <item>Video Plastico 1</item>
+        <item>Video Plastico 2</item>
+        <item>Video Plastico 3</item>
+    </string-array>
+    <string-array name="videos_vidrio_list">
+        <item>Video Vidrio 1</item>
+        <item>Video Vidrio 2</item>
+        <item>Video Vidrio 3</item>
+    </string-array>
+    <!--Texto de la bienvenida localizada en HomeFragment-->
     <string name="texto_bienvenida1">En primer lugar, se les da
         la más cordial bienvenida al curso de Desarrollo de Materiales [Taller - Laboratorio]
         para el período de 2016-2 del cual se tiene la confianza de que será de gran aceptación
@@ -121,489 +158,6 @@ Espectroscópico, mineralógico y microestructural
     <string name="texto_informacion17">Redacción, Conservación de derechos de patente y su uso como fuente de información</string>
     <!--*********FIN TEXTO INFORMACION***********-->
 
-    <!--Texto del slide..-->
-    <string-array name="slide_1_texto">
-        <item>Ceramicas Covalente</item>
-        <item>Formadas basicamente por silicion y oxigeno</item>
-        <item>A partir de combinaciones.....</item>
-    </string-array>
-    <string-array name="slide_2_texto">
-        <item>Ceramicas Covalente</item>
-        <item>Si dos Tetraedros SiO4 ^4- se unen compartiendo un oxigeno tendremos una estructura en forma
-        de cadena(asbestos)</item>
-    </string-array>
-    <string-array name="slide_3_texto">
-        <item>Ceramicas Covalente</item>
-        <item>Si dos  tetraedros SiO4 ^4- comparten tres oxigenos se forman estructuras laminares (arcillas y micas)</item>
-    </string-array>
-    <string-array name="slide_4_texto">
-        <item>Ceramicas Covalente</item>
-        <item>Si los 4 oxigenos del tetraedro
-            SiO4^4- son compartidos, se
-            forma una red tridimensional de silice (SiO2), que puede
-            ser cristalina o amorfa</item>
-        <item>Cristobalita (polimorfo cristalino del SiO2</item>
-    </string-array>
-    <string-array name="slide_5_texto">
-        <item>Ceramicas Amorfas</item>
-        <item>La silice puede existir como solido amorfo o vidrio</item>
-        <item>Los Vidrios inorganicos mas comunes (recipientes,ventanas) llevan oxidos
-        (B203, CaO, Na20</item>
-    </string-array>
-    <string-array name="slide_6_texto">
-        <item>Defectos Estructurales</item>
-        <item> Defectos atomicos puntuales</item>
-        <item>Vacantes anionicas iones (cationes) intersticiales</item>
-        <item>Estructura de defectos → Electroneutralidad →
-            en los ceramicos los defectos no ocurren de forma aislada
-        </item>
-        <item>Defecto Frenkel: vacante cationica + cation intersticial</item>
-        <item>Defecto Schottky: Solo en ceramicos AX.
-            Consiste en una vacante aniomica + vacante cationica
-        </item>
-        <item>Iones con 2 estados de oxidacion (Fe^2+, Fe ^3+)→
-            se conserva la electoneutralidad pero no la estequiometria
-        </item>
-    </string-array>
-    <string-array name="slide_7_texto">
-        <item>Defectos Estructurales</item>
-        <item> Impurezas</item>
-        <item>Intersticiales: sus radios ionicos debe ser pequeños
-            en relacion con los del anion.
-        </item>
-        <item>Sustitucionales: sus tamaños ionicos y su carga deben
-            ser casi iguales que los iones disolventes
-        </item>
-
-        <item>Para compensar las diferencias de carga que puedan aparecer
-            y mantener la electroneutralidad se forman defectos atomicos puntuales en la red.
-        </item>
-    </string-array>
-    <string-array name="slide_8_texto">
-        <item>
-            Aleaciones Ceramicas
-        </item>
-        <item>
-            Mejorar la tenacidad a la fractura
-        </item>
-        <item>
-            Conseguir una densificacion total
-        </item>
-        <item>
-            Los oxidos fundidos tienen gran solubilidad entre si y
-            solidifican en una o mas fases (diagramas de equilibrio)
-        </item>
-    </string-array>
-    <!--*********FIN TEXTO Slide2***********-->
-
-    <!--Texto del slide2.-->
-    <string-array name="slide2_1_texto">
-        <item>
-            Conservacion de Derechos
-
-        </item>
-        <item>
-            Que es una Invecion?
-
-        </item>
-        <item>
-            Toda creacion humana que permite transformar los
-            maeteriales o la energia que existe en la naturaleza
-            para:
-        </item>
-        <item>
-            Aprovechamiento por el hombre
-        </item>
-        <item>
-            Dar solucion a un problema concreto
-        </item>
-    </string-array>
-    <string-array name="slide2_2_texto">
-        <item>
-        Figuras Juridicas protegidas por la
-            Ley de la Propiedad Industrial
-        </item>
-    </string-array>
-    <string-array name="slide2_3_texto">
-        <item>
-            Patente
-
-        </item><item>
-            Es un derecho o privilegio legal que concede el estado a una persona,
-        fisica o moral, para producir o utilizar en forma exclusiva, o a traves de
-        un tercero bajo licencia, un producto o proceso desarrollado por dicha
-        persona.
-
-        </item>
-    </string-array>
-    <string-array name="slide2_4_texto">
-        <item>
-         Modelo de Utilidad
-        </item><item>
-            Son objetos, utensilios, aparatos o herramientas que,
-            como resultado de una modificacion presente una funcion
-            diferente.
-        </item>
-    </string-array>
-    <string-array name="slide2_5_texto">
-        <item>
-            Diseños Industriales
-        </item><item>
-            Los dibujos insdustriales son la combinacion
-        de figuras, lineas o colores que se incorporen a un
-        producto industrial con fines de ornamentacion y que
-        le den un aspecto peculiar y propio.
-        </item>
-    </string-array>
-    <string-array name="slide2_6_texto">
-        <item>
-            Diseños Industriales
-
-        </item><item>
-            Los Modelos Industriales estan constituidos por la forma tridimensional
-        que sirva de tipo o patron para la fabricacion de un producto industrial,
-        que le de apariencia especial en cuanto no implique efectos tecnicos.
-        </item>
-    </string-array>
-    <string-array name="slide2_7_texto">
-        <item>
-            Procedimiento Administrativo.
-
-        </item>
-    </string-array>
-    <string-array name="slide2_8_texto">
-        <item>
-            Examen de Forma
-        </item>
-    </string-array>
-    <string-array name="slide2_9_texto">
-        <item>
-            Resultado Examen de Forma
-        </item>
-    </string-array>
-    <string-array name="slide2_10_texto">
-        <item>
-            Examen de Fondo
-        </item>
-    </string-array>
-    <string-array name="slide2_11_texto">
-        <item>
-            Condiciones de Patentabilidad
-
-        </item>
-        <item>
-        Novedad
-        </item>
-        <item>
-        Actividad Inventiva
-        </item>
-        <item>
-        Aplicacion Industrial
-        </item>
-    </string-array>
-    <string-array name="slide2_12_texto">
-        <item>
-            Excepciones de Patentabilidad
-
-        </item><item>
-        (No son Patentables)
-
-
-        </item><item>
-        Metodos de produccion y cruza utilizados
-        primordialmente en el ramo de la agricultura y la
-        ganaderia
-        </item><item>
-        El material biologico y genetico tal como se
-        encuentrarn en la naturaleza
-        </item><item>
-        Las razas de animales
-        </item><item>
-        El cuerpo humano y las partes vivas que lo componen
-        </item>
-        ><item>
-        Las variedades vegetables
-        </item>
-    </string-array>
-    <string-array name="slide2_13_texto">
-        <item>
-            No son Invenciones
-
-        </item><item>
-        Principios teoricos o cientificos
-
-        </item><item>
-        Descubrimientos existentes en la naturaleza
-
-        </item><item>
-        Esquemas, planes, reglas y metodos para realizar actos mentales,
-        juegos o negocios, asi como lso metodos matematicos
-
-        </item><item>
-        Programams de computo
-
-        </item><item>
-        Formas de presentacion de informacion
-
-        </item>
-        <item>Creaciones esteticas y obras artisticas o literarias</item>
-        <item>Metodos para tratamiento quirurgico, terapeutico
-        o de diagnostico relativos al cuerpo humano o a los animales.
-        </item>
-        <item>
-            Mezclas de productos conocidos, su variacion de
-            uso, forma, dimensiones o materiales, salvo que
-            se obtenga un resultado industrial o un uso no
-            obvio para un tecnico en la materia.
-        </item>
-    </string-array>
-
-    <string-array name="slide2_14_texto">
-        <item>
-            Nulidad de una patente o registro
-
-        </item><item>
-        Otorgamiento en contravencion a las condiciones
-        requisitos de patentabilidad.
-
-        </item><item>
-        Otorgameinto de contravencion a las
-        disposiciones legales vigentes durante el
-        otorgamiento de la patente o registor.
-        </item><item>
-        Cuando se incurra en abandono
-        </item><item>
-        Por vicios o errores en el otorgamiento, o se
-        hubiere concedido a quien no tenia derecho
-        para obtenerla
-        </item>
-    </string-array>
-    <string-array name="slide2_15_texto">
-        <item>
-            Expedicion de Titulo de Patente o Registro
-        </item><item>
-        Que documentos presentar?
-        </item>
-    </string-array>
-    <string-array name="slide2_16_texto">
-        <item>
-            Oficio de "Cita a Pago"
-        </item>
-    </string-array>
-    <string-array name="slide2_17_texto">
-        <item>
-            Linea de Captura para pago de Servicios
-
-        </item>
-    </string-array>
-    <string-array name="slide2_18_texto">
-        <item>
-            Solicitud de Descuento
-
-        </item><item>
-        Inventores Independientes o Personas Fisicas
-
-        </item><item>
-        Micro o pequeña industria
-
-        </item><item>
-        Instituciones de educacion superior
-
-        </item><item>
-        Instituciones de investigacion cientifica y tecnologica
-        del sector publico
-
-        </item>
-    </string-array>
-    <string-array name="slide2_19_texto">
-        <item>
-            Figuras Requeridas en el Oficio de Cita a Pago
-
-        </item><item>
-        Tres copias finas en las siguientes Medidas
-
-        </item><item>
-        Para un dibujo: 7.00 x 11.00cm
-
-        </item><item>
-        Para dos o mas dibujos: 11.00 x14.00 cm
-
-        </item>
-    </string-array>
-    <string-array name="slide2_20_texto">
-        <item>
-            Titulo de Patente
-        </item>
-    </string-array>
-    <string-array name="slide2_21_texto">
-        <item>
-        Titulo de Registro de Diseño Industrial
-
-        </item>
-    </string-array>
-    <string-array name="slide2_22_texto">
-        <item>
-            Titulo de Registro de Modelo de Utilidad
-        </item>
-    </string-array>
-    <string-array name="slide2_23_texto">
-        <item>
-            Derechos Conferidos por una Patente o Registro
-        </item><item>
-        Derecho de exclusividad en la explotacion de la
-        invencion, el cual esta determinado por las
-        reivindicaciones.
-        </item><item>
-        Demandar daños prejuicios a terceros que antes
-        del otrogamiento hubieren explotado sin su
-        consentimiento la patente o registro.
-        </item>
-    </string-array>
-    <string-array name="slide2_24_texto">
-        <item>
-            Plazo Adicional
-        </item><item>
-        Sin que medie solicitud y comprobando el pago
-        correspondiente
-        </item><item>
-        Relativo al articulo 31 de la tarifa vigente por los
-        servicios que presta el instituo mexicano de la
-        propiedad industrial
-        </item><item>
-        Por el cumplimiento de requisito dentro del plazo de
-        dos meses previsto en el articulo 58 y 122 bis por cada
-        uno.
-        </item><item>
-        $152.77
-        </item><item>
-        IVA $24.44
-        </item>
-        <item>Total $177.21 (Por Cada Mes)</item>
-    </string-array>
-    <string-array name="slide2_25_texto">
-        <item>
-            Ejemplo Plazo Adicional
-        </item>
-    </string-array>
-    <string-array name="slide2_26_texto">
-        <item>
-            Licencias de Explotacion
-        </item>
-</string-array>
-    <string-array name="slide2_27_texto">
-        <item>
-            Licencia de Explotacion
-        </item><item>
-        Quien la otorga es el titular de la patente o
-        registro y, debe ser inscrita ante el instituto para
-        producir efectos contra terceros.
-        </item><item>
-        Puede ser solicitada por el licenciante o el licenciatario
-        </item><item>
-        Tanto la viegencia como las condiciones generales
-        de la misma, estan determinadas por las partes, sin
-        embargo, el convecio debe hacer mencion, si la
-        misma concede facultades para ejercer acciones
-        legales contra terceros.
-        </item><item>
-        Puede otorgarse de manera exclusiva
-        </item>
-    </string-array>
-    <string-array name="slide2_28_texto">
-        <item>
-            Vigilancia de Pago Anualidades
-        </item>
-    </string-array>
-
-    <string-array name="slide2_29_texto">
-        <item>
-            Patentes o Registros
-        </item><item>
-        Constraprestaciones para el titular:
-        </item><item>
-        Publicacion de la invecion
-        </item><item>
-        Pago de anualidades
-        </item>
-</string-array>
-    <string-array name="slide2_30_texto">
-        <item>
-            Condiciones para el Pago de Anualidades
-        </item><item>
-        El pago de anualidades debe realizarse dentro
-        del mes aniversario de la solicitud, que se
-        refiere al mes de presentacion.
-        </item><item>
-        Ejemplo, la solicitud se presento el 2 de enero
-        de 2000 y se concedio el 8 de noviembre de 2001.
-        </item>
-    </string-array>
-    <string-array name="slide2_31_texto">
-        <item>Ejemplo del Pago de un Quinquenio o Anualidad
-        Correspondiente</item>
-        <item>Frecha de presentacion de una solicitud de patente:</item>
-        <item>15 de abril de 2002</item>
-        <item>Fecha de concesion: </item>
-        <item>16 de febreor de 2009</item>
-    </string-array>
-    <string-array name="slide2_32_texto">
-        <item>Fecha de Presentacion: 15/Abril/2002</item>
-        <item>Fecha de Concesion: 16/Febrero/2009</item>
-
-    </string-array>
-    <string-array name="slide2_33_texto">
-        <item>Plazo de Gracia</item>
-        <item>Es un derecho que otroga la ley</item>
-        <item>Seis meses para cubrir pago de anualidades, contados
-        apartir del mes siguiente en que debio pagar</item>
-        <item>Obligacion del Titular de Cubir el pago de: </item>
-        <item>A) Anualidades;</item>
-        <item>B)  Recargos</item>
-        <item>C) Actualizacion Fiscal</item>
-    </string-array>
-    <string-array name="slide2_34_texto">
-        <item>Rehabilitacion</item>
-        <item>Derecho otorgado por la ley.</item>
-        <item>La solicitud debe presentarse dentro de los seis
-        meses siguientes al plazo de gracia.</item>
-        <item>El titular debe cubrir el pago de:</item>
-        <item>A. Estudio rehabilitacion</item>
-        <item>B. Anualidades</item>
-        <item>C. Recargos</item>
-        <item>D. Actualizacion fiscal</item>
-        <item>Solicitud por parte del titular o licenciatario,
-        salvo estipulacin en contrario, Art. 49 RLPI.</item>
-    </string-array>
-    <string-array name="slide2_35_texto">
-        <item>Plazo de Gracia</item>
-        <item>Por ejemplo, si el pago de la anualidad o
-        quinquenio debia realizarse en el mes de junio de
-        2012, el conteo del plazo de gracia se hace de la
-        siguiente manera:</item>
-    </string-array>
-    <string-array name="slide2_36_texto">
-        <item>Rehabilitacion</item>
-        <item>Plazo para solicitar la rehabilitacion Fenece en
-        junio de 2013</item>
-    </string-array>
-    <string-array name="slide2_37_texto">
-        <item>Caducidad de Patente</item>
-        <item>1. Termino de su vigencia.</item>
-        <item>2. Flata de pago de las anualidades.</item>
-        <item>3. Flata de explotacion con licencia
-        obligatoria dos años, supuesto del Art. 73 LPI</item>
-    </string-array>
-
-    <string-array name="slide2_38_texto">
-        <item></item>
-    </string-array>
-
-
-
-
-
-
-
     <!--Texto Mix..-->
     <string name="imagen_de_perfil">Imagen de perfil</string>
     <string name="label_nombre">Nombre:</string>
@@ -650,4 +204,7 @@ Espectroscópico, mineralógico y microestructural
     <string name="tiempo">Tiempo</string>
     <string name="appp_key">xl0y0ywg4q20x8b</string>
     <string name="app_secrete">t275ub8b3fd0v32</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.koushikdutta.ion.Ion;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -34,7 +36,12 @@ public class DiapositivaFragment extends Fragment {
         Bundle bunble = getArguments();
         ImageView imagen = (ImageView) view.findViewById(R.id.ivDiapositiva1);
 
-        imagen.setImageResource(bunble.getInt("idImagen"));
-
+//        imagen.setImageResource(bunble.getInt("idImagen"));
+        Ion.with(imagen)
+                .placeholder(R.drawable.icono_cargando)
+                .error(R.drawable.error_image)
+                .animateLoad(0)
+                .animateIn(0)
+                .load(bunble.getString("string"));
     }
 }
