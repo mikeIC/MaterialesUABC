@@ -4,6 +4,7 @@ package com.example.android.materialesuabc;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,8 +26,12 @@ public class PresentacionesFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         // Inflate the layout for this fragment
+        Bundle bundle = getArguments();
+        int idMateria = bundle.getInt("materiaSeleccionada");
+        Log.d("PresentacionFrag","idMateria: "+idMateria);
         FragmentTransaction ft = getChildFragmentManager().beginTransaction();
         PresentacionesListFragment presentacionesListFragment = new PresentacionesListFragment();
+        presentacionesListFragment.setArguments(bundle);
         ft.replace(R.id.frame_lista_presentaciones, presentacionesListFragment);
         ft.addToBackStack(null);
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);

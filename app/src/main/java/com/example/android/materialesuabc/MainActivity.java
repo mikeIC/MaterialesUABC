@@ -13,6 +13,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -22,7 +23,7 @@ import android.widget.ListView;
 
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements MateriasListFragment.MateriasListListener,LibrosListFragment.LibroListListener,PresentacionesListFragment.PresentacionesListListener, VideosCategoryList.VideosCategoryListListener{
+public class MainActivity extends AppCompatActivity implements MateriasListFragment.MateriasListListener,LibrosListFragment.LibroListListener,PresentacionesListFragment.PresentacionesListListener, VideosCategoryList.VideosCategoryListListener, HomeFragment.HomeFragmentClickListener{
     private String[] titles;
     private ListView drawerList;
     private DrawerLayout drawerLayout;
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements MateriasListFragm
     private int materiaSeleccionada;
     private int unidadSeleccionada;
     private MenuItem item1;
+    private int materiaId;
 
 
 
@@ -168,6 +170,9 @@ public class MainActivity extends AppCompatActivity implements MateriasListFragm
             default:
 //                fragment = new TopFragment();
         }
+        Bundle bundle = new Bundle();
+        bundle.putInt("materiaSeleccionada",materiaId);
+        fragment.setArguments(bundle);
         FragmentTransaction ft = getFragmentManager().beginTransaction();
         ft.replace(R.id.main_frame_content, fragment,"visible_fragment");
         ft.addToBackStack(null);
@@ -231,6 +236,12 @@ public class MainActivity extends AppCompatActivity implements MateriasListFragm
         Intent intent = new Intent(MainActivity.this,VideosActivity.class);
         intent.putExtra("id",id);
         startActivity(intent);
+    }
+
+    @Override
+    public void homeFragmentItemClicked(int id) {
+        Log.d("MaintActivity","fromHomeFrag id:"+id);
+        materiaId = id;
     }
     //Cambair el titulo del menu
     private void setActionBarTitle(int position) {

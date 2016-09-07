@@ -3,6 +3,7 @@ package com.example.android.materialesuabc;
 
 import android.os.Bundle;
 import android.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,6 +24,10 @@ public class TareasFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        Bundle bundle = getArguments();
+        int idMateria = bundle.getInt("materiaSeleccionada");
+        Log.d("PresentacionFrag","idMateria: "+idMateria);
+
         return inflater.inflate(R.layout.fragment_tareas, container, false);
     }
 

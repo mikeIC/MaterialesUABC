@@ -9,11 +9,13 @@
         <item>Videos</item>
         <item>Informacion</item>
     </string-array>
+
     <string-array name="unidades_list">
         <item>Unidad 1</item>
         <item>Unidad 2</item>
         <item>Unidad 3</item>
     </string-array>
+
     <string-array name="libros_list">
         <item>Advances in Sintering Science and Technology</item>
         <item>Introduction to Materials Engineering</item>
@@ -33,8 +35,7 @@
     </string-array>
     <string-array name="materias_list">
         <item>Desarrollo de Materiales </item>
-        <!--<item>Materiales Ceramicos</item>-->
-        <!--<item>Materiales Ceramicos y Vitreos</item>-->
+        <item>Materiales Ceramicos</item>
     </string-array>
 
     <string-array name="videos_temas_list">
@@ -58,18 +59,68 @@
         <item>Los metales 5: El oro</item>
         <item>Los metales 6: El aluminio</item>
         <item>Proceso de extraccion del hierro</item>
-
     </string-array>
+
     <string-array name="videos_plastico_list">
         <item>Video Plastico 1</item>
         <item>Video Plastico 2</item>
         <item>Video Plastico 3</item>
     </string-array>
+
     <string-array name="videos_vidrio_list">
         <item>Video Vidrio 1</item>
         <item>Video Vidrio 2</item>
         <item>Video Vidrio 3</item>
     </string-array>
+
+    <string-array name="materiales_ceramicos_tareas_list">
+        <item>Tema 1a</item>
+        <item>Tema 1b</item>
+    </string-array>
+    
+    <string-array name="materiales_ceramicos_presentaciones_list">
+        <item>Tema 4a</item>
+        <item>Tema 4b</item>
+        <item>Tema 4c</item>
+        <item>Tema 5</item>
+    </string-array>
+
+    <string-array name="materiales_ceramicos_videos_list">
+        <item>Ceramica Artesanal</item>
+        <item>Ceramica Negra</item>
+        <item>Ladrillos</item>
+        <item>Baldosas</item>
+        <item>Azulejos</item>
+        <item>Ceramica por Vaciado: Inodoros</item>
+        <item>Ceramica Avanzada 1</item>
+        <item>Ceramica Avanzada 2</item>
+        <item>Vidrio Artesanal 1</item>
+        <item>Vidrio Artesanal 2</item>
+        <item>Vidrio Artesanal 3</item>
+        <item>Vidrio Artesanal 4</item>
+        <item>Vidrio 1</item>
+        <item>Vidrio 2</item>
+        <item>Copas de vidrio</item>
+        <item>Botellas 1</item>
+        <item>Botellas 2</item>
+        <item>Canicas 1</item>
+        <item>Canicas 2</item>
+        <item>Fibra 1</item>
+        <item>Fibra 2</item>
+        <item>Vidrio Plano 1</item>
+        <item>Vidrio Plano 2</item>
+    </string-array>
+
+
+
+
+
+
+
+
+
+
+
     <!--Texto de la bienvenida localizada en HomeFragment-->
     <string name="texto_bienvenida1">En primer lugar, se les da
         la más cordial bienvenida al curso de Desarrollo de Materiales [Taller - Laboratorio]

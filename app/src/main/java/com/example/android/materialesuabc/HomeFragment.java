@@ -21,18 +21,21 @@ import android.widget.Toast;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class HomeFragment extends Fragment implements View.OnClickListener{
-    private int materiaSeleccionada;
+public class HomeFragment extends Fragment{
+    private  int materiaSeleccionada;
     public Spinner spinnerMaterias;
     public int indexAux;
     public int indexAux2;
 
+    interface  HomeFragmentClickListener{
+        void homeFragmentItemClicked(int id);
 
+    }
+    private HomeFragmentClickListener listener;
 
     public HomeFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -40,7 +43,12 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
         // Inflate the layout for this fragment
 
         if(savedInstanceState != null){
-            materiaSeleccionada = savedInstanceState.getInt("materia");
+            materiaSeleccionada = savedInstanceState.getInt("materiaSelec",0);
+            Log.d("HomeFrag","MatSelec saved instance: "+materiaSeleccionada);
+
+            if(listener != null){
+                listener.homeFragmentItemClicked(materiaSeleccionada);
+            }
         }else{
             materiaSeleccionada =0;
         }
@@ -52,7 +60,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putInt("materia",materiaSeleccionada);
+        Log.d("HomeFrag","SaveOut");
+        outState.putInt("materiaSelec",materiaSeleccionada);
     }
 
     @Override
@@ -72,12 +81,20 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
 
         if(materiaSeleccionada != 0){
             spinnerMaterias.setSelection(materiaSeleccionada);
+            if(listener != null){
+                listener.homeFragmentItemClicked(materiaSeleccionada);
+            }
         }
 
         spinnerMaterias.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+                Log.d("HomeFragment","arg2: "+arg2);
                 materiaSeleccionada = arg2;
+                Log.d("HomeFragment","matSelec: "+materiaSeleccionada);
+                if(listener != null){
+                    listener.homeFragmentItemClicked(arg2);
+                }
             }
             @Override
             public void onNothingSelected(AdapterView<?> arg0) {
@@ -118,14 +135,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
     }
 
     @Override
-    public void onClick(View view) {
-
-//        if(view.getId() == R.id.button_start_trivia){
-////            Intent intent = new Intent(getActivity(),ScreenSlidePagerActivity.class);
-//            Intent intent = new Intent(getActivity(),TriviaActivity.class);
-//            intent.putExtra("materia",materiaSeleccionada);
-//            startActivity(intent);
-//        }
+    public void onDetach() {
+        super.onDetach();
 
     }
 }

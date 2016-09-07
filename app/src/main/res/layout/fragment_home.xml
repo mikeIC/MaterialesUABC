@@ -20,8 +20,7 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:padding="5dp"
-        android:spinnerMode="dropdown"
-        android:clickable="false"
+        android:spinnerMode="dialog"
         android:focusable="true" />
     <ScrollView
         android:id="@+id/scrollViewHome"
