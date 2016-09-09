@@ -1,6 +1,7 @@
 package com.example.android.materialesuabc;
 
 
+import android.app.Activity;
 import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
@@ -41,16 +42,12 @@ public class HomeFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
+        Bundle bundle = getArguments();
         if(savedInstanceState != null){
             materiaSeleccionada = savedInstanceState.getInt("materiaSelec",0);
             Log.d("HomeFrag","MatSelec saved instance: "+materiaSeleccionada);
-
-            if(listener != null){
-                listener.homeFragmentItemClicked(materiaSeleccionada);
-            }
         }else{
-            materiaSeleccionada =0;
+            materiaSeleccionada =bundle.getInt("materiaSeleccionada",0);
         }
         indexAux = 0;
         indexAux2 = 0;
@@ -78,13 +75,11 @@ public class HomeFragment extends Fragment{
         adapterMaterias.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinnerMaterias.setAdapter(adapterMaterias);
-
-        if(materiaSeleccionada != 0){
+//
+//        if(materiaSeleccionada != 0){
             spinnerMaterias.setSelection(materiaSeleccionada);
-            if(listener != null){
-                listener.homeFragmentItemClicked(materiaSeleccionada);
-            }
-        }
+
+//        }
 
         spinnerMaterias.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -133,7 +128,12 @@ public class HomeFragment extends Fragment{
             }
         });
     }
+    @Override
+    public void onAttach(Activity activity){
+        super.onAttach(activity);
+        this.listener = (HomeFragmentClickListener) activity;
 
+    }
     @Override
     public void onDetach() {
         super.onDetach();

@@ -30,15 +30,17 @@ public class VideosCategoryList extends ListFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        String [] optionsName;
+        String [] optionsName = null;
 
         Bundle bundle = getArguments();
         int idMateria = bundle.getInt("materiaSeleccionada");
-        if(idMateria == 1){
-            optionsName = getResources().getStringArray(R.array.materiales_ceramicos_videos_list);
-        }else {
+        if(idMateria == 0){
             optionsName = getResources().getStringArray(R.array.videos_temas_list);
         }
+        if(idMateria == 1){
+            optionsName = getResources().getStringArray(R.array.materiales_ceramicos_videos_list_tema);
+        }
+
 
         ArrayAdapter<String> adapter = new ArrayAdapter< >(inflater.getContext(),android.R.layout.simple_list_item_1,optionsName);
         setListAdapter(adapter);

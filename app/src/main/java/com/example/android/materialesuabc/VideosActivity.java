@@ -24,7 +24,13 @@ public class VideosActivity extends AppCompatActivity {
         String [] optionsName;
         ArrayAdapter<String> adapter = null;
         String[] videosURLs = null;
-        if(intent.getIntExtra("id",0) ==0){
+        int id = (int) intent.getLongExtra("id",0);
+
+        if(intent.getIntExtra("materiaId",0)==1){
+            id = id+4;
+            Log.d("VideosActivity","materiaId = 1, id = id+4, id= "+id);
+        }
+        if(id ==0){
             //Ceramica
             optionsName = getResources().getStringArray(R.array.videos_ceramica_list);
             adapter = new ArrayAdapter<String>(VideosActivity.this,android.R.layout.simple_list_item_1,optionsName);
@@ -34,7 +40,7 @@ public class VideosActivity extends AppCompatActivity {
             };
 
         }
-        if(intent.getIntExtra("id",0) ==1){
+        if(id ==1){
             //Metal
             optionsName = getResources().getStringArray(R.array.videos_metal_list);
             adapter = new ArrayAdapter<String>(VideosActivity.this,android.R.layout.simple_list_item_1,optionsName);
@@ -50,14 +56,14 @@ public class VideosActivity extends AppCompatActivity {
                     "https://youtu.be/bTuTE-dGU9M"
             };
         }
-        if(intent.getIntExtra("id",0) ==2){
+        if(id ==2){
             //Plastico
             optionsName = getResources().getStringArray(R.array.videos_plastico_list);
             adapter = new ArrayAdapter<String>(VideosActivity.this,android.R.layout.simple_list_item_1,optionsName);
             videosURLs = new String[]{
             };
         }
-        if(intent.getIntExtra("id",0) ==3){
+        if(id ==3){
             //Vidrio
             optionsName = getResources().getStringArray(R.array.videos_vidrio_list);
             adapter = new ArrayAdapter<String>(VideosActivity.this,android.R.layout.simple_list_item_1,optionsName);
@@ -65,25 +71,67 @@ public class VideosActivity extends AppCompatActivity {
             };
 
         }
-        if(intent.getIntExtra("id",0) ==4){
-            optionsName = getResources().getStringArray(R.array.videos_vidrio_list);
+        if(id ==4){
+            optionsName = getResources().getStringArray(R.array.materiales_ceramicos_videos_list_ceramica);
             adapter = new ArrayAdapter<String>(VideosActivity.this,android.R.layout.simple_list_item_1,optionsName);
             videosURLs = new String[]{
+                    //materiales ceramicos: ceramica
                     "https://youtu.be/pdlVaa8nAr8","https://youtu.be/mR9jnEY2gWo",
+                    "https://youtu.be/cXbiS345MBg",
+                    "https://youtu.be/f8Ovkf8Lp9Q","https://youtu.be/8ToNYtDgXtI"
+            };
+        }
+        if(id ==5) {
+            optionsName = getResources().getStringArray(R.array.materiales_ceramicos_videos_list_lba);
+            adapter = new ArrayAdapter<String>(VideosActivity.this, android.R.layout.simple_list_item_1, optionsName);
+            videosURLs = new String[]{
+                    //materiales ceramicos: ladrillos, baldosas, azulejos
                     "https://youtu.be/dnr_sj63o3Q","https://youtu.be/e5pwPZyU9YE",
-                    "https://youtu.be/jJLkYvoGXFc","https://youtu.be/cXbiS345MBg",
-                    "https://youtu.be/f8Ovkf8Lp9Q","https://youtu.be/8ToNYtDgXtI",
+                    "https://youtu.be/jJLkYvoGXFc"
+            };
+        }
+        if(id ==6) {
+            optionsName = getResources().getStringArray(R.array.materiales_ceramicos_videos_list_vidrio);
+            adapter = new ArrayAdapter<String>(VideosActivity.this, android.R.layout.simple_list_item_1, optionsName);
+            videosURLs = new String[]{
+                    //materiales ceramicos: Vidrio
                     "https://youtu.be/8dZMfpAz7jo","https://youtu.be/dvBvN1tHm2s",
                     "https://youtu.be/nefJPw9_YE0","https://youtu.be/Ax_wJyHImHU",
                     "https://youtu.be/AI4uZec8jZE","https://youtu.be/q1bsP9ZnvNs",
-                    "https://youtu.be/AmISHKjyVz4","https://youtu.be/qWWdCSt2zDU",
-                    "https://youtu.be/x14ab-4khjQ","https://youtu.be/suz0JxkDLhQ",
-                    "https://youtu.be/-rC2nljv8PE","https://youtu.be/WtLtOfd8Nxo",
-                    "https://youtu.be/UcNlRRLowuU","https://youtu.be/1Va0rdl68uU",
+                    "https://youtu.be/AmISHKjyVz4","https://youtu.be/1Va0rdl68uU",
                     "https://youtu.be/Zf460WKs8Jw"
             };
         }
-            listview.setAdapter(adapter);
+        if(id ==7) {
+            optionsName = getResources().getStringArray(R.array.materiales_ceramicos_videos_list_botellas);
+            adapter = new ArrayAdapter<String>(VideosActivity.this, android.R.layout.simple_list_item_1, optionsName);
+            videosURLs = new String[]{
+                    //materiales ceramicos: Botellas
+                    "https://youtu.be/qWWdCSt2zDU",
+                    "https://youtu.be/x14ab-4khjQ"
+            };
+        }
+        if(id==8) {
+            optionsName = getResources().getStringArray(R.array.materiales_ceramicos_videos_list_canicas);
+            adapter = new ArrayAdapter<String>(VideosActivity.this, android.R.layout.simple_list_item_1, optionsName);
+            videosURLs = new String[]{
+                    //materiales ceramicos: Canicas
+                    "https://youtu.be/suz0JxkDLhQ",
+                    "https://youtu.be/-rC2nljv8PE"
+            };
+        }
+        if(id ==9) {
+            optionsName = getResources().getStringArray(R.array.materiales_ceramicos_videos_list_fibra);
+            adapter = new ArrayAdapter<String>(VideosActivity.this, android.R.layout.simple_list_item_1, optionsName);
+            videosURLs = new String[]{
+                    //materiales ceramicos: Fibra
+                    "https://youtu.be/WtLtOfd8Nxo",
+                    "https://youtu.be/UcNlRRLowuU"
+            };
+        }
+
+
+        listview.setAdapter(adapter);
 
         final String[] finalVideosURLs = videosURLs;
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {

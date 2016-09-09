@@ -30,9 +30,6 @@ public class MainActivity extends AppCompatActivity implements MateriasListFragm
     private ActionBarDrawerToggle drawerToggle;
     private int currentPosition = 0;
     private Menu menuAux;
-    private int materiaSeleccionada;
-    private int unidadSeleccionada;
-    private MenuItem item1;
     private int materiaId;
 
 
@@ -51,14 +48,13 @@ public class MainActivity extends AppCompatActivity implements MateriasListFragm
         drawerLayout = (DrawerLayout) findViewById(R.id.main_drawer_layout);
         titles = getResources().getStringArray(R.array.menu_list);
         drawerList = (ListView) findViewById(R.id.drawer);
-        materiaSeleccionada = 0;
-        unidadSeleccionada = 0;
 
         drawerList.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_activated_1, titles));
         drawerList.setOnItemClickListener(new DrawerItemClickListener());
 
         if (savedInstanceState != null) {
             currentPosition = savedInstanceState.getInt("position");
+            materiaId = savedInstanceState.getInt("materiaId");
             setActionBarTitle(currentPosition);
         } else {
             selectItem(0);
@@ -198,6 +194,7 @@ public class MainActivity extends AppCompatActivity implements MateriasListFragm
     public void itemClickedPresentaciones(long id) {
         Intent intent = new Intent(MainActivity.this,PresentacionActivity.class);
         intent.putExtra("id",id);
+        intent.putExtra("materiaId",materiaId);
         startActivity(intent);
     }
 
@@ -235,13 +232,16 @@ public class MainActivity extends AppCompatActivity implements MateriasListFragm
     public void itemClickedVideosCategory(long id) {
         Intent intent = new Intent(MainActivity.this,VideosActivity.class);
         intent.putExtra("id",id);
+        intent.putExtra("materiaId",materiaId);
         startActivity(intent);
     }
 
+    //Called when Spinner in home Fragment changes
     @Override
     public void homeFragmentItemClicked(int id) {
-        Log.d("MaintActivity","fromHomeFrag id:"+id);
         materiaId = id;
+        Log.d("MaintActivity","fromHomeFrag materiaId:"+materiaId);
+
     }
     //Cambair el titulo del menu
     private void setActionBarTitle(int position) {
@@ -262,6 +262,7 @@ public class MainActivity extends AppCompatActivity implements MateriasListFragm
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putInt("position", currentPosition);
+        outState.putInt("materiaId",materiaId);
     }
 
     //Cambiar Icono de menu
@@ -282,7 +283,6 @@ public class MainActivity extends AppCompatActivity implements MateriasListFragm
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_inicial,menu);
         menuAux = menu;
-        item1 = menuAux.findItem(R.id.action_edit);
 //        item1.setVisible(false);
         return super.onCreateOptionsMenu(menu);
     }

@@ -32,7 +32,7 @@ public class VideosCategoryFragment extends Fragment {
         FragmentTransaction ft = getChildFragmentManager().beginTransaction();
 //        LibrosListFragment librosListFragment = new LibrosListFragment();
         VideosCategoryList videosCategoryList = new VideosCategoryList();
-        Log.d("PresentacionFrag","idMateria: "+idMateria);
+        Log.d("VideosCategoryFragment","idMateria: "+idMateria);
         videosCategoryList.setArguments(bundle);
         ft.replace(R.id.frame_lista_videos_category, videosCategoryList);
         ft.addToBackStack(null);

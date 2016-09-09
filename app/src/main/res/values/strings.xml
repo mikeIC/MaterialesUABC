@@ -74,26 +74,38 @@
     </string-array>
 
     <string-array name="materiales_ceramicos_tareas_list">
-        <item>Tema 1a</item>
-        <item>Tema 1b</item>
+
     </string-array>
     
     <string-array name="materiales_ceramicos_presentaciones_list">
+        <item>Tema 1a</item>
+        <item>Tema 1b</item>
         <item>Tema 4a</item>
         <item>Tema 4b</item>
         <item>Tema 4c</item>
         <item>Tema 5</item>
     </string-array>
-
-    <string-array name="materiales_ceramicos_videos_list">
-        <item>Ceramica Artesanal</item>
+    <string-array name="materiales_ceramicos_videos_list_tema">
+        <item>Ceramica</item>
+        <item>Ladrillos, Baldosas y Azulejos</item>
+        <item>Vidrio</item>
+        <item>Botellas</item>
+        <item>Canicas</item>
+        <item>Fibra</item>
+    </string-array>
+    <string-array name="materiales_ceramicos_videos_list_ceramica">
         <item>Ceramica Negra</item>
-        <item>Ladrillos</item>
-        <item>Baldosas</item>
-        <item>Azulejos</item>
+        <item>Ceramica Artesanal</item>
         <item>Ceramica por Vaciado: Inodoros</item>
         <item>Ceramica Avanzada 1</item>
         <item>Ceramica Avanzada 2</item>
+        </string-array>
+    <string-array name="materiales_ceramicos_videos_list_lba">
+        <item>Ladrillos</item>
+        <item>Baldosas</item>
+        <item>Azulejos</item>
+    </string-array>
+    <string-array name="materiales_ceramicos_videos_list_vidrio">
         <item>Vidrio Artesanal 1</item>
         <item>Vidrio Artesanal 2</item>
         <item>Vidrio Artesanal 3</item>
@@ -101,23 +113,21 @@
         <item>Vidrio 1</item>
         <item>Vidrio 2</item>
         <item>Copas de vidrio</item>
-        <item>Botellas 1</item>
-        <item>Botellas 2</item>
-        <item>Canicas 1</item>
-        <item>Canicas 2</item>
-        <item>Fibra 1</item>
-        <item>Fibra 2</item>
         <item>Vidrio Plano 1</item>
         <item>Vidrio Plano 2</item>
     </string-array>
-
-
-
-
-
-
-
-
+    <string-array name="materiales_ceramicos_videos_list_botellas">
+        <item>Botellas 1</item>
+        <item>Botellas 2</item>
+    </string-array>
+    <string-array name="materiales_ceramicos_videos_list_canicas">
+        <item>Canicas 1</item>
+        <item>Canicas 2</item>
+    </string-array>
+    <string-array name="materiales_ceramicos_videos_list_fibra">
+        <item>Fibra 1</item>
+        <item>Fibra 2</item>
+    </string-array>
 
 
 
