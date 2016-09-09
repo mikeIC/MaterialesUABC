@@ -8,7 +8,7 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+
 
 import com.viewpagerindicator.CirclePageIndicator;
 import com.viewpagerindicator.LinePageIndicator;
@@ -34,8 +34,6 @@ public class PresentacionActivity extends AppCompatActivity {
         if (materiaID == 1){
             id = id+6;
 
-            Log.d("PresentacionActivity","materiaID: "+materiaID);
-            Log.d("PresentacionActivity","id: "+id);
         }
 
         if(id == 0){
@@ -148,23 +146,62 @@ public class PresentacionActivity extends AppCompatActivity {
             };
         }
 
-        if(id == 6){
+        if(id == 6) {
             //Tema 1a
-            imagesPresentacion2 = new String [] {
+            imagesPresentacion2 = new String[]{
 
+                    "http://i.imgur.com/c0iJFlw.png", "http://i.imgur.com/MPjaIp2.png",
+                    "http://i.imgur.com/J6pNEuW.png", "http://i.imgur.com/aUlNzr3.png",
+                    "http://i.imgur.com/sPKO9pl.png", "http://i.imgur.com/YvKnZIe.png",
+                    "http://i.imgur.com/i4s2Ik4.png", "http://i.imgur.com/gkCKr1s.png",
+                    "http://i.imgur.com/ao0X9TS.png", "http://i.imgur.com/HWjJ5hR.png",
+                    "http://i.imgur.com/H06s7cC.png", "http://i.imgur.com/LmOUbrl.png",
+                    "http://i.imgur.com/dphXhYs.png", "http://i.imgur.com/s42tKxt.png",
+                    "http://i.imgur.com/i2lS5go.png", "http://i.imgur.com/EJThX2h.png",
+                    "http://i.imgur.com/F4DTAuY.png", "http://i.imgur.com/bIehjvy.png",
+                    "http://i.imgur.com/prkpKa6.png", "http://i.imgur.com/2S81d9I.png",
+                    "http://i.imgur.com/p1bTPy2.png", "http://i.imgur.com/LTASiie.png",
+                    "http://i.imgur.com/I6wHKy7.png", "http://i.imgur.com/MzrxA23.png",
+                    "http://i.imgur.com/SDMLqxR.png", "http://i.imgur.com/U27htdZ.png",
+                    "http://i.imgur.com/Scoj9j8.png", "http://i.imgur.com/tToSVW5.png",
+                    "http://i.imgur.com/VkeXIO6.png", "http://i.imgur.com/jWeDaEC.png",
+                    "http://i.imgur.com/KUPfCzz.png", "http://i.imgur.com/w1VokoH.png",
+                    "http://i.imgur.com/GCd9Dxy.png", "http://i.imgur.com/oWstYT1.png",
+                    "http://i.imgur.com/mf5K9xm.png", "http://i.imgur.com/WVslrnp.png",
+                    "http://i.imgur.com/R7YalWk.png", "http://i.imgur.com/heaL0Dq.png",
+                    "http://i.imgur.com/hKFgFs7.png", "http://i.imgur.com/ggYFzJJ.png",
+                    "http://i.imgur.com/1ZFhlFN.png", "http://i.imgur.com/JvatfIW.png",
+                    "http://i.imgur.com/48KQdzW.png", "http://i.imgur.com/Ud4qlw7.png",
+                    "http://i.imgur.com/rNKCoxt.png", "http://i.imgur.com/Z56hwid.png",
+                    "http://i.imgur.com/mzD8Q1f.png", "http://i.imgur.com/5ONbFJ4.png",
+                    "http://i.imgur.com/TbCSuHi.png", "http://i.imgur.com/p9QgIzv.png",
+                    "http://i.imgur.com/cQiiK8u.png", "http://i.imgur.com/hX4PFCJ.png"
             };
-
         }
         if(id == 7){
             //Tema 1b
             imagesPresentacion2 = new String [] {
-
+                    "http://i.imgur.com/VsN45Pj.png","http://i.imgur.com/j6VoYFl.png",
+                    "http://i.imgur.com/tVA9SJG.png","http://i.imgur.com/DgvvQDz.png",
+                    "http://i.imgur.com/iVasj5W.png","http://i.imgur.com/LU9Vbyr.png",
+                    "http://i.imgur.com/eFdv4yp.png","http://i.imgur.com/506Rc0i.png",
+                    "http://i.imgur.com/IK8RnLU.png","http://i.imgur.com/1E6p4z4.png",
+                    "http://i.imgur.com/Q5ZiFrS.png","http://i.imgur.com/3F1zAtm.png",
+                    "http://i.imgur.com/UjD9xY6.png","http://i.imgur.com/Ei63Ao3.png",
+                    "http://i.imgur.com/ZkCGwRf.png","http://i.imgur.com/2rXYsUw.png",
+                    "http://i.imgur.com/8jq8kAv.png","http://i.imgur.com/Sve5EHl.png"
             };
 
         }
         if(id == 8){
             //Tema 1c
             imagesPresentacion2 = new String [] {
+                    "http://i.imgur.com/bFumlEV.png","http://i.imgur.com/OgeOSF1.png",
+                    "http://i.imgur.com/gvWhmAd.png","http://i.imgur.com/In6v17C.png",
+                    "http://i.imgur.com/Q3VhJ5U.png","http://i.imgur.com/xPJa6AA.png",
+                    "http://i.imgur.com/8qegfGu.png","http://i.imgur.com/LI6wkIX.png",
+                    "http://i.imgur.com/2qsQ7Rt.png","http://i.imgur.com/JVfpjYa.png",
+                    "http://i.imgur.com/ECJEstY.png","http://i.imgur.com/v9NLbyH.png"
 
             };
 
@@ -172,6 +209,10 @@ public class PresentacionActivity extends AppCompatActivity {
         if(id == 9){
             //Tema 2a
             imagesPresentacion2 = new String [] {
+
+                    "http://i.imgur.com/g79OfeR.png","http://i.imgur.com/SlYE6iV.png",
+                    "http://i.imgur.com/h9Wm6ys.png","http://i.imgur.com/umbwClF.png",
+                    "http://i.imgur.com/McOXSKZ.png","http://i.imgur.com/J2DyPff.png"
 
             };
         }
@@ -184,18 +225,38 @@ public class PresentacionActivity extends AppCompatActivity {
         if(id == 11){
             //Tema 3a
             imagesPresentacion2 = new String [] {
+                    "http://i.imgur.com/MiHyLfD.png","http://i.imgur.com/wcY12fB.png",
+                    "http://i.imgur.com/NdbTcVd.png","http://i.imgur.com/nVRneKB.png",
+                    "http://i.imgur.com/1IozuW0.png","http://i.imgur.com/KiOLIuz.png",
+                    "http://i.imgur.com/7PxSokC.png","http://i.imgur.com/RxHS6kA.png",
+                    "http://i.imgur.com/xNdKglF.png","http://i.imgur.com/r1SZrFq.png",
+                    "http://i.imgur.com/kN6ft0r.png","http://i.imgur.com/7PyoW0H.png",
+                    "http://i.imgur.com/44pCnXE.png","http://i.imgur.com/gkkQVbv.png",
+                    "http://i.imgur.com/Vn2mh8A.png","http://i.imgur.com/eP2z8hU.png"
 
             };
         }
         if(id == 12){
             //Tema 3b
             imagesPresentacion2 = new String [] {
+                    "http://i.imgur.com/VHD8njL.png","http://i.imgur.com/lMwWpc6.png",
+                    "http://i.imgur.com/AERBR0P.png","http://i.imgur.com/RgXNWWU.png",
+                    "http://i.imgur.com/OHHoEPW.png"
 
             };
         }
         if(id == 13){
             //Tema 3c
             imagesPresentacion2 = new String [] {
+                    "http://i.imgur.com/RFtKj43.png","http://i.imgur.com/ylFtiFL.png",
+                    "http://i.imgur.com/YYlWX1t.png","http://i.imgur.com/EvAeWf1.png",
+                    "http://i.imgur.com/gWItPbs.png","http://i.imgur.com/U5WRNbz.png",
+                    "http://i.imgur.com/1hVoa8u.png","http://i.imgur.com/jXhR175.png",
+                    "http://i.imgur.com/vlPVapt.png","http://i.imgur.com/KrjLBIM.png",
+                    "http://i.imgur.com/slZMT4h.png","http://i.imgur.com/antRfjD.png",
+                    "http://i.imgur.com/zQrs2su.png","http://i.imgur.com/NRZHZ1I.png",
+                    "http://i.imgur.com/25CSAOD.png","http://i.imgur.com/aNVXUsn.png",
+                    "http://i.imgur.com/a07cgtx.png","http://i.imgur.com/4WsCIUF.png"
 
             };
         }

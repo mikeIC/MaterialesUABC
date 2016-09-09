@@ -7,7 +7,6 @@ import android.media.Image;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.os.Handler;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -45,7 +44,7 @@ public class HomeFragment extends Fragment{
         Bundle bundle = getArguments();
         if(savedInstanceState != null){
             materiaSeleccionada = savedInstanceState.getInt("materiaSelec",0);
-            Log.d("HomeFrag","MatSelec saved instance: "+materiaSeleccionada);
+            spinnerMaterias.setSelection(materiaSeleccionada);
         }else{
             materiaSeleccionada =bundle.getInt("materiaSeleccionada",0);
         }
@@ -57,7 +56,6 @@ public class HomeFragment extends Fragment{
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        Log.d("HomeFrag","SaveOut");
         outState.putInt("materiaSelec",materiaSeleccionada);
     }
 
@@ -84,9 +82,7 @@ public class HomeFragment extends Fragment{
         spinnerMaterias.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
-                Log.d("HomeFragment","arg2: "+arg2);
                 materiaSeleccionada = arg2;
-                Log.d("HomeFragment","matSelec: "+materiaSeleccionada);
                 if(listener != null){
                     listener.homeFragmentItemClicked(arg2);
                 }

@@ -62,8 +62,19 @@
         <activity
             android:name=".PresentacionActivity"
             android:label="Presentacion"
-            android:parentActivityName=".MainActivity" />
-        <activity android:name=".VideosActivity"/>
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity android:name=".VideosActivity"
+            android:label="Videos"
+            android:parentActivityName=".MainActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
     </application>
 
 </manifest>

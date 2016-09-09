@@ -32,8 +32,6 @@ public class MainActivity extends AppCompatActivity implements MateriasListFragm
     private Menu menuAux;
     private int materiaId;
 
-
-
     private class DrawerItemClickListener implements ListView.OnItemClickListener {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id){
@@ -44,6 +42,7 @@ public class MainActivity extends AppCompatActivity implements MateriasListFragm
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Log.d("MainActivity","onCreate");
 
         drawerLayout = (DrawerLayout) findViewById(R.id.main_drawer_layout);
         titles = getResources().getStringArray(R.array.menu_list);
@@ -51,14 +50,15 @@ public class MainActivity extends AppCompatActivity implements MateriasListFragm
 
         drawerList.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_activated_1, titles));
         drawerList.setOnItemClickListener(new DrawerItemClickListener());
-
         if (savedInstanceState != null) {
             currentPosition = savedInstanceState.getInt("position");
             materiaId = savedInstanceState.getInt("materiaId");
             setActionBarTitle(currentPosition);
         } else {
+            Log.d("MainActivity","currentPosition: "+currentPosition);
             selectItem(0);
         }
+
         //Create the ActionBarDrawerToggle
         drawerToggle = new ActionBarDrawerToggle(this, drawerLayout,
                 R.string.open_drawer, R.string.close_drawer) {
@@ -106,11 +106,22 @@ public class MainActivity extends AppCompatActivity implements MateriasListFragm
                     }
                 }
         );
+
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Log.d("MainActivity","onSaveInstanceState");
+        outState.putInt("position", currentPosition);
+        outState.putInt("materiaId",materiaId);
     }
 
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
+
         super.onPostCreate(savedInstanceState);
+        Log.d("MainActivity","onPostCreate");
         drawerToggle.syncState();
     }
     @Override
@@ -139,6 +150,7 @@ public class MainActivity extends AppCompatActivity implements MateriasListFragm
 
     //Cambiar de fragmento con la posicion de la opcion seleccionada
     private void selectItem(int position){
+        Log.d("MainActivity","selectItem");
         Fragment fragment=null;
         currentPosition = position;
         setActionBarTitle(position);
@@ -240,7 +252,6 @@ public class MainActivity extends AppCompatActivity implements MateriasListFragm
     @Override
     public void homeFragmentItemClicked(int id) {
         materiaId = id;
-        Log.d("MaintActivity","fromHomeFrag materiaId:"+materiaId);
 
     }
     //Cambair el titulo del menu
@@ -255,14 +266,6 @@ public class MainActivity extends AppCompatActivity implements MateriasListFragm
         }
         changeActionBarIcons(position);
         getSupportActionBar().setTitle(title);
-    }
-
-
-    @Override
-    public void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        outState.putInt("position", currentPosition);
-        outState.putInt("materiaId",materiaId);
     }
 
     //Cambiar Icono de menu
@@ -296,5 +299,11 @@ public class MainActivity extends AppCompatActivity implements MateriasListFragm
             startActivity(intent);
         }
         return drawerToggle.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d("MainActivity","onRestart");
     }
 }

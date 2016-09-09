@@ -28,7 +28,6 @@ public class PresentacionesFragment extends Fragment {
         // Inflate the layout for this fragment
         Bundle bundle = getArguments();
         int idMateria = bundle.getInt("materiaSeleccionada");
-        Log.d("PresentacionFrag","idMateria: "+idMateria);
         FragmentTransaction ft = getChildFragmentManager().beginTransaction();
         PresentacionesListFragment presentacionesListFragment = new PresentacionesListFragment();
         presentacionesListFragment.setArguments(bundle);
