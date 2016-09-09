@@ -149,7 +149,6 @@ public class PresentacionActivity extends AppCompatActivity {
         if(id == 6) {
             //Tema 1a
             imagesPresentacion2 = new String[]{
-
                     "http://i.imgur.com/c0iJFlw.png", "http://i.imgur.com/MPjaIp2.png",
                     "http://i.imgur.com/J6pNEuW.png", "http://i.imgur.com/aUlNzr3.png",
                     "http://i.imgur.com/sPKO9pl.png", "http://i.imgur.com/YvKnZIe.png",
@@ -209,11 +208,9 @@ public class PresentacionActivity extends AppCompatActivity {
         if(id == 9){
             //Tema 2a
             imagesPresentacion2 = new String [] {
-
                     "http://i.imgur.com/g79OfeR.png","http://i.imgur.com/SlYE6iV.png",
                     "http://i.imgur.com/h9Wm6ys.png","http://i.imgur.com/umbwClF.png",
                     "http://i.imgur.com/McOXSKZ.png","http://i.imgur.com/J2DyPff.png"
-
             };
         }
         if(id == 10){
@@ -233,7 +230,6 @@ public class PresentacionActivity extends AppCompatActivity {
                     "http://i.imgur.com/kN6ft0r.png","http://i.imgur.com/7PyoW0H.png",
                     "http://i.imgur.com/44pCnXE.png","http://i.imgur.com/gkkQVbv.png",
                     "http://i.imgur.com/Vn2mh8A.png","http://i.imgur.com/eP2z8hU.png"
-
             };
         }
         if(id == 12){
@@ -242,7 +238,6 @@ public class PresentacionActivity extends AppCompatActivity {
                     "http://i.imgur.com/VHD8njL.png","http://i.imgur.com/lMwWpc6.png",
                     "http://i.imgur.com/AERBR0P.png","http://i.imgur.com/RgXNWWU.png",
                     "http://i.imgur.com/OHHoEPW.png"
-
             };
         }
         if(id == 13){
@@ -257,7 +252,6 @@ public class PresentacionActivity extends AppCompatActivity {
                     "http://i.imgur.com/zQrs2su.png","http://i.imgur.com/NRZHZ1I.png",
                     "http://i.imgur.com/25CSAOD.png","http://i.imgur.com/aNVXUsn.png",
                     "http://i.imgur.com/a07cgtx.png","http://i.imgur.com/4WsCIUF.png"
-
             };
         }
         if(id == 14){
