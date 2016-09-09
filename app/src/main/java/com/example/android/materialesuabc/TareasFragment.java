@@ -25,8 +25,8 @@ public class TareasFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         Bundle bundle = getArguments();
-        int idMateria = bundle.getInt("materiaSeleccionada");
-        Log.d("PresentacionFrag","idMateria: "+idMateria);
+        int idMateria = bundle.getInt("idMateria",0);
+        Log.d("TareasFragment","idMateria: "+idMateria);
 
         return inflater.inflate(R.layout.fragment_tareas, container, false);
     }

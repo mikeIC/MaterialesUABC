@@ -8,6 +8,7 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.viewpagerindicator.CirclePageIndicator;
 import com.viewpagerindicator.LinePageIndicator;
@@ -32,6 +33,9 @@ public class PresentacionActivity extends AppCompatActivity {
         materiaID = intent.getIntExtra("materiaId",0);
         if (materiaID == 1){
             id = id+6;
+
+            Log.d("PresentacionActivity","materiaID: "+materiaID);
+            Log.d("PresentacionActivity","id: "+id);
         }
 
         if(id == 0){

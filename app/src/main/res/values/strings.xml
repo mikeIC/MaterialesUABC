@@ -36,6 +36,7 @@
     <string-array name="materias_list">
         <item>Desarrollo de Materiales </item>
         <item>Materiales Ceramicos</item>
+        <item>Materiales de Ingenieria</item>
     </string-array>
 
     <string-array name="videos_temas_list">
@@ -80,6 +81,12 @@
     <string-array name="materiales_ceramicos_presentaciones_list">
         <item>Tema 1a</item>
         <item>Tema 1b</item>
+        <item>Tema 1c</item>
+        <item>Tema 2a</item>
+        <item>Tema 2b</item>
+        <item>Tema 3a</item>
+        <item>Tema 3b</item>
+        <item>Tema 3c</item>
         <item>Tema 4a</item>
         <item>Tema 4b</item>
         <item>Tema 4c</item>

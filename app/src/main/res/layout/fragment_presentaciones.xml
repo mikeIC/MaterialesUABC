@@ -4,6 +4,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.android.materialesuabc.PresentacionesFragment">
+    <Spinner
+        android:id="@+id/spinner_materias_presentaciones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="5dp"
+        android:spinnerMode="dialog"
+        android:focusable="true" />
 
     <FrameLayout android:id="@+id/frame_lista_presentaciones"
         android:layout_width="match_parent"
