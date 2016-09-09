@@ -7,11 +7,15 @@
     <color name="Green2">#08b70d</color>
     <color name="Green3">#004e02</color>
     <color name="Red">#e90606</color>
-    <color name="Blue">#0a39d4</color>
+    <color name="Blue">#2b5cff</color>
+    <color name="lightBlue">#819efc</color>
+
     <color name="White">#ffffff</color>
     <color name="colorWhite">#ffffff</color>
     <color name="Grey">#a9a9a9</color>
-    <color name="lightBlue">#3F51B5</color>
+
     <color name="Gray">#646464</color>
     <color name="Gold">#d49b1e</color>
+    <color name="Orange">#ff8615</color>
+    <color name="lightOrange">#ffa95a</color>
 </resources>

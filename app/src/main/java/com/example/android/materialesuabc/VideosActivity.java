@@ -2,6 +2,7 @@ package com.example.android.materialesuabc;
 
 import android.app.FragmentTransaction;
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -25,10 +26,20 @@ public class VideosActivity extends AppCompatActivity {
         ArrayAdapter<String> adapter = null;
         String[] videosURLs = null;
         int id = (int) intent.getLongExtra("id",0);
-
-        if(intent.getIntExtra("materiaId",0)==1){
+        int materiaID = intent.getIntExtra("materiaId",0);
+        if(materiaID==1){
             id = id+4;
             Log.d("VideosActivity","materiaId = 1, id = id+4, id= "+id);
+        }
+
+        if(materiaID == 0){
+            getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.Green)));
+        }
+        if(materiaID == 1){
+            getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.Blue)));
+        }
+        if(materiaID == 2){
+            getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.Orange)));
         }
         if(id ==0){
             //Ceramica

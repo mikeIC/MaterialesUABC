@@ -5,6 +5,7 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
@@ -198,7 +199,7 @@ public class MainActivity extends AppCompatActivity implements MateriasListFragm
 
 //        Toast.makeText(MainActivity.this, "BLAH id: "+id, Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(MainActivity.this,InformacionActivity.class);
-        intent.putExtra("materia_id",id);
+        intent.putExtra("materiaId",id);
         startActivity(intent);
 
     }
@@ -252,7 +253,16 @@ public class MainActivity extends AppCompatActivity implements MateriasListFragm
     @Override
     public void homeFragmentItemClicked(int id) {
         materiaId = id;
-
+        Toolbar toolbar = null;
+        if(materiaId == 0){
+            getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.Green)));
+        }
+        if(materiaId == 1){
+            getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.Blue)));
+        }
+        if(materiaId == 2){
+            getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.Orange)));
+        }
     }
     //Cambair el titulo del menu
     private void setActionBarTitle(int position) {
@@ -266,6 +276,7 @@ public class MainActivity extends AppCompatActivity implements MateriasListFragm
         }
         changeActionBarIcons(position);
         getSupportActionBar().setTitle(title);
+
     }
 
     //Cambiar Icono de menu

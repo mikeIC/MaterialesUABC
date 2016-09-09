@@ -1,6 +1,7 @@
 package com.example.android.materialesuabc;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
@@ -34,6 +35,15 @@ public class PresentacionActivity extends AppCompatActivity {
         if (materiaID == 1){
             id = id+6;
 
+        }
+        if(materiaID == 0){
+            getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.Green)));
+        }
+        if(materiaID == 1){
+            getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.Blue)));
+        }
+        if(materiaID == 2){
+            getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.Orange)));
         }
 
         if(id == 0){
@@ -216,6 +226,28 @@ public class PresentacionActivity extends AppCompatActivity {
         if(id == 10){
             //Tema 2b
             imagesPresentacion2 = new String [] {
+                    "http://i.imgur.com/rmrW2bF.png","http://i.imgur.com/yy2SrMh.png",
+                    "http://i.imgur.com/MXPUi1N.png","http://i.imgur.com/HUd9gcf.png",
+                    "http://i.imgur.com/I3sjHNo.png","http://i.imgur.com/ruBGXS4.png",
+                    "http://i.imgur.com/X6LWFCU.png","http://i.imgur.com/wtqMLvy.png",
+                    "http://i.imgur.com/uFzGUVw.png","http://i.imgur.com/OtPU7cs.png",
+                    "http://i.imgur.com/OtPU7cs.png","http://i.imgur.com/uNrRbaM.png",
+                    "http://i.imgur.com/JBJxxtM.png","http://i.imgur.com/nkZsa7t.png",
+                    "http://i.imgur.com/oMLpwL4.png","http://i.imgur.com/Mb3RV3r.png",
+                    "http://i.imgur.com/8RDQiAa.png","http://i.imgur.com/WzTXTcw.png",
+                    "http://i.imgur.com/OPiIZ5b.png","http://i.imgur.com/GeiwdYs.png",
+                    "http://i.imgur.com/eyXKTn3.png","http://i.imgur.com/KSuqv6U.png",
+                    "http://i.imgur.com/KSuqv6U.png","http://i.imgur.com/lfUFbtF.png",
+                    "http://i.imgur.com/Ynjt90O.png","http://i.imgur.com/atkI5eQ.png",
+                    "http://i.imgur.com/yaZ5ZdZ.png","http://i.imgur.com/ckwXFZH.png",
+                    "http://i.imgur.com/A0uHQnW.png","http://i.imgur.com/jVSONtF.png",
+                    "http://i.imgur.com/NFjKD6B.png","http://i.imgur.com/0tVlxCO.png",
+                    "http://i.imgur.com/snJeNfg.png","http://i.imgur.com/gtWcjpY.png",
+                    "http://i.imgur.com/9i0a7pE.png","http://i.imgur.com/jCHHomw.png",
+                    "http://i.imgur.com/iLuuJV1.png","http://i.imgur.com/Ym8BHZO.png",
+                    "http://i.imgur.com/xpDpJaO.png","http://i.imgur.com/ZRbZuB3.png",
+                    "http://i.imgur.com/RWiQBDq.png","http://i.imgur.com/QpoKUiO.png",
+                    "http://i.imgur.com/5qHpI3D.png"
 
             };
         }

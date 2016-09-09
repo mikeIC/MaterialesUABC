@@ -2,6 +2,7 @@ package com.example.android.materialesuabc;
 
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -34,6 +35,17 @@ public class InformacionActivity extends AppCompatActivity{
         pagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(pagerAdapter);
         circlePageIndicator.setViewPager(viewPager);
+        Intent intent = getIntent();
+        int materiaID = intent.getIntExtra("materiaId",0);
+        if(materiaID == 0){
+            getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.Green)));
+        }
+        if(materiaID == 1){
+            getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.Blue)));
+        }
+        if(materiaID == 2){
+            getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.Orange)));
+        }
     }
     private class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter {
         public ScreenSlidePagerAdapter(FragmentManager fm) {
